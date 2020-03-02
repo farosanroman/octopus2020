@@ -1,0 +1,4520 @@
+{"antenas":
+  [{"cellid":0,"mobilegeneration":"4G","technology":"LTE","lon":-80.32430648803711,"lat":25.78628999289964},{"cellid":1,"mobilegeneration":"4G","technology":"LTE","lon":-80.31761169433594,"lat":25.78474430449608},{"cellid":2,"mobilegeneration":"4G","technology":"LTE","lon":-80.3217315673828,"lat":25.778097614825704},{"cellid":3,"mobilegeneration":"4G","technology":"LTE","lon":-80.31606674194336,"lat":25.77392392167507},{"cellid":4,"mobilegeneration":"4G","technology":"LTE","lon":-80.30834197998047,"lat":25.775315169038237},{"cellid":5,"mobilegeneration":"4G","technology":"LTE","lon":-80.30336380004883,"lat":25.776706400088642},{"cellid":6,"mobilegeneration":"4G","technology":"LTE","lon":-80.2935791015625,"lat":25.77655181966642},{"cellid":7,"mobilegeneration":"4G","technology":"LTE","lon":-80.28070449829102,"lat":25.776397239042783},{"cellid":8,"mobilegeneration":"4G","technology":"LTE","lon":-80.27521133422852,"lat":25.77717014014695},{"cellid":9,"mobilegeneration":"4G","technology":"LTE","lon":-80.26491165161133,"lat":25.779179659453522},{"cellid":10,"mobilegeneration":"4G","technology":"LTE","lon":-80.26044845581055,"lat":25.777479299178832},{"cellid":11,"mobilegeneration":"4G","technology":"LTE","lon":-80.25203704833984,"lat":25.774851421729664},{"cellid":12,"mobilegeneration":"4G","technology":"LTE","lon":-80.2467155456543,"lat":25.778252193233897},{"cellid":13,"mobilegeneration":"4G","technology":"LTE","lon":-80.23521423339844,"lat":25.775469751071626},{"cellid":14,"mobilegeneration":"4G","technology":"LTE","lon":-80.22199630737305,"lat":25.776706400088642},{"cellid":15,"mobilegeneration":"4G","technology":"LTE","lon":-80.21186828613281,"lat":25.779488813248758},{"cellid":16,"mobilegeneration":"4G","technology":"LTE","lon":-80.20483016967773,"lat":25.78057084518746},{"cellid":17,"mobilegeneration":"4G","technology":"LTE","lon":-80.19899368286133,"lat":25.78057084518746},{"cellid":18,"mobilegeneration":"4G","technology":"LTE","lon":-80.19624710083008,"lat":25.78087999535717},{"cellid":19,"mobilegeneration":"4G","technology":"LTE","lon":-80.19092559814453,"lat":25.78087999535717},{"cellid":20,"mobilegeneration":"4G","technology":"LTE","lon":-80.18920898437499,"lat":25.781807441032118},{"cellid":21,"mobilegeneration":"4G","technology":"LTE","lon":-80.18766403198242,"lat":25.7836623106276},{"cellid":22,"mobilegeneration":"4G","technology":"LTE","lon":-80.18783569335938,"lat":25.78984499977489},{"cellid":23,"mobilegeneration":"4G","technology":"LTE","lon":-80.1921272277832,"lat":25.790463250960926},{"cellid":24,"mobilegeneration":"4G","technology":"LTE","lon":-80.1976203918457,"lat":25.79200886482251},{"cellid":25,"mobilegeneration":"4G","technology":"LTE","lon":-80.20517349243164,"lat":25.794327247836158},{"cellid":26,"mobilegeneration":"4G","technology":"LTE","lon":-80.21358489990234,"lat":25.79309078253729},{"cellid":27,"mobilegeneration":"4G","technology":"LTE","lon":-80.22216796875,"lat":25.79247254505204},{"cellid":28,"mobilegeneration":"4G","technology":"LTE","lon":-80.22920608520508,"lat":25.790772375345068},{"cellid":29,"mobilegeneration":"4G","technology":"LTE","lon":-80.23521423339844,"lat":25.791081498923305},{"cellid":30,"mobilegeneration":"4G","technology":"LTE","lon":-80.24276733398438,"lat":25.791081498923305},{"cellid":31,"mobilegeneration":"4G","technology":"LTE","lon":-80.2474021911621,"lat":25.790926937234936},{"cellid":32,"mobilegeneration":"4G","technology":"LTE","lon":-80.25375366210938,"lat":25.790772375345068},{"cellid":33,"mobilegeneration":"4G","technology":"LTE","lon":-80.26216506958008,"lat":25.790154125770858},{"cellid":34,"mobilegeneration":"4G","technology":"LTE","lon":-80.2686882019043,"lat":25.788763052442683},{"cellid":35,"mobilegeneration":"4G","technology":"LTE","lon":-80.27246475219727,"lat":25.79123606041021},{"cellid":36,"mobilegeneration":"4G","technology":"LTE","lon":-80.277099609375,"lat":25.78984499977489},{"cellid":37,"mobilegeneration":"4G","technology":"LTE","lon":-80.28430938720703,"lat":25.786753695492386},{"cellid":38,"mobilegeneration":"4G","technology":"LTE","lon":-80.2910041809082,"lat":25.787062829546965},{"cellid":39,"mobilegeneration":"4G","technology":"LTE","lon":-80.29735565185547,"lat":25.787681095238597},{"cellid":40,"mobilegeneration":"4G","technology":"LTE","lon":-80.30542373657227,"lat":25.786753695492386},{"cellid":41,"mobilegeneration":"4G","technology":"LTE","lon":-80.30937194824219,"lat":25.787990226875646},{"cellid":42,"mobilegeneration":"4G","technology":"LTE","lon":-80.31486511230469,"lat":25.788144792391982},{"cellid":43,"mobilegeneration":"4G","technology":"LTE","lon":-80.32018661499023,"lat":25.789381309269906},
+    
+        {
+          "cellid": 160021,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.894276,
+          "lat": 10.504417
+        },
+        {
+          "cellid": 160022,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.894276,
+          "lat": 10.504417
+        },
+        {
+          "cellid": 160023,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.894276,
+          "lat": 10.504417
+        },
+        {
+          "cellid": 160091,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.916207,
+          "lat": 10.516249
+        },
+        {
+          "cellid": 160092,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.916207,
+          "lat": 10.516249
+        },
+        {
+          "cellid": 160093,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.916207,
+          "lat": 10.516249
+        },
+        {
+          "cellid": 162311,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918887,
+          "lat": 10.500729
+        },
+        {
+          "cellid": 162312,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918887,
+          "lat": 10.500729
+        },
+        {
+          "cellid": 162313,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918887,
+          "lat": 10.500729
+        },
+        {
+          "cellid": 162881,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.890304,
+          "lat": 10.480041
+        },
+        {
+          "cellid": 162882,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.890304,
+          "lat": 10.480041
+        },
+        {
+          "cellid": 162883,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.890304,
+          "lat": 10.480041
+        },
+        {
+          "cellid": 160101,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9007,
+          "lat": 10.497111
+        },
+        {
+          "cellid": 160102,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9007,
+          "lat": 10.497111
+        },
+        {
+          "cellid": 160103,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9007,
+          "lat": 10.497111
+        },
+        {
+          "cellid": 164761,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.939432,
+          "lat": 10.481566
+        },
+        {
+          "cellid": 164762,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.939432,
+          "lat": 10.481566
+        },
+        {
+          "cellid": 164763,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.939432,
+          "lat": 10.481566
+        },
+        {
+          "cellid": 260561,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.902222,
+          "lat": 10.485944
+        },
+        {
+          "cellid": 260562,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.902222,
+          "lat": 10.485944
+        },
+        {
+          "cellid": 260563,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.902222,
+          "lat": 10.485944
+        },
+        {
+          "cellid": 160601,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.927519,
+          "lat": 10.497703
+        },
+        {
+          "cellid": 160602,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.927519,
+          "lat": 10.497703
+        },
+        {
+          "cellid": 160603,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.927519,
+          "lat": 10.497703
+        },
+        {
+          "cellid": 161891,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.909251,
+          "lat": 10.506287
+        },
+        {
+          "cellid": 161892,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.909251,
+          "lat": 10.506287
+        },
+        {
+          "cellid": 161893,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.909251,
+          "lat": 10.506287
+        },
+        {
+          "cellid": 162341,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8997,
+          "lat": 10.5042
+        },
+        {
+          "cellid": 162342,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8997,
+          "lat": 10.5042
+        },
+        {
+          "cellid": 162343,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8997,
+          "lat": 10.5042
+        },
+        {
+          "cellid": 160211,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.898241,
+          "lat": 10.500249
+        },
+        {
+          "cellid": 160212,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.898241,
+          "lat": 10.500249
+        },
+        {
+          "cellid": 160213,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.898241,
+          "lat": 10.500249
+        },
+        {
+          "cellid": 164791,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.915725,
+          "lat": 10.510347
+        },
+        {
+          "cellid": 164792,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.915725,
+          "lat": 10.510347
+        },
+        {
+          "cellid": 164793,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.915725,
+          "lat": 10.510347
+        },
+        {
+          "cellid": 164391,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9027,
+          "lat": 10.506
+        },
+        {
+          "cellid": 164392,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9027,
+          "lat": 10.506
+        },
+        {
+          "cellid": 164393,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9027,
+          "lat": 10.506
+        },
+        {
+          "cellid": 169471,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.91,
+          "lat": 10.482778
+        },
+        {
+          "cellid": 169472,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.91,
+          "lat": 10.482778
+        },
+        {
+          "cellid": 169473,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.91,
+          "lat": 10.482778
+        },
+        {
+          "cellid": 166581,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918071,
+          "lat": 10.481984
+        },
+        {
+          "cellid": 166582,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918071,
+          "lat": 10.481984
+        },
+        {
+          "cellid": 166583,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918071,
+          "lat": 10.481984
+        },
+        {
+          "cellid": 165271,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9158,
+          "lat": 10.4772
+        },
+        {
+          "cellid": 165272,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9158,
+          "lat": 10.4772
+        },
+        {
+          "cellid": 165273,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9158,
+          "lat": 10.4772
+        },
+        {
+          "cellid": 160561,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918126,
+          "lat": 10.454636
+        },
+        {
+          "cellid": 160562,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918126,
+          "lat": 10.454636
+        },
+        {
+          "cellid": 160563,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918126,
+          "lat": 10.454636
+        },
+        {
+          "cellid": 169431,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.910306,
+          "lat": 10.454889
+        },
+        {
+          "cellid": 169432,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.910306,
+          "lat": 10.454889
+        },
+        {
+          "cellid": 169433,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.910306,
+          "lat": 10.454889
+        },
+        {
+          "cellid": 161401,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.942,
+          "lat": 10.482
+        },
+        {
+          "cellid": 161402,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.942,
+          "lat": 10.482
+        },
+        {
+          "cellid": 161403,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.942,
+          "lat": 10.482
+        },
+        {
+          "cellid": 162871,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.935,
+          "lat": 10.486
+        },
+        {
+          "cellid": 162872,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.935,
+          "lat": 10.486
+        },
+        {
+          "cellid": 162873,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.935,
+          "lat": 10.486
+        },
+        {
+          "cellid": 161661,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918123,
+          "lat": 10.506951
+        },
+        {
+          "cellid": 161662,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918123,
+          "lat": 10.506951
+        },
+        {
+          "cellid": 161663,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918123,
+          "lat": 10.506951
+        },
+        {
+          "cellid": 160741,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.904884,
+          "lat": 10.467077
+        },
+        {
+          "cellid": 160742,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.904884,
+          "lat": 10.467077
+        },
+        {
+          "cellid": 160743,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.904884,
+          "lat": 10.467077
+        },
+        {
+          "cellid": 160751,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.899066,
+          "lat": 10.507901
+        },
+        {
+          "cellid": 160752,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.899066,
+          "lat": 10.507901
+        },
+        {
+          "cellid": 160753,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.899066,
+          "lat": 10.507901
+        },
+        {
+          "cellid": 166851,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.914555,
+          "lat": 10.496497
+        },
+        {
+          "cellid": 166852,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.914555,
+          "lat": 10.496497
+        },
+        {
+          "cellid": 166853,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.914555,
+          "lat": 10.496497
+        },
+        {
+          "cellid": 166221,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.886181,
+          "lat": 10.490536
+        },
+        {
+          "cellid": 166222,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.886181,
+          "lat": 10.490536
+        },
+        {
+          "cellid": 166223,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.886181,
+          "lat": 10.490536
+        },
+        {
+          "cellid": 160811,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.908942,
+          "lat": 10.510054
+        },
+        {
+          "cellid": 160812,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.908942,
+          "lat": 10.510054
+        },
+        {
+          "cellid": 160813,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.908942,
+          "lat": 10.510054
+        },
+        {
+          "cellid": 160311,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.904257,
+          "lat": 10.5046
+        },
+        {
+          "cellid": 160312,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.904257,
+          "lat": 10.5046
+        },
+        {
+          "cellid": 160313,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.904257,
+          "lat": 10.5046
+        },
+        {
+          "cellid": 163751,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.919464,
+          "lat": 10.511281
+        },
+        {
+          "cellid": 163752,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.919464,
+          "lat": 10.511281
+        },
+        {
+          "cellid": 163753,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.919464,
+          "lat": 10.511281
+        },
+        {
+          "cellid": 165621,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.90029,
+          "lat": 10.47297
+        },
+        {
+          "cellid": 165622,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.90029,
+          "lat": 10.47297
+        },
+        {
+          "cellid": 165623,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.90029,
+          "lat": 10.47297
+        },
+        {
+          "cellid": 163711,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.898529,
+          "lat": 10.479192
+        },
+        {
+          "cellid": 163712,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.898529,
+          "lat": 10.479192
+        },
+        {
+          "cellid": 163713,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.898529,
+          "lat": 10.479192
+        },
+        {
+          "cellid": 163231,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.917509,
+          "lat": 10.504624
+        },
+        {
+          "cellid": 163232,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.917509,
+          "lat": 10.504624
+        },
+        {
+          "cellid": 163233,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.917509,
+          "lat": 10.504624
+        },
+        {
+          "cellid": 162081,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.906475,
+          "lat": 10.506422
+        },
+        {
+          "cellid": 162082,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.906475,
+          "lat": 10.506422
+        },
+        {
+          "cellid": 162083,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.906475,
+          "lat": 10.506422
+        },
+        {
+          "cellid": 168241,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.954694,
+          "lat": 10.473397
+        },
+        {
+          "cellid": 168242,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.954694,
+          "lat": 10.473397
+        },
+        {
+          "cellid": 168243,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.954694,
+          "lat": 10.473397
+        },
+        {
+          "cellid": 163641,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.911569,
+          "lat": 10.502398
+        },
+        {
+          "cellid": 163642,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.911569,
+          "lat": 10.502398
+        },
+        {
+          "cellid": 163643,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.911569,
+          "lat": 10.502398
+        },
+        {
+          "cellid": 165321,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.932,
+          "lat": 10.488
+        },
+        {
+          "cellid": 165322,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.932,
+          "lat": 10.488
+        },
+        {
+          "cellid": 165323,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.932,
+          "lat": 10.488
+        },
+        {
+          "cellid": 169191,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9129,
+          "lat": 10.5078
+        },
+        {
+          "cellid": 169192,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9129,
+          "lat": 10.5078
+        },
+        {
+          "cellid": 169193,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9129,
+          "lat": 10.5078
+        },
+        {
+          "cellid": 167831,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.91611111,
+          "lat": 10.49741667
+        },
+        {
+          "cellid": 167832,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.91611111,
+          "lat": 10.49741667
+        },
+        {
+          "cellid": 167833,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.91611111,
+          "lat": 10.49741667
+        },
+        {
+          "cellid": 161441,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.928102,
+          "lat": 10.437401
+        },
+        {
+          "cellid": 161442,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.928102,
+          "lat": 10.437401
+        },
+        {
+          "cellid": 161443,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.928102,
+          "lat": 10.437401
+        },
+        {
+          "cellid": 161501,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918723,
+          "lat": 10.493768
+        },
+        {
+          "cellid": 161502,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918723,
+          "lat": 10.493768
+        },
+        {
+          "cellid": 161503,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.918723,
+          "lat": 10.493768
+        },
+        {
+          "cellid": 166961,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.897118,
+          "lat": 10.501636
+        },
+        {
+          "cellid": 166962,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.897118,
+          "lat": 10.501636
+        },
+        {
+          "cellid": 166963,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.897118,
+          "lat": 10.501636
+        },
+        {
+          "cellid": 166761,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.922524,
+          "lat": 10.500368
+        },
+        {
+          "cellid": 166762,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.922524,
+          "lat": 10.500368
+        },
+        {
+          "cellid": 166763,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.922524,
+          "lat": 10.500368
+        },
+        {
+          "cellid": 163741,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.922219,
+          "lat": 10.495373
+        },
+        {
+          "cellid": 163742,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.922219,
+          "lat": 10.495373
+        },
+        {
+          "cellid": 163743,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.922219,
+          "lat": 10.495373
+        },
+        {
+          "cellid": 163501,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.911343,
+          "lat": 10.495211
+        },
+        {
+          "cellid": 163502,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.911343,
+          "lat": 10.495211
+        },
+        {
+          "cellid": 163503,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.911343,
+          "lat": 10.495211
+        },
+        {
+          "cellid": 164341,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.89852778,
+          "lat": 10.51063889
+        },
+        {
+          "cellid": 164342,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.89852778,
+          "lat": 10.51063889
+        },
+        {
+          "cellid": 164343,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.89852778,
+          "lat": 10.51063889
+        },
+        {
+          "cellid": 161561,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.913513,
+          "lat": 10.49988
+        },
+        {
+          "cellid": 161562,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.913513,
+          "lat": 10.49988
+        },
+        {
+          "cellid": 161563,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.913513,
+          "lat": 10.49988
+        },
+        {
+          "cellid": 161841,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.914692,
+          "lat": 10.503874
+        },
+        {
+          "cellid": 161842,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.914692,
+          "lat": 10.503874
+        },
+        {
+          "cellid": 161843,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.914692,
+          "lat": 10.503874
+        },
+        {
+          "cellid": 161961,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.885869,
+          "lat": 10.494383
+        },
+        {
+          "cellid": 161962,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.885869,
+          "lat": 10.494383
+        },
+        {
+          "cellid": 161963,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.885869,
+          "lat": 10.494383
+        },
+        {
+          "cellid": 160681,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.808013,
+          "lat": 10.469127
+        },
+        {
+          "cellid": 160682,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.808013,
+          "lat": 10.469127
+        },
+        {
+          "cellid": 160683,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.808013,
+          "lat": 10.469127
+        },
+        {
+          "cellid": 162141,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.7647,
+          "lat": 10.4608
+        },
+        {
+          "cellid": 162142,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.7647,
+          "lat": 10.4608
+        },
+        {
+          "cellid": 162143,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.7647,
+          "lat": 10.4608
+        },
+        {
+          "cellid": 163791,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.746725,
+          "lat": 10.469501
+        },
+        {
+          "cellid": 163792,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.746725,
+          "lat": 10.469501
+        },
+        {
+          "cellid": 163793,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.746725,
+          "lat": 10.469501
+        },
+        {
+          "cellid": 162741,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.804613,
+          "lat": 10.478603
+        },
+        {
+          "cellid": 162742,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.804613,
+          "lat": 10.478603
+        },
+        {
+          "cellid": 162743,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.804613,
+          "lat": 10.478603
+        },
+        {
+          "cellid": 161711,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.779391,
+          "lat": 10.491614
+        },
+        {
+          "cellid": 161712,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.779391,
+          "lat": 10.491614
+        },
+        {
+          "cellid": 161713,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.779391,
+          "lat": 10.491614
+        },
+        {
+          "cellid": 161781,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.79541,
+          "lat": 10.498025
+        },
+        {
+          "cellid": 161782,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.79541,
+          "lat": 10.498025
+        },
+        {
+          "cellid": 161783,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.79541,
+          "lat": 10.498025
+        },
+        {
+          "cellid": 168161,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.785347,
+          "lat": 10.498947
+        },
+        {
+          "cellid": 168162,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.785347,
+          "lat": 10.498947
+        },
+        {
+          "cellid": 168163,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.785347,
+          "lat": 10.498947
+        },
+        {
+          "cellid": 160041,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.84946,
+          "lat": 10.495539
+        },
+        {
+          "cellid": 160042,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.84946,
+          "lat": 10.495539
+        },
+        {
+          "cellid": 160043,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.84946,
+          "lat": 10.495539
+        },
+        {
+          "cellid": 163941,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.868661,
+          "lat": 10.488167
+        },
+        {
+          "cellid": 163942,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.868661,
+          "lat": 10.488167
+        },
+        {
+          "cellid": 163943,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.868661,
+          "lat": 10.488167
+        },
+        {
+          "cellid": 162481,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.872333,
+          "lat": 10.508003
+        },
+        {
+          "cellid": 162482,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.872333,
+          "lat": 10.508003
+        },
+        {
+          "cellid": 162483,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.872333,
+          "lat": 10.508003
+        },
+        {
+          "cellid": 162171,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.84953,
+          "lat": 10.501297
+        },
+        {
+          "cellid": 162172,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.84953,
+          "lat": 10.501297
+        },
+        {
+          "cellid": 162173,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.84953,
+          "lat": 10.501297
+        },
+        {
+          "cellid": 164501,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8532,
+          "lat": 10.5041
+        },
+        {
+          "cellid": 164502,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8532,
+          "lat": 10.5041
+        },
+        {
+          "cellid": 164503,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8532,
+          "lat": 10.5041
+        },
+        {
+          "cellid": 160071,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.847622,
+          "lat": 10.506409
+        },
+        {
+          "cellid": 160072,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.847622,
+          "lat": 10.506409
+        },
+        {
+          "cellid": 160073,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.847622,
+          "lat": 10.506409
+        },
+        {
+          "cellid": 160361,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.876794,
+          "lat": 10.492749
+        },
+        {
+          "cellid": 160362,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.876794,
+          "lat": 10.492749
+        },
+        {
+          "cellid": 160363,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.876794,
+          "lat": 10.492749
+        },
+        {
+          "cellid": 162371,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.854016,
+          "lat": 10.492967
+        },
+        {
+          "cellid": 162372,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.854016,
+          "lat": 10.492967
+        },
+        {
+          "cellid": 160141,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87332,
+          "lat": 10.493269
+        },
+        {
+          "cellid": 160142,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87332,
+          "lat": 10.493269
+        },
+        {
+          "cellid": 160143,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87332,
+          "lat": 10.493269
+        },
+        {
+          "cellid": 166461,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.864465,
+          "lat": 10.48846
+        },
+        {
+          "cellid": 166462,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.864465,
+          "lat": 10.48846
+        },
+        {
+          "cellid": 166463,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.864465,
+          "lat": 10.48846
+        },
+        {
+          "cellid": 160111,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.869281,
+          "lat": 10.495013
+        },
+        {
+          "cellid": 160112,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.869281,
+          "lat": 10.495013
+        },
+        {
+          "cellid": 160113,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.869281,
+          "lat": 10.495013
+        },
+        {
+          "cellid": 169051,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.82724,
+          "lat": 10.494292
+        },
+        {
+          "cellid": 169052,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.82724,
+          "lat": 10.494292
+        },
+        {
+          "cellid": 169053,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.82724,
+          "lat": 10.494292
+        },
+        {
+          "cellid": 169791,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.815,
+          "lat": 10.490722
+        },
+        {
+          "cellid": 169792,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.815,
+          "lat": 10.490722
+        },
+        {
+          "cellid": 169793,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.815,
+          "lat": 10.490722
+        },
+        {
+          "cellid": 160181,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.850418,
+          "lat": 10.490439
+        },
+        {
+          "cellid": 160182,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.850418,
+          "lat": 10.490439
+        },
+        {
+          "cellid": 160183,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.850418,
+          "lat": 10.490439
+        },
+        {
+          "cellid": 166791,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.820592,
+          "lat": 10.496222
+        },
+        {
+          "cellid": 166792,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.820592,
+          "lat": 10.496222
+        },
+        {
+          "cellid": 166793,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.820592,
+          "lat": 10.496222
+        },
+        {
+          "cellid": 160241,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.82336,
+          "lat": 10.49755
+        },
+        {
+          "cellid": 160242,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.82336,
+          "lat": 10.49755
+        },
+        {
+          "cellid": 160243,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.82336,
+          "lat": 10.49755
+        },
+        {
+          "cellid": 160261,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.861092,
+          "lat": 10.49052
+        },
+        {
+          "cellid": 160262,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.861092,
+          "lat": 10.49052
+        },
+        {
+          "cellid": 160263,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.861092,
+          "lat": 10.49052
+        },
+        {
+          "cellid": 260001,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.849908,
+          "lat": 10.498608
+        },
+        {
+          "cellid": 260002,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.849908,
+          "lat": 10.498608
+        },
+        {
+          "cellid": 260003,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.849908,
+          "lat": 10.498608
+        },
+        {
+          "cellid": 167221,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8553,
+          "lat": 10.4877
+        },
+        {
+          "cellid": 167222,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8553,
+          "lat": 10.4877
+        },
+        {
+          "cellid": 167223,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8553,
+          "lat": 10.4877
+        },
+        {
+          "cellid": 165791,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.815336,
+          "lat": 10.485943
+        },
+        {
+          "cellid": 165792,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.815336,
+          "lat": 10.485943
+        },
+        {
+          "cellid": 165793,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.815336,
+          "lat": 10.485943
+        },
+        {
+          "cellid": 160301,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8442,
+          "lat": 10.496823
+        },
+        {
+          "cellid": 160302,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8442,
+          "lat": 10.496823
+        },
+        {
+          "cellid": 160303,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8442,
+          "lat": 10.496823
+        },
+        {
+          "cellid": 167421,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8442,
+          "lat": 10.496823
+        },
+        {
+          "cellid": 160371,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.856298,
+          "lat": 10.505057
+        },
+        {
+          "cellid": 160372,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.856298,
+          "lat": 10.505057
+        },
+        {
+          "cellid": 160373,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.856298,
+          "lat": 10.505057
+        },
+        {
+          "cellid": 167771,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.857372,
+          "lat": 10.501959
+        },
+        {
+          "cellid": 167772,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.857372,
+          "lat": 10.501959
+        },
+        {
+          "cellid": 167773,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.857372,
+          "lat": 10.501959
+        },
+        {
+          "cellid": 160391,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.852397,
+          "lat": 10.498677
+        },
+        {
+          "cellid": 160392,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.852397,
+          "lat": 10.498677
+        },
+        {
+          "cellid": 160393,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.852397,
+          "lat": 10.498677
+        },
+        {
+          "cellid": 160501,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.869598,
+          "lat": 10.4914
+        },
+        {
+          "cellid": 160502,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.869598,
+          "lat": 10.4914
+        },
+        {
+          "cellid": 160503,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.869598,
+          "lat": 10.4914
+        },
+        {
+          "cellid": 169161,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8774,
+          "lat": 10.492
+        },
+        {
+          "cellid": 169162,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8774,
+          "lat": 10.492
+        },
+        {
+          "cellid": 169163,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8774,
+          "lat": 10.492
+        },
+        {
+          "cellid": 160591,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.862297,
+          "lat": 10.505206
+        },
+        {
+          "cellid": 160592,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.862297,
+          "lat": 10.505206
+        },
+        {
+          "cellid": 160593,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.862297,
+          "lat": 10.505206
+        },
+        {
+          "cellid": 163861,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.895901,
+          "lat": 10.512716
+        },
+        {
+          "cellid": 163862,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.895901,
+          "lat": 10.512716
+        },
+        {
+          "cellid": 163863,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.895901,
+          "lat": 10.512716
+        },
+        {
+          "cellid": 168131,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.853194,
+          "lat": 10.495972
+        },
+        {
+          "cellid": 168132,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.853194,
+          "lat": 10.495972
+        },
+        {
+          "cellid": 168133,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.853194,
+          "lat": 10.495972
+        },
+        {
+          "cellid": 165201,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.855852,
+          "lat": 10.495243
+        },
+        {
+          "cellid": 165202,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.855852,
+          "lat": 10.495243
+        },
+        {
+          "cellid": 165203,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.855852,
+          "lat": 10.495243
+        },
+        {
+          "cellid": 163841,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.857136,
+          "lat": 10.492129
+        },
+        {
+          "cellid": 163842,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.857136,
+          "lat": 10.492129
+        },
+        {
+          "cellid": 166981,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.821858,
+          "lat": 10.504947
+        },
+        {
+          "cellid": 166982,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.821858,
+          "lat": 10.504947
+        },
+        {
+          "cellid": 166983,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.821858,
+          "lat": 10.504947
+        },
+        {
+          "cellid": 160791,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8457,
+          "lat": 10.4939
+        },
+        {
+          "cellid": 160792,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8457,
+          "lat": 10.4939
+        },
+        {
+          "cellid": 160793,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8457,
+          "lat": 10.4939
+        },
+        {
+          "cellid": 168741,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8322,
+          "lat": 10.5078
+        },
+        {
+          "cellid": 168742,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8322,
+          "lat": 10.5078
+        },
+        {
+          "cellid": 168743,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8322,
+          "lat": 10.5078
+        },
+        {
+          "cellid": 164091,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.816927,
+          "lat": 10.501427
+        },
+        {
+          "cellid": 164092,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.816927,
+          "lat": 10.501427
+        },
+        {
+          "cellid": 164093,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.816927,
+          "lat": 10.501427
+        },
+        {
+          "cellid": 168181,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.850278,
+          "lat": 10.506944
+        },
+        {
+          "cellid": 168182,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.850278,
+          "lat": 10.506944
+        },
+        {
+          "cellid": 168183,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.850278,
+          "lat": 10.506944
+        },
+        {
+          "cellid": 160011,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.836022,
+          "lat": 10.496126
+        },
+        {
+          "cellid": 160012,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.836022,
+          "lat": 10.496126
+        },
+        {
+          "cellid": 160013,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.836022,
+          "lat": 10.496126
+        },
+        {
+          "cellid": 160701,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.865288,
+          "lat": 10.489979
+        },
+        {
+          "cellid": 160702,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.865288,
+          "lat": 10.489979
+        },
+        {
+          "cellid": 160703,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.865288,
+          "lat": 10.489979
+        },
+        {
+          "cellid": 168121,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85894444,
+          "lat": 10.50659722
+        },
+        {
+          "cellid": 168122,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85894444,
+          "lat": 10.50659722
+        },
+        {
+          "cellid": 168123,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85894444,
+          "lat": 10.50659722
+        },
+        {
+          "cellid": 160781,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8552,
+          "lat": 10.4904
+        },
+        {
+          "cellid": 160782,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8552,
+          "lat": 10.4904
+        },
+        {
+          "cellid": 160783,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8552,
+          "lat": 10.4904
+        },
+        {
+          "cellid": 165171,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.873878,
+          "lat": 10.501814
+        },
+        {
+          "cellid": 165172,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.873878,
+          "lat": 10.501814
+        },
+        {
+          "cellid": 165173,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.873878,
+          "lat": 10.501814
+        },
+        {
+          "cellid": 162811,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.81819,
+          "lat": 10.494449
+        },
+        {
+          "cellid": 162812,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.81819,
+          "lat": 10.494449
+        },
+        {
+          "cellid": 162813,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.81819,
+          "lat": 10.494449
+        },
+        {
+          "cellid": 160891,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.827603,
+          "lat": 10.484301
+        },
+        {
+          "cellid": 160892,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.827603,
+          "lat": 10.484301
+        },
+        {
+          "cellid": 160893,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.827603,
+          "lat": 10.484301
+        },
+        {
+          "cellid": 162191,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8729,
+          "lat": 10.4979
+        },
+        {
+          "cellid": 162192,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8729,
+          "lat": 10.4979
+        },
+        {
+          "cellid": 162193,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8729,
+          "lat": 10.4979
+        },
+        {
+          "cellid": 160991,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.883319,
+          "lat": 10.504109
+        },
+        {
+          "cellid": 160992,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.883319,
+          "lat": 10.504109
+        },
+        {
+          "cellid": 160993,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.883319,
+          "lat": 10.504109
+        },
+        {
+          "cellid": 160801,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.841497,
+          "lat": 10.488933
+        },
+        {
+          "cellid": 160802,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.841497,
+          "lat": 10.488933
+        },
+        {
+          "cellid": 160803,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.841497,
+          "lat": 10.488933
+        },
+        {
+          "cellid": 161871,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.809531,
+          "lat": 10.493423
+        },
+        {
+          "cellid": 161872,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.809531,
+          "lat": 10.493423
+        },
+        {
+          "cellid": 161873,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.809531,
+          "lat": 10.493423
+        },
+        {
+          "cellid": 161881,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.805228,
+          "lat": 10.481987
+        },
+        {
+          "cellid": 161882,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.805228,
+          "lat": 10.481987
+        },
+        {
+          "cellid": 161883,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.805228,
+          "lat": 10.481987
+        },
+        {
+          "cellid": 160711,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.862616,
+          "lat": 10.492022
+        },
+        {
+          "cellid": 160712,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.862616,
+          "lat": 10.492022
+        },
+        {
+          "cellid": 160713,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.862616,
+          "lat": 10.492022
+        },
+        {
+          "cellid": 169621,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.871992,
+          "lat": 10.490989
+        },
+        {
+          "cellid": 169622,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.871992,
+          "lat": 10.490989
+        },
+        {
+          "cellid": 169623,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.871992,
+          "lat": 10.490989
+        },
+        {
+          "cellid": 161071,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.88191,
+          "lat": 10.499174
+        },
+        {
+          "cellid": 161072,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.88191,
+          "lat": 10.499174
+        },
+        {
+          "cellid": 161073,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.88191,
+          "lat": 10.499174
+        },
+        {
+          "cellid": 162901,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.824287,
+          "lat": 10.487134
+        },
+        {
+          "cellid": 162902,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.824287,
+          "lat": 10.487134
+        },
+        {
+          "cellid": 162903,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.824287,
+          "lat": 10.487134
+        },
+        {
+          "cellid": 167841,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.845426,
+          "lat": 10.500903
+        },
+        {
+          "cellid": 167842,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.845426,
+          "lat": 10.500903
+        },
+        {
+          "cellid": 167843,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.845426,
+          "lat": 10.500903
+        },
+        {
+          "cellid": 160941,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843588,
+          "lat": 10.504727
+        },
+        {
+          "cellid": 160942,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843588,
+          "lat": 10.504727
+        },
+        {
+          "cellid": 160943,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843588,
+          "lat": 10.504727
+        },
+        {
+          "cellid": 167881,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.829835,
+          "lat": 10.487177
+        },
+        {
+          "cellid": 167882,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.829835,
+          "lat": 10.487177
+        },
+        {
+          "cellid": 167883,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.829835,
+          "lat": 10.487177
+        },
+        {
+          "cellid": 162221,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8161385,
+          "lat": 10.47575359
+        },
+        {
+          "cellid": 162222,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8161385,
+          "lat": 10.47575359
+        },
+        {
+          "cellid": 162223,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8161385,
+          "lat": 10.47575359
+        },
+        {
+          "cellid": 161181,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.858153,
+          "lat": 10.497026
+        },
+        {
+          "cellid": 161182,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.858153,
+          "lat": 10.497026
+        },
+        {
+          "cellid": 161183,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.858153,
+          "lat": 10.497026
+        },
+        {
+          "cellid": 169590,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.84181,
+          "lat": 10.507063
+        },
+        {
+          "cellid": 160291,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8442,
+          "lat": 10.496823
+        },
+        {
+          "cellid": 160292,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8442,
+          "lat": 10.496823
+        },
+        {
+          "cellid": 160293,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8442,
+          "lat": 10.496823
+        },
+        {
+          "cellid": 160294,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8442,
+          "lat": 10.496823
+        },
+        {
+          "cellid": 160295,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8442,
+          "lat": 10.496823
+        },
+        {
+          "cellid": 160296,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8442,
+          "lat": 10.496823
+        },
+        {
+          "cellid": 163311,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843281,
+          "lat": 10.497694
+        },
+        {
+          "cellid": 163312,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843281,
+          "lat": 10.497694
+        },
+        {
+          "cellid": 163313,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843281,
+          "lat": 10.497694
+        },
+        {
+          "cellid": 169241,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.884,
+          "lat": 10.496611
+        },
+        {
+          "cellid": 169242,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.884,
+          "lat": 10.496611
+        },
+        {
+          "cellid": 169243,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.884,
+          "lat": 10.496611
+        },
+        {
+          "cellid": 169381,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.844406,
+          "lat": 10.499611
+        },
+        {
+          "cellid": 169382,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.844406,
+          "lat": 10.499611
+        },
+        {
+          "cellid": 169383,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.844406,
+          "lat": 10.499611
+        },
+        {
+          "cellid": 169611,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.885139,
+          "lat": 10.500417
+        },
+        {
+          "cellid": 169612,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.885139,
+          "lat": 10.500417
+        },
+        {
+          "cellid": 169613,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.885139,
+          "lat": 10.500417
+        },
+        {
+          "cellid": 161431,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.887827,
+          "lat": 10.499258
+        },
+        {
+          "cellid": 161432,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.887827,
+          "lat": 10.499258
+        },
+        {
+          "cellid": 161433,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.887827,
+          "lat": 10.499258
+        },
+        {
+          "cellid": 167451,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.826333,
+          "lat": 10.482286
+        },
+        {
+          "cellid": 167452,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.826333,
+          "lat": 10.482286
+        },
+        {
+          "cellid": 167453,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.826333,
+          "lat": 10.482286
+        },
+        {
+          "cellid": 165551,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.80547,
+          "lat": 10.496947
+        },
+        {
+          "cellid": 165552,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.80547,
+          "lat": 10.496947
+        },
+        {
+          "cellid": 165553,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.80547,
+          "lat": 10.496947
+        },
+        {
+          "cellid": 166601,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.833633,
+          "lat": 10.485603
+        },
+        {
+          "cellid": 166602,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.833633,
+          "lat": 10.485603
+        },
+        {
+          "cellid": 166603,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.833633,
+          "lat": 10.485603
+        },
+        {
+          "cellid": 169041,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8618,
+          "lat": 10.4893
+        },
+        {
+          "cellid": 169042,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8618,
+          "lat": 10.4893
+        },
+        {
+          "cellid": 169043,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8618,
+          "lat": 10.4893
+        },
+        {
+          "cellid": 169891,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87618333,
+          "lat": 10.49395
+        },
+        {
+          "cellid": 169892,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87618333,
+          "lat": 10.49395
+        },
+        {
+          "cellid": 169893,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87618333,
+          "lat": 10.49395
+        },
+        {
+          "cellid": 169831,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.870465,
+          "lat": 10.496018
+        },
+        {
+          "cellid": 169832,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.870465,
+          "lat": 10.496018
+        },
+        {
+          "cellid": 169833,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.870465,
+          "lat": 10.496018
+        },
+        {
+          "cellid": 166631,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.881136,
+          "lat": 10.492856
+        },
+        {
+          "cellid": 166632,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.881136,
+          "lat": 10.492856
+        },
+        {
+          "cellid": 166633,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.881136,
+          "lat": 10.492856
+        },
+        {
+          "cellid": 161591,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8545,
+          "lat": 10.4904
+        },
+        {
+          "cellid": 161592,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8545,
+          "lat": 10.4904
+        },
+        {
+          "cellid": 161593,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8545,
+          "lat": 10.4904
+        },
+        {
+          "cellid": 163271,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87613,
+          "lat": 10.50425
+        },
+        {
+          "cellid": 163272,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87613,
+          "lat": 10.50425
+        },
+        {
+          "cellid": 163273,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87613,
+          "lat": 10.50425
+        },
+        {
+          "cellid": 167851,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.83304964,
+          "lat": 10.49100052
+        },
+        {
+          "cellid": 167852,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.83304964,
+          "lat": 10.49100052
+        },
+        {
+          "cellid": 167853,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.83304964,
+          "lat": 10.49100052
+        },
+        {
+          "cellid": 163421,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.839036,
+          "lat": 10.502672
+        },
+        {
+          "cellid": 163422,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.839036,
+          "lat": 10.502672
+        },
+        {
+          "cellid": 163423,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.839036,
+          "lat": 10.502672
+        },
+        {
+          "cellid": 164351,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8397,
+          "lat": 10.4986
+        },
+        {
+          "cellid": 164352,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8397,
+          "lat": 10.4986
+        },
+        {
+          "cellid": 164353,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8397,
+          "lat": 10.4986
+        },
+        {
+          "cellid": 161651,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.831647,
+          "lat": 10.504149
+        },
+        {
+          "cellid": 161652,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.831647,
+          "lat": 10.504149
+        },
+        {
+          "cellid": 161653,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.831647,
+          "lat": 10.504149
+        },
+        {
+          "cellid": 169271,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.83716667,
+          "lat": 10.5029722
+        },
+        {
+          "cellid": 169272,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.83716667,
+          "lat": 10.5029722
+        },
+        {
+          "cellid": 169273,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.83716667,
+          "lat": 10.5029722
+        },
+        {
+          "cellid": 164861,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.82965556,
+          "lat": 10.49108889
+        },
+        {
+          "cellid": 164862,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.82965556,
+          "lat": 10.49108889
+        },
+        {
+          "cellid": 164863,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.82965556,
+          "lat": 10.49108889
+        },
+        {
+          "cellid": 164901,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.818433,
+          "lat": 10.483057
+        },
+        {
+          "cellid": 164902,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.818433,
+          "lat": 10.483057
+        },
+        {
+          "cellid": 164903,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.818433,
+          "lat": 10.483057
+        },
+        {
+          "cellid": 160081,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.98,
+          "lat": 10.463
+        },
+        {
+          "cellid": 160082,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.98,
+          "lat": 10.463
+        },
+        {
+          "cellid": 160083,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.98,
+          "lat": 10.463
+        },
+        {
+          "cellid": 166281,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9459,
+          "lat": 10.48682
+        },
+        {
+          "cellid": 166282,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9459,
+          "lat": 10.48682
+        },
+        {
+          "cellid": 162101,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.949782,
+          "lat": 10.482861
+        },
+        {
+          "cellid": 162102,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.949782,
+          "lat": 10.482861
+        },
+        {
+          "cellid": 162103,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.949782,
+          "lat": 10.482861
+        },
+        {
+          "cellid": 161251,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.960408,
+          "lat": 10.472282
+        },
+        {
+          "cellid": 161252,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.960408,
+          "lat": 10.472282
+        },
+        {
+          "cellid": 161253,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.960408,
+          "lat": 10.472282
+        },
+        {
+          "cellid": 161621,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.935,
+          "lat": 10.493
+        },
+        {
+          "cellid": 161622,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.935,
+          "lat": 10.493
+        },
+        {
+          "cellid": 161623,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.935,
+          "lat": 10.493
+        },
+        {
+          "cellid": 162231,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9767,
+          "lat": 10.4653
+        },
+        {
+          "cellid": 162232,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9767,
+          "lat": 10.4653
+        },
+        {
+          "cellid": 162233,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.9767,
+          "lat": 10.4653
+        },
+        {
+          "cellid": 167721,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.89272453,
+          "lat": 10.43944078
+        },
+        {
+          "cellid": 167722,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.89272453,
+          "lat": 10.43944078
+        },
+        {
+          "cellid": 167651,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87546,
+          "lat": 10.438797
+        },
+        {
+          "cellid": 167652,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87546,
+          "lat": 10.438797
+        },
+        {
+          "cellid": 167653,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87546,
+          "lat": 10.438797
+        },
+        {
+          "cellid": 169261,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.876735,
+          "lat": 10.488811
+        },
+        {
+          "cellid": 169262,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.876735,
+          "lat": 10.488811
+        },
+        {
+          "cellid": 169263,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.876735,
+          "lat": 10.488811
+        },
+        {
+          "cellid": 160231,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8738,
+          "lat": 10.486
+        },
+        {
+          "cellid": 160232,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8738,
+          "lat": 10.486
+        },
+        {
+          "cellid": 160233,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8738,
+          "lat": 10.486
+        },
+        {
+          "cellid": 169181,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8772,
+          "lat": 10.4792
+        },
+        {
+          "cellid": 169182,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8772,
+          "lat": 10.4792
+        },
+        {
+          "cellid": 169183,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8772,
+          "lat": 10.4792
+        },
+        {
+          "cellid": 165471,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.835472,
+          "lat": 10.466306
+        },
+        {
+          "cellid": 165472,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.835472,
+          "lat": 10.466306
+        },
+        {
+          "cellid": 169171,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8661,
+          "lat": 10.4842
+        },
+        {
+          "cellid": 169172,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8661,
+          "lat": 10.4842
+        },
+        {
+          "cellid": 169173,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8661,
+          "lat": 10.4842
+        },
+        {
+          "cellid": 166611,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.859354,
+          "lat": 10.481468
+        },
+        {
+          "cellid": 166612,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.859354,
+          "lat": 10.481468
+        },
+        {
+          "cellid": 166613,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.859354,
+          "lat": 10.481468
+        },
+        {
+          "cellid": 160431,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.837787,
+          "lat": 10.472169
+        },
+        {
+          "cellid": 160432,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.837787,
+          "lat": 10.472169
+        },
+        {
+          "cellid": 160433,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.837787,
+          "lat": 10.472169
+        },
+        {
+          "cellid": 166991,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.88438,
+          "lat": 10.461717
+        },
+        {
+          "cellid": 166992,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.88438,
+          "lat": 10.461717
+        },
+        {
+          "cellid": 166993,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.88438,
+          "lat": 10.461717
+        },
+        {
+          "cellid": 164881,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.835876,
+          "lat": 10.439997
+        },
+        {
+          "cellid": 164882,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.835876,
+          "lat": 10.439997
+        },
+        {
+          "cellid": 164883,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.835876,
+          "lat": 10.439997
+        },
+        {
+          "cellid": 168021,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.823376,
+          "lat": 10.423411
+        },
+        {
+          "cellid": 168022,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.823376,
+          "lat": 10.423411
+        },
+        {
+          "cellid": 168023,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.823376,
+          "lat": 10.423411
+        },
+        {
+          "cellid": 260221,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.868343,
+          "lat": 10.467515
+        },
+        {
+          "cellid": 260222,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.868343,
+          "lat": 10.467515
+        },
+        {
+          "cellid": 260223,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.868343,
+          "lat": 10.467515
+        },
+        {
+          "cellid": 163651,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.813721,
+          "lat": 10.458456
+        },
+        {
+          "cellid": 163652,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.813721,
+          "lat": 10.458456
+        },
+        {
+          "cellid": 163653,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.813721,
+          "lat": 10.458456
+        },
+        {
+          "cellid": 168611,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85514,
+          "lat": 10.430372
+        },
+        {
+          "cellid": 168612,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85514,
+          "lat": 10.430372
+        },
+        {
+          "cellid": 168613,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85514,
+          "lat": 10.430372
+        },
+        {
+          "cellid": 168591,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.888333,
+          "lat": 10.481389
+        },
+        {
+          "cellid": 168592,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.888333,
+          "lat": 10.481389
+        },
+        {
+          "cellid": 168593,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.888333,
+          "lat": 10.481389
+        },
+        {
+          "cellid": 168141,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.841123,
+          "lat": 10.481306
+        },
+        {
+          "cellid": 168142,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.841123,
+          "lat": 10.481306
+        },
+        {
+          "cellid": 168143,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.841123,
+          "lat": 10.481306
+        },
+        {
+          "cellid": 160541,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.849825,
+          "lat": 10.483282
+        },
+        {
+          "cellid": 160542,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.849825,
+          "lat": 10.483282
+        },
+        {
+          "cellid": 160543,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.849825,
+          "lat": 10.483282
+        },
+        {
+          "cellid": 161061,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.80245,
+          "lat": 10.424507
+        },
+        {
+          "cellid": 161062,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.80245,
+          "lat": 10.424507
+        },
+        {
+          "cellid": 161063,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.80245,
+          "lat": 10.424507
+        },
+        {
+          "cellid": 162831,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.815278,
+          "lat": 10.434806
+        },
+        {
+          "cellid": 162832,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.815278,
+          "lat": 10.434806
+        },
+        {
+          "cellid": 162833,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.815278,
+          "lat": 10.434806
+        },
+        {
+          "cellid": 166651,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85185,
+          "lat": 10.443387
+        },
+        {
+          "cellid": 166652,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85185,
+          "lat": 10.443387
+        },
+        {
+          "cellid": 166653,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85185,
+          "lat": 10.443387
+        },
+        {
+          "cellid": 166481,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.856957,
+          "lat": 10.464054
+        },
+        {
+          "cellid": 166482,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.856957,
+          "lat": 10.464054
+        },
+        {
+          "cellid": 166483,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.856957,
+          "lat": 10.464054
+        },
+        {
+          "cellid": 164441,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.855518,
+          "lat": 10.479951
+        },
+        {
+          "cellid": 164442,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.855518,
+          "lat": 10.479951
+        },
+        {
+          "cellid": 164443,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.855518,
+          "lat": 10.479951
+        },
+        {
+          "cellid": 160581,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.872228,
+          "lat": 10.452589
+        },
+        {
+          "cellid": 160582,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.872228,
+          "lat": 10.452589
+        },
+        {
+          "cellid": 160583,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.872228,
+          "lat": 10.452589
+        },
+        {
+          "cellid": 160631,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.882239,
+          "lat": 10.462814
+        },
+        {
+          "cellid": 160632,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.882239,
+          "lat": 10.462814
+        },
+        {
+          "cellid": 160633,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.882239,
+          "lat": 10.462814
+        },
+        {
+          "cellid": 167671,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.837924,
+          "lat": 10.431114
+        },
+        {
+          "cellid": 167672,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.837924,
+          "lat": 10.431114
+        },
+        {
+          "cellid": 167673,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.837924,
+          "lat": 10.431114
+        },
+        {
+          "cellid": 161771,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.883056,
+          "lat": 10.444556
+        },
+        {
+          "cellid": 161772,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.883056,
+          "lat": 10.444556
+        },
+        {
+          "cellid": 161773,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.883056,
+          "lat": 10.444556
+        },
+        {
+          "cellid": 162971,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.860722,
+          "lat": 10.480621
+        },
+        {
+          "cellid": 162972,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.860722,
+          "lat": 10.480621
+        },
+        {
+          "cellid": 162973,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.860722,
+          "lat": 10.480621
+        },
+        {
+          "cellid": 162091,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.839759,
+          "lat": 10.46369
+        },
+        {
+          "cellid": 162092,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.839759,
+          "lat": 10.46369
+        },
+        {
+          "cellid": 162093,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.839759,
+          "lat": 10.46369
+        },
+        {
+          "cellid": 163681,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.881078,
+          "lat": 10.449493
+        },
+        {
+          "cellid": 163682,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.881078,
+          "lat": 10.449493
+        },
+        {
+          "cellid": 163683,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.881078,
+          "lat": 10.449493
+        },
+        {
+          "cellid": 163581,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.873713,
+          "lat": 10.47589
+        },
+        {
+          "cellid": 163582,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.873713,
+          "lat": 10.47589
+        },
+        {
+          "cellid": 163583,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.873713,
+          "lat": 10.47589
+        },
+        {
+          "cellid": 160951,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.856857,
+          "lat": 10.446322
+        },
+        {
+          "cellid": 160952,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.856857,
+          "lat": 10.446322
+        },
+        {
+          "cellid": 160953,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.856857,
+          "lat": 10.446322
+        },
+        {
+          "cellid": 160961,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.837688,
+          "lat": 10.426538
+        },
+        {
+          "cellid": 160962,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.837688,
+          "lat": 10.426538
+        },
+        {
+          "cellid": 160963,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.837688,
+          "lat": 10.426538
+        },
+        {
+          "cellid": 160841,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8206,
+          "lat": 10.4528
+        },
+        {
+          "cellid": 160842,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8206,
+          "lat": 10.4528
+        },
+        {
+          "cellid": 160843,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8206,
+          "lat": 10.4528
+        },
+        {
+          "cellid": 161051,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.806701,
+          "lat": 10.426974
+        },
+        {
+          "cellid": 161052,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.806701,
+          "lat": 10.426974
+        },
+        {
+          "cellid": 161053,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.806701,
+          "lat": 10.426974
+        },
+        {
+          "cellid": 167641,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.852422,
+          "lat": 10.436536
+        },
+        {
+          "cellid": 167642,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.852422,
+          "lat": 10.436536
+        },
+        {
+          "cellid": 167643,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.852422,
+          "lat": 10.436536
+        },
+        {
+          "cellid": 161851,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.861173,
+          "lat": 10.432124
+        },
+        {
+          "cellid": 161852,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.861173,
+          "lat": 10.432124
+        },
+        {
+          "cellid": 161853,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.861173,
+          "lat": 10.432124
+        },
+        {
+          "cellid": 161201,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.862911,
+          "lat": 10.485028
+        },
+        {
+          "cellid": 161202,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.862911,
+          "lat": 10.485028
+        },
+        {
+          "cellid": 161203,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.862911,
+          "lat": 10.485028
+        },
+        {
+          "cellid": 165141,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.872175,
+          "lat": 10.449014
+        },
+        {
+          "cellid": 165142,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.872175,
+          "lat": 10.449014
+        },
+        {
+          "cellid": 165143,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.872175,
+          "lat": 10.449014
+        },
+        {
+          "cellid": 168051,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.830012,
+          "lat": 10.445138
+        },
+        {
+          "cellid": 168052,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.830012,
+          "lat": 10.445138
+        },
+        {
+          "cellid": 168053,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.830012,
+          "lat": 10.445138
+        },
+        {
+          "cellid": 165811,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.86711,
+          "lat": 10.45844
+        },
+        {
+          "cellid": 165812,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.86711,
+          "lat": 10.45844
+        },
+        {
+          "cellid": 165813,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.86711,
+          "lat": 10.45844
+        },
+        {
+          "cellid": 160511,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.888507,
+          "lat": 10.485262
+        },
+        {
+          "cellid": 160512,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.888507,
+          "lat": 10.485262
+        },
+        {
+          "cellid": 160513,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.888507,
+          "lat": 10.485262
+        },
+        {
+          "cellid": 167891,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.842145,
+          "lat": 10.439454
+        },
+        {
+          "cellid": 167892,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.842145,
+          "lat": 10.439454
+        },
+        {
+          "cellid": 167893,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.842145,
+          "lat": 10.439454
+        },
+        {
+          "cellid": 161581,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.853506,
+          "lat": 10.456964
+        },
+        {
+          "cellid": 161582,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.853506,
+          "lat": 10.456964
+        },
+        {
+          "cellid": 161583,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.853506,
+          "lat": 10.456964
+        },
+        {
+          "cellid": 161101,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.817121,
+          "lat": 10.467156
+        },
+        {
+          "cellid": 161102,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.817121,
+          "lat": 10.467156
+        },
+        {
+          "cellid": 161103,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.817121,
+          "lat": 10.467156
+        },
+        {
+          "cellid": 161151,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.886666,
+          "lat": 10.433965
+        },
+        {
+          "cellid": 161152,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.886666,
+          "lat": 10.433965
+        },
+        {
+          "cellid": 161153,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.886666,
+          "lat": 10.433965
+        },
+        {
+          "cellid": 260111,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.87342778,
+          "lat": 10.45455
+        },
+        {
+          "cellid": 161331,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.832541,
+          "lat": 10.418862
+        },
+        {
+          "cellid": 161332,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.832541,
+          "lat": 10.418862
+        },
+        {
+          "cellid": 161333,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.832541,
+          "lat": 10.418862
+        },
+        {
+          "cellid": 163071,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.858424,
+          "lat": 10.477695
+        },
+        {
+          "cellid": 163072,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.858424,
+          "lat": 10.477695
+        },
+        {
+          "cellid": 163073,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.858424,
+          "lat": 10.477695
+        },
+        {
+          "cellid": 165491,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.833009,
+          "lat": 10.476962
+        },
+        {
+          "cellid": 165492,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.833009,
+          "lat": 10.476962
+        },
+        {
+          "cellid": 166491,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.870378,
+          "lat": 10.433352
+        },
+        {
+          "cellid": 166492,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.870378,
+          "lat": 10.433352
+        },
+        {
+          "cellid": 166493,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.870378,
+          "lat": 10.433352
+        },
+        {
+          "cellid": 163061,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.881456,
+          "lat": 10.489328
+        },
+        {
+          "cellid": 163062,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.881456,
+          "lat": 10.489328
+        },
+        {
+          "cellid": 163063,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.881456,
+          "lat": 10.489328
+        },
+        {
+          "cellid": 162701,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.832793,
+          "lat": 10.479953
+        },
+        {
+          "cellid": 162702,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.832793,
+          "lat": 10.479953
+        },
+        {
+          "cellid": 162703,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.832793,
+          "lat": 10.479953
+        },
+        {
+          "cellid": 161611,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843918,
+          "lat": 10.468911
+        },
+        {
+          "cellid": 161612,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843918,
+          "lat": 10.468911
+        },
+        {
+          "cellid": 161691,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.861812,
+          "lat": 10.462886
+        },
+        {
+          "cellid": 161692,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.861812,
+          "lat": 10.462886
+        },
+        {
+          "cellid": 161693,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.861812,
+          "lat": 10.462886
+        },
+        {
+          "cellid": 161721,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843498,
+          "lat": 10.478164
+        },
+        {
+          "cellid": 161722,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843498,
+          "lat": 10.478164
+        },
+        {
+          "cellid": 161723,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.843498,
+          "lat": 10.478164
+        },
+        {
+          "cellid": 165181,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.890223,
+          "lat": 10.476983
+        },
+        {
+          "cellid": 165182,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.890223,
+          "lat": 10.476983
+        },
+        {
+          "cellid": 165183,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.890223,
+          "lat": 10.476983
+        },
+        {
+          "cellid": 161731,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.894403,
+          "lat": 10.474943
+        },
+        {
+          "cellid": 161732,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.894403,
+          "lat": 10.474943
+        },
+        {
+          "cellid": 161733,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.894403,
+          "lat": 10.474943
+        },
+        {
+          "cellid": 161741,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.830617,
+          "lat": 10.459524
+        },
+        {
+          "cellid": 161742,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.830617,
+          "lat": 10.459524
+        },
+        {
+          "cellid": 161743,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.830617,
+          "lat": 10.459524
+        },
+        {
+          "cellid": 163031,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.81983,
+          "lat": 10.467967
+        },
+        {
+          "cellid": 163033,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.81983,
+          "lat": 10.467967
+        },
+        {
+          "cellid": 165311,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85421,
+          "lat": 10.479959
+        },
+        {
+          "cellid": 165312,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85421,
+          "lat": 10.479959
+        },
+        {
+          "cellid": 165313,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.85421,
+          "lat": 10.479959
+        },
+        {
+          "cellid": 161791,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.870553,
+          "lat": 10.446468
+        },
+        {
+          "cellid": 161792,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.870553,
+          "lat": 10.446468
+        },
+        {
+          "cellid": 161793,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.870553,
+          "lat": 10.446468
+        },
+        {
+          "cellid": 167391,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.882694,
+          "lat": 10.411889
+        },
+        {
+          "cellid": 167392,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.882694,
+          "lat": 10.411889
+        },
+        {
+          "cellid": 167393,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.882694,
+          "lat": 10.411889
+        },
+        {
+          "cellid": 161911,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8626974,
+          "lat": 10.47221939
+        },
+        {
+          "cellid": 161912,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8626974,
+          "lat": 10.47221939
+        },
+        {
+          "cellid": 161913,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.8626974,
+          "lat": 10.47221939
+        },
+        {
+          "cellid": 161931,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.857539,
+          "lat": 10.480003
+        },
+        {
+          "cellid": 161932,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.857539,
+          "lat": 10.480003
+        },
+        {
+          "cellid": 161933,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.857539,
+          "lat": 10.480003
+        },
+        {
+          "cellid": 166471,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.855287,
+          "lat": 10.485956
+        },
+        {
+          "cellid": 166472,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.855287,
+          "lat": 10.485956
+        },
+        {
+          "cellid": 166473,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.855287,
+          "lat": 10.485956
+        },
+        {
+          "cellid": 163351,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.866232,
+          "lat": 10.434716
+        },
+        {
+          "cellid": 163352,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.866232,
+          "lat": 10.434716
+        },
+        {
+          "cellid": 163353,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.866232,
+          "lat": 10.434716
+        },
+        {
+          "cellid": 162301,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.977067,
+          "lat": 10.598001
+        },
+        {
+          "cellid": 162302,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.977067,
+          "lat": 10.598001
+        },
+        {
+          "cellid": 162303,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.977067,
+          "lat": 10.598001
+        },
+        {
+          "cellid": 164921,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.999869,
+          "lat": 10.597664
+        },
+        {
+          "cellid": 164922,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.999869,
+          "lat": 10.597664
+        },
+        {
+          "cellid": 164923,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.999869,
+          "lat": 10.597664
+        },
+        {
+          "cellid": 164941,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.001131,
+          "lat": 10.597636
+        },
+        {
+          "cellid": 164942,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.001131,
+          "lat": 10.597636
+        },
+        {
+          "cellid": 164943,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.001131,
+          "lat": 10.597636
+        },
+        {
+          "cellid": 162291,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.027488,
+          "lat": 10.603881
+        },
+        {
+          "cellid": 162292,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.027488,
+          "lat": 10.603881
+        },
+        {
+          "cellid": 162293,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.027488,
+          "lat": 10.603881
+        },
+        {
+          "cellid": 160401,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.041218,
+          "lat": 10.597051
+        },
+        {
+          "cellid": 160402,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.041218,
+          "lat": 10.597051
+        },
+        {
+          "cellid": 160403,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.041218,
+          "lat": 10.597051
+        },
+        {
+          "cellid": 160831,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.95621,
+          "lat": 10.59661
+        },
+        {
+          "cellid": 160832,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.95621,
+          "lat": 10.59661
+        },
+        {
+          "cellid": 160833,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.95621,
+          "lat": 10.59661
+        },
+        {
+          "cellid": 167711,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.005141,
+          "lat": 10.596538
+        },
+        {
+          "cellid": 167712,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.005141,
+          "lat": 10.596538
+        },
+        {
+          "cellid": 167713,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.005141,
+          "lat": 10.596538
+        },
+        {
+          "cellid": 167701,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.006192,
+          "lat": 10.596538
+        },
+        {
+          "cellid": 167702,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.006192,
+          "lat": 10.596538
+        },
+        {
+          "cellid": 161131,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.006308,
+          "lat": 10.606983
+        },
+        {
+          "cellid": 161132,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.006308,
+          "lat": 10.606983
+        },
+        {
+          "cellid": 161133,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.006308,
+          "lat": 10.606983
+        },
+        {
+          "cellid": 166691,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.019892,
+          "lat": 10.608619
+        },
+        {
+          "cellid": 166692,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.019892,
+          "lat": 10.608619
+        },
+        {
+          "cellid": 166693,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -67.019892,
+          "lat": 10.608619
+        },
+        {
+          "cellid": 167501,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.96815209,
+          "lat": 10.5995219
+        },
+        {
+          "cellid": 167502,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.96815209,
+          "lat": 10.5995219
+        },
+        {
+          "cellid": 167503,
+          "mobilegeneration": "4G",
+          "technology": "LTE",
+          "lon": -66.96815209,
+          "lat": 10.5995219
+        }
+      ]
+    }
