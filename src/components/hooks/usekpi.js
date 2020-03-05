@@ -33,7 +33,7 @@ import { useState ,useEffect} from "react";
   },[]);
   //alert(JSON.stringify(initialRoles))
   const handleKpiDay = async (dia) => {
-   //   alert("dia   aaa "+JSON.stringify(dia))
+      alert("dia  handleKpiDay  "+JSON.stringify(dia))
 setKpi(dia)
 var f2=[]
 var f3=[]

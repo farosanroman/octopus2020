@@ -36,7 +36,7 @@ import { reducer, defaultState } from '../hooks/context';
 
 //import {GeoAntenas} from '../helpers/geoantenas'
 import {GeoKpi} from '../hooks/geokpi'
-//import {useKpi} from '../hooks/usekpi'
+import {useKpi} from '../hooks/usekpi'
 import {useKpiGeoJson} from '../hooks/usekpigeojson'
 //import {antenacercana} from '../helpers/antenacercana'
 
@@ -98,8 +98,8 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     //const stategeo = useGeolocation();
     const[dia, setDia]=useState('DIA')
     const[fecha, setFecha]=useState(new Date())
-//    const[criterio,kpicant,kpi2G,kpi3G,kpi4G, handleKpiFiltro,handleKpiDay]=useKpi(celular)
-const[criterio,kpicant,kpiRuta,kpi2G,kpi3G,kpi4G,handleKpiDay,handleKpiCriterio]=useKpiGeoJson({"type":"FeatureCollection","features":[]})
+    const[criterio0,kpicant0,kpi2G0,kpi3G0,kpi4G0, handleKpiFiltro0,handleKpiDay0]=useKpi(celular)
+   const[criterio,kpicant,kpiRuta,kpi2G,kpi3G,kpi4G,handleKpiDay,handleKpiCriterio]=useKpiGeoJson({"type":"FeatureCollection","features":[]})
     
     const[dummy,setDummy]=useState({"G2G":"dummy"})
     
@@ -153,6 +153,7 @@ useEffect(() => {
   setFlagCircular(true)
   //alert("get otro "+dia)
   //var d='2020-03-01'
+
     fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+dia);
    
   // handleKpiDay(state.kpiday)
@@ -186,7 +187,7 @@ useEffect(() => {
   function clickDay (newday)  {
     //alert(newday)
     //fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&dia='+newday);
-   
+    handleKpiFiltro0([])
     setDia(newday)
      dispatch({
        type: 'KPIDAY',
@@ -355,7 +356,86 @@ return (
            'line-opacity': 0.8
           }}
           
-        />   
+        />
+   <GeoJSONLayer
+          data={kpi2G0}
+          circleLayout={{ visibility: 'visible' }}
+         circlePaint={{'circle-color': '#3BB9FF','circle-radius': 4}}         
+          symbolLayout={{
+            'text-field': '{nombre0}',
+            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
+            'text-offset': [0, 0.6],
+            'text-anchor': 'top',
+            
+          }}
+          symbolPaint={{
+            'text-color': 'dodgerblue'
+          }}
+          />
+
+<GeoJSONLayer
+          data={kpi3G0}
+          circleLayout={{ visibility: 'visible' }}
+         circlePaint={{'circle-color': 'white','circle-radius': 9,'circle-opacity': 1,'circle-stroke-color': 'gray' , 'circle-stroke-width': 4,'circle-blur': 0.9, }}         
+          symbolLayout={{
+            'text-field': '{nombre0}',
+            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
+            'text-offset': [0, 0.6],
+            'text-anchor': 'top',
+            
+          }}
+          symbolPaint={{
+            'text-color': 'black'
+          }}
+          />
+      <GeoJSONLayer
+          data={kpi3G0}
+          circleLayout={{ visibility: 'visible' }}
+         circlePaint={{'circle-color': '#B041FF','circle-radius': 4}}         
+          symbolLayout={{
+            'text-field': '{nombre0}',
+            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
+            'text-offset': [0, 0.6],
+            'text-anchor': 'top',
+            
+          }}
+          symbolPaint={{
+            'text-color': 'purple'
+          }}
+          />
+       <GeoJSONLayer
+          data={kpi4G0}
+          circleLayout={{ visibility: 'visible' }}
+         circlePaint={{'circle-color': 'white','circle-radius': 9,'circle-opacity': 1,'circle-stroke-color': 'gray' , 'circle-stroke-width': 4,'circle-blur': 0.9, }}         
+          symbolLayout={{
+            'text-field': '{nombre0}',
+            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
+            'text-offset': [0, 0.6],
+            'text-anchor': 'top',
+            
+          }}
+          symbolPaint={{
+            'text-color': 'black'
+          }}
+          />
+      <GeoJSONLayer
+          data={kpi4G0}
+          circleLayout={{ visibility: 'visible' }}
+         circlePaint={{'circle-color': 'crimson','circle-radius': 4}}         
+          symbolLayout={{
+            'text-field': '{nombre0}',
+            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
+            'text-offset': [0, 0.6],
+            'text-anchor': 'top',
+            
+          }}
+          symbolPaint={{
+            'text-color': 'red'
+          }}
+          />
+   
+
+
       <GeoJSONLayer
           data={kpi2G}
           circleLayout={{ visibility: 'visible' }}
