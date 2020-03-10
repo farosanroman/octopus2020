@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
@@ -15,6 +15,10 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import Footer from './footer'
 import Avatar from '@material-ui/core/Avatar';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from 'firebase'
+import Snackbar from '@material-ui/core/Snackbar';
+import SnackbarContent from '@material-ui/core/SnackbarContent';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -58,10 +62,67 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const cards = [1, 2, 3];
-
+const config = {
+  apiKey: 'AIzaSyDZ08hKl01qFilc3nJ4oRmO8wq49pcsw8s',
+  authDomain: 'vinotinto-7f56f.firebaseapp.com',
+  signInFlow: 'popup',
+  // Redirect to /signedIn after sign in is successful. Alternatively you can provide a callbacks.signInSuccess function.
+  //signInSuccessUrl: '/signedIn',
+  // We will display Google and Facebook as auth providers.
+  signInOptions: [
+    //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      //  firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      //  firebase.auth.GithubAuthProvider.PROVIDER_ID,
+      //  firebase.auth.EmailAuthProvider.PROVIDER_ID,
+       // firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+       // firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+  ],
+};
+firebase.initializeApp(config);
 export default function Login(prop) {
   const classes = useStyles();
+  const [loginauth, setLoginAuth] = useState({uid:"0",name:"",photoURL:"",email:"",phone:"",cedula:"",lat:0,lng:0})
 
+  const [flag, setFlag] = useState(false);
+  const [flagAsignacion, setFlagAsignacion] = useState(false);
+  const [openSnackBar,setOpenSnackBar]= useState(true);
+  const [mensajeSnackBar,setMensajeSnackBar]= useState("");
+  useEffect(() => {   
+    //alert(user)
+    //setOpenSnackBar(true)
+    //setMensajeSnackBar("Autenticando en Twitter...(useEffect)")
+   //A U T O M A T I C O
+    firebase.auth().onAuthStateChanged(
+      user=>{
+       // alert(JSON.stringify(user))
+        //console.log(JSON.stringify(user))
+       //setLoginAuth(login)
+        SignIn(user)
+      }
+  
+    )
+     
+},[]);
+useEffect(() => {  
+  if (loginauth.name!=""){
+  setOpenSnackBar(true)
+  setMensajeSnackBar("Autenticando el correo:"+loginauth.email+" de "+loginauth.name)
+  }
+},[loginauth]);
+function SignIn(user) {
+     // alert("firebase user "+JSON.stringify(user))
+      var login={id:user.providerData[0].uid,name:user.displayName,photoURL:user.photoURL,email:user.email,phone:user.metadata.phoneNumber,cedula:"",photo:"",lat:0,lng:0}
+      setLoginAuth(login)
+      // alert(JSON.stringify(login))
+      //setMensajeSnackBar(user.displayName)
+      
+    }
+    function handleCloseSnackBar() {
+      // onClick("V3664204")
+       setOpenSnackBar(false)
+        prop.loginclick()
+     }
   return (
     <React.Fragment>
       <CssBaseline />
@@ -77,6 +138,16 @@ export default function Login(prop) {
       </AppBar>
       <main>
         {/* Hero unit */}
+        <Snackbar
+          open={openSnackBar}
+          autoHideDuration={5000}
+          onClose={handleCloseSnackBar}
+          anchorOrigin={{ vertical:'bottom', horizontal:'left' }}
+       >
+               <SnackbarContent style={{backgroundColor:'#1DA1F2',}}
+                     message={<span id="client-snackbar">{mensajeSnackBar}</span>}
+                />
+        </Snackbar>
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h3" align="center" color="textPrimary" gutterBottom>
@@ -89,6 +160,7 @@ export default function Login(prop) {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
+                <StyledFirebaseAuth uiConfig={config} firebaseAuth={firebase.auth()} />
                   <Button  variant="contained" color="primary"  onClick={() => prop.loginclick()}>
                   Conexión
                   </Button>

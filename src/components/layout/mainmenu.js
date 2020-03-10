@@ -6,16 +6,11 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import SignalCellular3BarIcon from '@material-ui/icons/SignalCellular3Bar';
-import PeopleIcon from '@material-ui/icons/People';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import LayersIcon from '@material-ui/icons/Layers';
-import AssignmentIcon from '@material-ui/icons/Assignment';
-
 import NetworkCheckIcon from '@material-ui/icons/NetworkCheck';
 import PersonPinCircleIcon from '@material-ui/icons/PersonPinCircle';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import MapIcon from '@material-ui/icons/Map';
-
+import SettingsInputAntennaIcon from '@material-ui/icons/SettingsInputAntenna';
 export default function MainMenu(prop) {
 
   const handleMenuLayout = value => () => {
@@ -24,23 +19,31 @@ export default function MainMenu(prop) {
   }
 return (
     <div>
-    <ListItem button onClick={handleMenuLayout(0)} >
+        <ListItem button onClick={handleMenuLayout(100)} >
       <ListItemIcon >
-      <PersonPinCircleIcon />
+      <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
-    <ListItem button  onClick={handleMenuLayout(1)}>
-      <ListItemIcon>
+    <ListItem button onClick={handleMenuLayout(0)} >
+      <ListItemIcon >
       <NetworkCheckIcon />
       </ListItemIcon>
-      <ListItemText primary="Indicadores" />
+      <ListItemText primary="Mensajes" />
     </ListItem>
+   
     <ListItem button  onClick={handleMenuLayout(2)}>
       <ListItemIcon>
         <MapIcon />
       </ListItemIcon>
       <ListItemText primary="GeoFences" />
+    </ListItem>
+    
+    <ListItem button  onClick={handleMenuLayout(1)}>
+      <ListItemIcon>
+        <SettingsInputAntennaIcon />
+      </ListItemIcon>
+      <ListItemText primary="Antenas" />
     </ListItem>
     <ListItem button  onClick={handleMenuLayout(3)}>
       <ListItemIcon>

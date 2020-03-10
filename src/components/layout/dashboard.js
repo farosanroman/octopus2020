@@ -16,10 +16,12 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
+
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SignalCellular3BarIcon from '@material-ui/icons/SignalCellular3Bar';
+import TuneIcon from '@material-ui/icons/Tune'; 
 
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -38,19 +40,21 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
-import Geo from         '../dashboard/geo';
-import GeoFences from         '../dashboard/geofences';
-import GeoPostKpi from         '../dashboard/geopostkpi';
-import Modelog from     '../dashboard/modelog'
-import Dispositivos from     '../dashboard/dispositivos'
+import Geo from         '../heatmap/geo';
+import GeoFences from         '../heatmap/geofences';
+import GeoPostKpi from         '../heatmap/geopostkpi';
+import Modelog from     '../heatmap/modelog'
+import Dispositivos from     '../heatmap/dispositivos'
 
-import GeoCalendar from '../dashboard/geocalendar';
-import GeoBar from '../dashboard/geobar';
-import GeoPie from '../dashboard/geopie';
-import ChartDayPki from '../dashboard/chartdaypki';
+import GeoCalendar from '../heatmap/geocalendar';
+import GeoBar from '../heatmap/geobar';
+import GeoPie from '../heatmap/geopie';
+import ChartDayPki from '../heatmap/chartdaypki';
 import Chart1 from '../charts/chart1';
 import { mainListItems, secondaryListItems } from './listitems';
 import MainMenu from './mainmenu'
+import Indicadores from './indicadores'
+import Antenas from './antenas'
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -153,7 +157,7 @@ const useStyles = makeStyles(theme => ({
 export default function Dashboard() {
   const classes = useStyles();
   const [hora,setHora]=React.useState(new Date())
-  const [layout, setLayout] = React.useState(0);
+  const [layout, setLayout] = React.useState(100);
   const [open, setOpen] = React.useState(false);
   const [state, setState] = React.useState({
     top: true,
@@ -393,6 +397,12 @@ export default function Dashboard() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
+        
+        {(layout==100)&&     
+      <div className={classes.root}>
+    <Indicadores />
+  </div>
+}
         {(layout==0)&&
         <Container maxWidth="lg" className={classes.container}>
          
@@ -433,6 +443,7 @@ export default function Dashboard() {
 }
 {(layout==1)&&     
       <div className={classes.root}>
+           
     <Grid container spacing={4} justify="center">
       <Grid item xs={12} sm={6} md={3}>
         <Paper className={classes.paper2}><Modelog /></Paper>
@@ -440,7 +451,10 @@ export default function Dashboard() {
       <Grid item xs={12} sm={6} md={3}>
          <Paper className={classes.paper2}><Modelog /></Paper>
       </Grid>
-
+      <Grid item xs={12} sm={12} md={12}>
+         <Paper className={classes.paper2}><Antenas /></Paper>
+      </Grid>
+      
     </Grid>
   </div>
 }
@@ -462,6 +476,7 @@ export default function Dashboard() {
 }
 {(layout==3)&&     
       <div className={classes.root}>
+    
     <Grid container spacing={4} justify="center">
       <Grid item xs={12} sm={6} md={3}>
         <Paper className={classes.paper2}><Dispositivos /></Paper>
