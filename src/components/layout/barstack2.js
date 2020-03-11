@@ -29,16 +29,17 @@ export default function BarStack(props) {
                     },
                     plotOptions: {
                       bar: {
-                        horizontal: true
+                        horizontal: true,
+                        barHeight: '90%',
                       }
                     },
                     dataLabels: {
                       dropShadow: {
-                        enabled: true
+                        enabled: false
                       }
                     },
                     stroke: {
-                      width: 0
+                      width: 2
                     },
                     xaxis: {
                       categories: ['2G', '3G', '4G' ],
@@ -74,30 +75,30 @@ export default function BarStack(props) {
                   }
 
               }
-              height={120}
+              height={140}
               series={
                 [
                     {
                       name: "HSDPA",
-                      data: [32,2]
+                      data: [32,2,3]
                     },
                     {
                       name: "HSPA",
-                      data: [41,34]
+                      data: [41,34,4]
                     },
                     {
                       name: "HSPAP",
-                      data: [12,3]
+                      data: [12,3.45]
                     },
                     {
                       name: "LTE",
-                      data: [65,2]
+                      data: [65,2,56]
                     }
                   ]
               }
 
               type="bar"
-              width={400}
+              width={350}
             />
           </div>
      

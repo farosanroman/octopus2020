@@ -3,6 +3,10 @@ import React, {useEffect, useState,Fragment } from 'react';
 import Button from '@material-ui/core/Button';
 import DatePicker from './datepicker';
 import GeoCalendar from './geocalendar';
+import BarStack2 from '../layout/barstack2';
+import Histogram from '../layout/histogram';
+
+import Dispositivos from '../layout/dispositivos';
 import 'date-fns';
 import clsx from 'clsx';
 import DateFnsUtils from '@date-io/date-fns';
@@ -76,7 +80,7 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
       color: theme.palette.text.secondary
     },
     fixedHeight: {
-      height: 240,
+      height: 200,
     },
   }));
 
@@ -252,7 +256,7 @@ const SOURCES=antenas.map((nodo,index)=>{
 return (
 <Fragment>
     <div className={classes.root}>
-    
+   
     <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={12} lg={12}>
@@ -261,13 +265,36 @@ return (
                <GeoCalendar clickday={clickDay} />
               </Paper>
             </Grid>
-            <Grid item xs={12} md={12} lg={12}>
+
+            <Grid item xs={12} md={6} lg={6}>
+              
+              <Paper className={fixedHeightPaper}>
+              <Dispositivos titulo={'Actividad de Dispositivos'}  />
+               </Paper>
+            </Grid>
+
+
+            <Grid item xs={12} md={6} lg={6}>
+              
+              <Paper className={fixedHeightPaper}>
+              <BarStack2 titulo={'Sygnal Type'}  />
+               </Paper>
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              
+              <Paper className={fixedHeightPaper}>
+              <Histogram titulo={'Histogram RSRP'}  />
+               </Paper>
+            </Grid>
+
+            <Grid item xs={12} md={6} lg={6}>
             <Paper >
-    
+
+
 {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress} />}
-    <Button  variant="contained" color="primary"  startIcon={<RefreshIcon />} onClick={() => buttondiaclick()}>      
+    {/* <Button  variant="contained" color="primary"  startIcon={<RefreshIcon />} onClick={() => buttondiaclick()}>      
     {dia}({kpicant})          
-                  </Button>
+                  </Button> */}
     <FormControlLabel
         control={<Switch
           checked={checked2G}
@@ -298,13 +325,14 @@ return (
         />}
         label="4G"
       />
-    <Button  variant="contained" color="primary"  onClick={() => buttonclick()}>
+    {/* <Button  variant="contained" color="primary"  onClick={() => buttonclick()}>
                    Refrescar
-                  </Button>
-<DatePicker clickday={clickDay}/>
+                  </Button> */}
+{/* <DatePicker clickday={clickDay}/> */}
 </Paper>
 </Grid>
 </Grid>
+
 <Map       
    //style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"

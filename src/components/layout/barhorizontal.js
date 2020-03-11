@@ -119,8 +119,7 @@ var options = {
         enabled: false
       },
       xaxis: {
-        categories: ['2G', '3G', '4G'
-        ],
+        categories: ['2G', '3G', '4G' ],
       },
       colors: [ '#3BB9FF','#B041FF', '#990000', '#000080'],
       };
