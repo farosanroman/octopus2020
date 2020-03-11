@@ -47,7 +47,7 @@ export default function Histogram(props) {
              
 
               type="bar"
-              width={350}
+
             />
           </div>
      

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Title from './title';
+import Title from '../layout/title';
 import Chart from "react-apexcharts";
 import Moment from 'react-moment';
 const useStyles = makeStyles({
@@ -94,7 +94,7 @@ var s=                [
       }
   ]
 
-export default function Dispositivos(props) {
+export default function GeoDispositivos(props) {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -105,9 +105,11 @@ export default function Dispositivos(props) {
              
               series={s}
               type="area"
-              width={350}
+              
             />
      
     </React.Fragment>
   );
 }
+
+//https://apexcharts.com/docs/chart-types/area-chart/

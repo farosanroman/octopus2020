@@ -6,7 +6,7 @@ import GeoCalendar from './geocalendar';
 import BarStack2 from '../layout/barstack2';
 import Histogram from '../layout/histogram';
 
-import Dispositivos from '../layout/dispositivos';
+import Dispositivos from './geodispositivos';
 import 'date-fns';
 import clsx from 'clsx';
 import DateFnsUtils from '@date-io/date-fns';

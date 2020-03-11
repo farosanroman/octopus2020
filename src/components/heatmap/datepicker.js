@@ -18,6 +18,8 @@ function KeyboardDatePickerExample(props) {
         onChange={date => handleDateChange(date)}
         minDate={new Date()}
         format="MM/dd/yyyy"
+      
+
       />
 
     

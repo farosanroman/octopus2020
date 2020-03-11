@@ -52,10 +52,9 @@ return (
         monthBorderColor="gray"
         dayBorderWidth={2}
         dayBorderColor="#ffffff"
-        width="800"
-        height="250"
+      
         onClick={clickCalendar}
-       
+        yearLegendOffset={25}
     />
 )
     }

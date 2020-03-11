@@ -98,7 +98,7 @@ export default function BarStack(props) {
               }
 
               type="bar"
-              width={350}
+              
             />
           </div>
      

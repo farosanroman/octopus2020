@@ -34,7 +34,7 @@ export default function BarStack(props) {
                     },
                     dataLabels: {
                       dropShadow: {
-                        enabled: true
+                        enabled: false
                       }
                     },
                     stroke: {
@@ -97,7 +97,7 @@ export default function BarStack(props) {
               }
 
               type="bar"
-              width={400}
+              
             />
           </div>
      
