@@ -1,8 +1,10 @@
   
 import React, {useEffect, useState,Fragment } from 'react';
 import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
 import DatePicker from './datepicker';
 import GeoCalendar from './geocalendar';
+import GeoSlider from './geoslider';
 import BarStack2 from '../layout/barstack2';
 import Histogram from '../layout/histogram';
 
@@ -51,7 +53,7 @@ import {celular} from '../../data/celular.json';
 //import {aG4} from '../../data/aG4.json';
 //https://upmostly.com/tutorials/build-a-react-timer-component-using-hooks
 //https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks
-
+//https://www.npmjs.com/package/react-mapbox-gl-draw     DRAW in MAPBOX!!!!!!!!!!!<<<<<<<<<
 //import {PKI} from '../../data/PKI.json';
 //import {CIUDADESGEO} from '../../data/ciudadesgeo.json';
 //https://onlineimagetools.com/resize-image
@@ -325,6 +327,8 @@ return (
         />}
         label="4G"
       />
+      <Divider />
+      <GeoSlider />
     {/* <Button  variant="contained" color="primary"  onClick={() => buttonclick()}>
                    Refrescar
                   </Button> */}
