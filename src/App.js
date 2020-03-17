@@ -5,6 +5,8 @@ import './App.css';
 import Button from '@material-ui/core/Button';
 import Login from './components/layout/login'
 import Dashboard from './components/layout/dashboard'
+import { reducer, defaultState } from './Context';
+export const Application = React.createContext({ state: null, dispatch: null });
 //import Fotos from '../src/components/fotos'
 function App() {
   const [pag, setPag] = useState(0);
@@ -12,13 +14,23 @@ function App() {
  
       setPag(1)
   }
+  const initialState = () => JSON.parse(window.localStorage.getItem('octopus2020')) || defaultState;
+  
+  const [state, dispatch] = React.useReducer(reducer, initialState());
+ // alert(JSON.stringify(state))
+
+   
+  React.useEffect(() => {
+    window.localStorage.setItem('octopus2020', JSON.stringify(state));
+  }, [state]);
+
   return (
-    <div className="App">
+    <Application.Provider value={{ state, dispatch }}>
        
      {(pag==0)&&<Login loginclick={onLoginClick} />}
      {(pag==1)&&<Dashboard />}
           
-    </div>
+     </Application.Provider>
   );
 }
 export default App;

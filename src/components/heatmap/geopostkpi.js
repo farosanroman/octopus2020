@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 //import {useNetworkStatus} from '../hooks/usenetworkstatus';
-
+//import { Application } from '../../App';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -68,6 +68,7 @@ const useStyles = makeStyles(theme => ({
 export default function GeoPostKpi() {
    // const stategeo = useGeolocation();
    const classes = useStyles();
+   //const { state, dispatch } = React.useContext(Application);
    const [flagCircular, setFlagCircular] = React.useState(false);
    const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pzIn0.V8cqmZH6dFIcxtKoaWcZZw"
    const Map = MapGL({accessToken: TOKEN });
@@ -257,6 +258,13 @@ export default function GeoPostKpi() {
     }
 },[stategeo.timestamp,connection.effectiveType,onlineStatus]);
 ///////////////////////////////////////
+// useEffect(() => {
+
+// dispatch({
+//   type: 'LOGIN',
+//   stateprop: {id:222}
+// });
+// }, []);
 useEffect(() => {
  // alert(JSON.stringify(kpi))
   if ((kpi.geometry.coordinates[0]!=null)&&(kpi.geometry.coordinates[0]<0)){

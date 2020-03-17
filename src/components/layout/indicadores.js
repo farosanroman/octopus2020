@@ -1,4 +1,5 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent,useEffect } from 'react';
+import { Application } from '../../App';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -113,6 +114,10 @@ export default function Indicadores() {
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   const fixedHeightPaper2 = clsx(classes.paper, classes.fixedHeight2);
+  const { state, dispatch } = React.useContext(Application);
+  useEffect(() => {
+   // alert("indicadores "+JSON.stringify(state.days))
+  }, []);
   function clickDay (newday)  {
 
   }
@@ -135,13 +140,13 @@ export default function Indicadores() {
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'3G Basestations'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={500} leyenda={'Dispositivos Activos'}/>
+          <Total titulo={'3G Basestations'}  total={100}leyenda={'Dispositivos Activos'}/>
       </Paper>
    
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'4G Basestations'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={700} leyenda={'Dispositivos Activos'}/>
+          <Total titulo={'4G Basestations'}   total={state.cantantenas} leyenda={'Dispositivos Activos'}/>
       </Paper>
    
       </Grid>
@@ -163,7 +168,7 @@ export default function Indicadores() {
       <Grid item xs={12} sm={12} md={12}>
       <Paper className={fixedHeightPaper}>
       <Title>{'Actividad'}</Title>
-      <GeoCalendar clickday={clickDay} />
+      <GeoCalendar days={state.days} clickday={clickDay} />
 
       </Paper>
       </Grid>

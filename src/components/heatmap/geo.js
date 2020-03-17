@@ -1,5 +1,6 @@
   
 import React, {useEffect, useState,Fragment } from 'react';
+import { Application } from '../../App';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import DatePicker from './datepicker';
@@ -38,12 +39,13 @@ import RefreshIcon from '@material-ui/icons/Refresh';
 import {useFetch} from '../hooks/usefetch';
 //import {useGeolocation} from '../hooks/usegeolocation';
 
-import { reducer, defaultState } from '../hooks/context';
 
 //import {GeoAntenas} from '../helpers/geoantenas'
+import {kpigeojson} from '../hooks/kpigeojson';
 import {GeoKpi} from '../hooks/geokpi'
 import {useKpi} from '../hooks/usekpi'
 import {useKpiGeoJson} from '../hooks/usekpigeojson'
+import {useKpiGeoJson2} from '../hooks/usekpigeojson2'
 //import {antenacercana} from '../helpers/antenacercana'
 
 import {antenas} from '../../data/antenas.json';
@@ -91,21 +93,24 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
 //   alert(JSON.stringify(antfl))
     const classes = useStyles();
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+    const { state, dispatch } = React.useContext(Application);
     const [zoom, setZoom] = useState(12);
     const [center, setCenter] = useState([-66.8726,10.4713]);
 
     const [flagCircular, setFlagCircular] = React.useState(false);     
-    const [data, isLoading, isError , fetchData] = useFetch(""); 
-    const [state, dispatch] = React.useReducer(reducer, defaultState);
+
+    //const [state, dispatch] = React.useReducer(reducer, defaultState);
     //const { state, dispatch } = React.useContext(Application);
 
     //const [zoom, setZoom] = useState([state.zoom]);
     //const { latitude, longitude, timestamp, accuracy, error } = usePosition();
     //const stategeo = useGeolocation();
-    const[dia, setDia]=useState('DIA')
+   
     const[fecha, setFecha]=useState(new Date())
-    const[criterio0,kpicant0,kpi2G0,kpi3G0,kpi4G0, handleKpiFiltro0,handleKpiDay0]=useKpi(celular)
+    //const[criterio0,kpicant0,kpi2G0,kpi3G0,kpi4G0, handleKpiFiltro0,handleKpiDay0]=useKpi(celular)
    const[criterio,kpicant,kpiRuta,kpi2G,kpi3G,kpi4G,handleKpiDay,handleKpiCriterio]=useKpiGeoJson({"type":"FeatureCollection","features":[]})
+   
+   const[KPIcriterio,KPIcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2([])
     
     const[dummy,setDummy]=useState({"G2G":"dummy"})
     
@@ -119,58 +124,54 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     const[yellow,setYellow]=useState()
     const[green,setGreen]=useState()
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+    const[dia, setDia]=useState('DIA')
+    const [data, isLoading, isError , fetchData] = useFetch(""); 
+
 console.log("GEO")
     const handleDateChange = date => {
       setSelectedDate(date);
     };
-    //const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-  //   useEffect(() => {
-  //     handleKpiDay(state.kpiday)
-  //    // alert(JSON.stringify(state.kpiday))
-  //    console.log(JSON.stringify(state.kpiday))
-//   useEffect(() => {
-//     //alert(JSON.stringify(kpi3G))
-//     setFlagCircular(true)
-//     alert("[]")
-//     fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id=2020-02-29');
-        
-//     dispatch({
-//       type: 'KPI',
-//       stateprop: celular
-//     });
-// },[]);
+
+useEffect(() => {
+   //var a=kpigeojson(celular)
+  //console.log(JSON.stringify(kpigeojson(celular)))
+   handleKPIDay(kpigeojson(celular,'GEOJSON'))
+   
+},[]);
 useEffect(() => {
   //alert("in "+option)
-  
+// alert(JSON.stringify(data))
   if (isLoading) {
     setFlagCircular(true)
   }
   //alert(data[0].type)
   if ((data!=undefined)&&(!isLoading))      
   {
-   //alert(JSON.stringify(data))
+  // alert("fetch"+JSON.stringify(data))
    
     handleKpiDay(data)
    setFlagCircular(false)
    
   }
 },[data,isLoading]);
-useEffect(() => {
-  setFlagCircular(true)
-  //alert("get otro "+dia)
-  //var d='2020-03-01'
+// useEffect(() => {
+//   setFlagCircular(true)
+//  alert("get otro :"+dia)
+//  handleKPIFiltroDay(dia)
+//   //var d='2020-03-01'
+// //setDia('2020-03-01')
 
-    fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+dia);
+//   /////// fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+dia);
    
-  // handleKpiDay(state.kpiday)
- // alert(JSON.stringify(state.kpiday))
- console.log(JSON.stringify(state.kpiday))
-},[dia]);
+//   // handleKpiDay(state.kpiday)
+//  // alert(JSON.stringify(state.kpiday))
+//  //console.log(JSON.stringify(state.kpiday))
+// },[dia]);
   //  },[state.kpiday]);
-   useEffect(() => {
+useEffect(() => {
   //handleKpiFiltro({"G2G":true,"G3G":true,"G4G":true})
   //alert(JSON.stringify({"G2G":checked2G,"G3G":checked3G,"G4G":checked4G}))
-  handleKpiCriterio({"G2G":checked2G,"G3G":checked3G,"G4G":checked4G})
+  handleKPICriterio({"G2G":checked2G,"G3G":checked3G,"G4G":checked4G})
 
 //  setCriterio({"G2G":true,"G3G":true,"G4G":true})
 //alert("[]")
@@ -191,14 +192,18 @@ useEffect(() => {
   };
 
   function clickDay (newday)  {
+    //alert("clickDay "+newday)
+    var newfecha=newday.split("-")
+    newday=newfecha[1]+"/"+newfecha[2]*1+"/"+newfecha[0]
     //alert(newday)
+    handleKPIFiltroDay(newday)
     //fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&dia='+newday);
-    handleKpiFiltro0([])
-    setDia(newday)
-     dispatch({
-       type: 'KPIDAY',
-       stateprop: newday
-     });
+    //handleKPIDay(newday)
+    ///setDia(newday)
+    //  dispatch({
+    //    type: 'KPIDAY',
+    //    stateprop: newday
+    //  });
   }
   function buttondiaclick ()  {
     // alert(state.kpifechas.length+" "+JSON.stringify(state.kpifechas))
@@ -264,7 +269,7 @@ return (
             <Grid item xs={12} md={12} lg={12}>
               
               <Paper className={fixedHeightPaper}>
-               <GeoCalendar clickday={clickDay} />
+               <GeoCalendar days={state.days} clickday={clickDay} />
               </Paper>
             </Grid>
 
@@ -288,10 +293,12 @@ return (
               <Histogram titulo={'Histogram RSRP'}  />
                </Paper>
             </Grid>
+            </Grid>
+           
+            <Grid container spacing={3}>
 
             <Grid item xs={12} md={6} lg={6}>
             <Paper >
-
 
 {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress} />}
     {/* <Button  variant="contained" color="primary"  startIcon={<RefreshIcon />} onClick={() => buttondiaclick()}>      
@@ -363,10 +370,10 @@ return (
 <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
             {SOURCES}
       </Layer>
-      {/* <GeoJSONLayer   OJO PELAO CON ESTE  TIENE centro y brillo
-          data={red}
+      <GeoJSONLayer   centro y brillo
+          data={KPI2G}
           circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'red','circle-radius': 6,'circle-opacity': 1,'circle-stroke-color': 'orange' , 'circle-stroke-width': 4,'circle-blur': 0.9, }}         
+         circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Lime' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
           symbolLayout={{
             'text-field': '{nombre0}',
             'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
@@ -378,17 +385,47 @@ return (
             'text-color': 'black'
           }}
           />
-    */}
-     <GeoJSONLayer
-          data={kpiRuta}
-          circlePaint={{'circle-color': 'lightgrey','circle-radius': 4,'circle-opacity': .8}}   
+   <GeoJSONLayer   centro y brillo
+          data={KPI3G}
+          circleLayout={{ visibility: 'visible' }}
+         circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Orange' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
+          symbolLayout={{
+            'text-field': '{nombre0}',
+            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
+            'text-offset': [0, 0.6],
+            'text-anchor': 'top',
+            
+          }}
+          symbolPaint={{
+            'text-color': 'black'
+          }}
+          />
+           <GeoJSONLayer   centro y brillo
+          data={KPI4G}
+          circleLayout={{ visibility: 'visible' }}
+         circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Red' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
+          symbolLayout={{
+            'text-field': '{nombre0}',
+            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
+            'text-offset': [0, 0.6],
+            'text-anchor': 'top',
+            
+          }}
+          symbolPaint={{
+            'text-color': 'black'
+          }}
+          />
+      <GeoJSONLayer
+          data={KPIRuta}
+          circlePaint={{'circle-color': 'lightgrey','circle-radius': 2,'circle-opacity': .8}}   
           linePaint={{
             'line-color': 'lightgrey',
-            'line-width': 1.5,
-           'line-opacity': 0.8
+            'line-width': .4,
+           'line-opacity': 0.3
           }}
           
         />
+        {/*
    <GeoJSONLayer
           data={kpi2G0}
           circleLayout={{ visibility: 'visible' }}
@@ -544,7 +581,7 @@ return (
             'text-color': 'red'
           }}
           />
-        
+         */}
 
 <GeoJSONLayer
           data={tres}

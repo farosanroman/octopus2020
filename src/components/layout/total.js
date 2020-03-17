@@ -19,7 +19,7 @@ export default function Total(props) {
          {props.total}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
-        al 30 Noviembre 2019
+         {props.leyenda}
       </Typography>
      
     </React.Fragment>

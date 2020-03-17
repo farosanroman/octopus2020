@@ -1,5 +1,6 @@
 import React,{useEffect} from 'react';
 import clsx from 'clsx';
+import { Application } from '../../App';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
@@ -55,6 +56,10 @@ import { mainListItems, secondaryListItems } from './listitems';
 import MainMenu from './mainmenu'
 import Indicadores from './indicadores'
 import Antenas from './antenas'
+import {useFetch} from '../hooks/usefetch';
+import {kpigeojson} from '../hooks/kpigeojson';
+import {antenas} from '../../data/antenas.json';
+import {celular} from '../../data/celular.json';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -156,10 +161,11 @@ const useStyles = makeStyles(theme => ({
 
 export default function Dashboard() {
   const classes = useStyles();
+  const { state, dispatch } = React.useContext(Application);
   const [hora,setHora]=React.useState(new Date())
   const [layout, setLayout] = React.useState(100);
   const [open, setOpen] = React.useState(false);
-  const [state, setState] = React.useState({
+  const [stateF, setStateF] = React.useState({
     top: true,
     left: true,
     bottom: false,
@@ -168,6 +174,35 @@ export default function Dashboard() {
   const [checked, setChecked] = React.useState(false);
 
   const [value, setValue] = React.useState('female');
+  const [dataDays, isLoadingDays, isErrorDays , fetchDataDays] = useFetch("https://octopustestingfunctions.azurewebsites.net/api/GetGroupByDatesKPICaracas?code=F3Rb8pR03YSXi0fPEtprJ6GHQgEO5VLnc3aF6tvv/9pccdpaXSFwhg=="); 
+  const [kpi, setKpi] = React.useState({"type":"FeatureCollection","features":[] });
+  useEffect(() => {
+   dispatch({
+      type: 'CANTANTENAS',
+      stateprop: antenas.length
+    });
+    fetchDataDays("https://octopustestingfunctions.azurewebsites.net/api/GetGroupByDatesKPICaracas?code=F3Rb8pR03YSXi0fPEtprJ6GHQgEO5VLnc3aF6tvv/9pccdpaXSFwhg==")
+  
+  // var a=kpigeojson(celular)
+  // setKpi(a)
+  // dispatch({
+  //   type: 'KPI',
+  //   stateprop: a
+  // });
+  // console.log(JSON.stringify(a))
+  // alert(JSON.stringify(a.features.length))
+  // alert(JSON.stringify(a.features[0]))
+  }, []);
+  useEffect(() => {
+   
+    if ((dataDays.length>0)&&(isLoadingDays)){
+     // alert(JSON.stringify(dataDays))
+    dispatch({
+       type: 'DAYS',
+       stateprop: dataDays
+     });
+   }
+  }, [dataDays]);
   const handleMenuChange=(id)=> {
     alert(id)
     //setValue(event.target.value);
@@ -187,7 +222,7 @@ export default function Dashboard() {
     setOpen(false);
   };
   const handleFiltersOpen = () => {
-    setState(true);
+    setStateF(true);
   };
   function clickDay (day)  {
     alert(day)
@@ -200,7 +235,7 @@ export default function Dashboard() {
       return;
     }
 
-    setState({ ...state, [side]: open });
+    setStateF({ ...stateF, [side]: open });
   };
 
   const sideList = side => (
@@ -388,7 +423,7 @@ export default function Dashboard() {
        
         <List>{secondaryListItems}</List>
       </Drawer>
-      <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}
+      <Drawer anchor="right" open={stateF.right} onClose={toggleDrawer('right', false)}
       classes={{
         paper: classes.drawerPaper2,
       }}
@@ -414,12 +449,12 @@ export default function Dashboard() {
                  <Geo />
               </Paper>
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            {/* <Grid item xs={12} md={6} lg={6}>
               <Paper className={fixedHeightPaper}>
                <GeoBar />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
+           
             <Grid item xs={12} md={6} lg={6}>
                <Paper className={fixedHeightPaper}>
                  <GeoPie />   
@@ -434,7 +469,7 @@ export default function Dashboard() {
                <Paper className={fixedHeightPaper}>
                  <ChartDayPki />   
               </Paper>
-            </Grid>
+            </Grid> */}
           </Grid>
           <Box pt={4}>
             <Copyright />
