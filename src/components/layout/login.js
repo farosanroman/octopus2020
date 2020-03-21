@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react';
+import { Application } from '../../App';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
@@ -80,6 +81,10 @@ const config = {
   ],
 };
 firebase.initializeApp(config);
+//andres@alcancia.biz
+//Juanfer123.
+//octotestingv2@gmail.com
+//Octo123.
 export default function Login(prop) {
   const classes = useStyles();
   const [loginauth, setLoginAuth] = useState({uid:"0",name:"",photoURL:"",email:"",phone:"",cedula:"",lat:0,lng:0})
@@ -88,6 +93,7 @@ export default function Login(prop) {
   const [flagAsignacion, setFlagAsignacion] = useState(false);
   const [openSnackBar,setOpenSnackBar]= useState(true);
   const [mensajeSnackBar,setMensajeSnackBar]= useState("");
+  const { state, dispatch } = React.useContext(Application);
   useEffect(() => {   
     //alert(user)
     //setOpenSnackBar(true)
@@ -106,9 +112,17 @@ export default function Login(prop) {
 },[]);
 useEffect(() => {  
   if (loginauth.name!=""){
+    ///
+    ///  AUDITORIA de la EXISTENCIA
+    ///
+    ///
   setOpenSnackBar(true)
   setMensajeSnackBar("Autenticando el correo:"+loginauth.email+" de "+loginauth.name)
   }
+      dispatch({
+        type: 'LOGIN',
+        stateprop: loginauth
+      });
 },[loginauth]);
 function SignIn(user) {
      // alert("firebase user "+JSON.stringify(user))
@@ -154,7 +168,7 @@ function SignIn(user) {
               Octopus FullStack 
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            Proyecto de "SoftWare Abierto" en JavaScript  utilizando React.js, Material, Node.js, CosmosDB y MapBox para su construccion. Cada componente esta especialmente diseñado basado en funciones y hooks de React.
+            Proyecto de "SoftWare Abierto" en JavaScript  basado en React, Hooks, Material, Node.js, CosmosDB y MapBox.
             
                </Typography>
             <div className={classes.heroButtons}>

@@ -1,4 +1,4 @@
-import React, { PureComponent,useEffect } from 'react';
+import React, { PureComponent,useEffect ,useState} from 'react';
 import { Application } from '../../App';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,11 +6,12 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Total from './total'
+import Total from '../layout/total'
 import BarStack from './barstack'
 import BarHorizontal from './barhorizontal'
 import GeoCalendar from '../heatmap/geocalendar';
-import Title from './title'
+import Title from '../layout/title'
+import Voronoi from './voronoi.js'
 //mport Title from '../dashboard/title';
 //import FaroPieChart from '../indicadores/faropiechart';
 //import FaroPieChart from './faropiechartborrar';
@@ -115,6 +116,10 @@ export default function Indicadores() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   const fixedHeightPaper2 = clsx(classes.paper, classes.fixedHeight2);
   const { state, dispatch } = React.useContext(Application);
+  const [totalKPI,setTotaKPI]= useState("33.000");
+  const [totalDevices,setTotaDevices]= useState("13");
+  const [tota3GBaseStations,setTota3GBaseStations]= useState("130");
+  const [tota4GBaseStations,setTota4GBaseStations]= useState("430");
   useEffect(() => {
    // alert("indicadores "+JSON.stringify(state.days))
   }, []);
@@ -126,27 +131,27 @@ export default function Indicadores() {
         <div className={classes.root}>    
          
         <Container maxWidth="lg" className={classes.container}>  
-
+       <Voronoi />
         <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-           <Total titulo={'Messages'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={23000} leyenda={'Total Acumulado'}/>
+           <Total titulo={'Messages'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalKPI} leyenda={'Total Acumulado'}/>
       </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'Devices'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={123} leyenda={'Dispositivos Activos'}/>
+          <Total titulo={'Devices'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalDevices} leyenda={'Dispositivos Activos'}/>
       </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'3G Basestations'}  total={100}leyenda={'Dispositivos Activos'}/>
+          <Total titulo={'3G Basestations'}  total={tota3GBaseStations}leyenda={'Dispositivos Activos'}/>
       </Paper>
    
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'4G Basestations'}   total={state.cantantenas} leyenda={'Dispositivos Activos'}/>
+          <Total titulo={'4G Basestations'}   total={tota3GBaseStations} leyenda={'Dispositivos Activos'}/>
       </Paper>
    
       </Grid>
@@ -155,13 +160,14 @@ export default function Indicadores() {
       <Grid container spacing={3}>
       <Grid item xs={12} sm={12} md={6}>
       <Paper className={fixedHeightPaper2}>
-            <BarStack titulo={'Sygnal Type'}  />
+      <BarHorizontal titulo={'Mobile Generation'}  />
+           
 
       </Paper>
       </Grid>
       <Grid item xs={12} sm={12} md={6}>
       <Paper className={fixedHeightPaper2}>
-            <BarHorizontal titulo={'Mobile Generation'}  />
+      <BarStack titulo={'Sygnal Type'}  />
 
       </Paper>
       </Grid>

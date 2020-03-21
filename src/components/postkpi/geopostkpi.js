@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-
+import { Application } from '../../App';
 import { makeStyles } from '@material-ui/core/styles';
 //import {useNetworkStatus} from '../hooks/usenetworkstatus';
 //import { Application } from '../../App';
@@ -77,7 +77,7 @@ export default function GeoPostKpi() {
    const stategeo = useGeolocation();
   const connection = useNetworkStatus();
   const  onlineStatus = useOnlineStatus();
-  
+  const { state, dispatch } = React.useContext(Application);
   const [kpi,setKpi]=useState(
     {
       "type": "Feature",
@@ -86,6 +86,7 @@ export default function GeoPostKpi() {
         "timestamp": "12/22/2018 11:00",
         "mobilegeneration": connection.effectiveType.toUpperCase(),
         "cellid": 100301,
+        "identification":state.login.email,
         "cidreported": 2567681,
         "downlink":connection.downlink,
         "rtt":connection.rtt,
@@ -126,8 +127,7 @@ export default function GeoPostKpi() {
      {
        "type": "Feature",
        "properties": {
-         "marker-color": "#00ff00",
-         "marker-size": "medium",
+        
          "marker-symbol": "telephone"
        },
        "geometry": {
@@ -184,30 +184,18 @@ export default function GeoPostKpi() {
       "properties": {
         "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
         "timestamp": new Date(),
+        "identification":state.login.email,
         "mobilegeneration": connection.effectiveType.toUpperCase(),
-        "cellid": 100301,
-        "cidreported": 2567681,
+        "cellid": 11111,
+        "cidreported": 11111,
         "downlink":connection.downlink,
         "rtt":connection.rtt,
         "mcc": 734,
         "mnc": 2,
-        "lac": 700,
-        "loc": 1,
-        "lon": -66.85489415,
-        "lat": 10.46507604,
-        "signaltype": "LTE",
+        "signaltype":connection.effectiveType.toUpperCase(),
         "signalstrength": 27,
         "rsrq": -11,
         "rsrp": -89,
-        "bhealth": "GOOD",
-        "blevel": 1,
-        "bsource": "AC",
-        "bstatus": "FULL",
-        "btemp": 242,
-        "bvolts": 4346,
-        "bslon": "NULL",
-        "bslat": "NULL",
-        "status": "NULL"
       },
       "geometry": {
         "type": "Point",
@@ -218,43 +206,31 @@ export default function GeoPostKpi() {
         ]
       }
     }
-    setKpi(newkpi)
-    var newpos={
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "properties": {
-          "fecha":new Date(),
-            "nombre":connection.effectiveType.toUpperCase(),
-          "marker-color": "#00ff00",
-          "marker-size": "medium",
-          "marker-symbol": "telephone"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            stategeo.longitude,
-            stategeo.latitude
-          ]
-        }
-      }]}
-     
-      setPos(newpos)
+    
       var newruta=posruta
-      newruta.features.push(newpos.features[0])
-      setPosRuta(newruta)
+      newruta.features.push(newkpi)
+      
       var newlinea=linearuta
       newlinea.features[0].geometry.coordinates.push([
         stategeo.longitude,
         stategeo.latitude
       ])
-      setLatLng([ stategeo.longitude,
-        stategeo.latitude])
-      setLineaRuta(newlinea)
+    setPos({
+      "type": "FeatureCollection",
+      "features": [
+            newkpi  
+      ]})
+      console.log("newrkpi")  
       console.log(JSON.stringify(newkpi))
-      console.log(newruta)
-      console.log(newlinea)
+      console.log("newruta")
+      console.log(JSON.stringify(newruta))
+      console.log("newline")
+      console.log(JSON.stringify(newlinea))
+ 
+      setPosRuta(newruta)
+      setLatLng([ stategeo.longitude,stategeo.latitude])
+      setLineaRuta(newlinea)
+      setKpi(newkpi)
     }
 },[stategeo.timestamp,connection.effectiveType,onlineStatus]);
 ///////////////////////////////////////
@@ -270,7 +246,7 @@ useEffect(() => {
   if ((kpi.geometry.coordinates[0]!=null)&&(kpi.geometry.coordinates[0]<0)){
    // alert("post"+JSON.stringify(kpi))
      setFlagCircular(true)
-     postData("https://octopustestingfunctions.azurewebsites.net/api/PostKPICaracas?code=ZS2OTxwaybC7yKS5KC3vNBSjICz5/ktlDfL5WEWgIF7t9fdZedD7Ug==",kpi)
+     postData("https://octopustestingfunctions.azurewebsites.net/api/PostKPI?code=L4A3rCSSFFI5lvQfBBK2yCWG1Hr4ZaHZahfSoISNpKSlIiQ5J3NySA==",kpi)
   }
 },[kpi]);
 
@@ -439,45 +415,45 @@ return (
 
 
 }
-var kpijson=
+// var kpijson=
  
-  {
-    "type": "Feature",
-    "properties": {
-      "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
-      "timestamp": "12/22/2018 11:00",
-      "mobilegeneration": "4G",
-      "cellid": 100301,
-      "cidreported": 2567681,
-      "downlink":2.22,
-      "rtt":100,
-      "mcc": 734,
-      "mnc": 2,
-      "lac": 700,
-      "loc": 1,
-      "lon": -66.85489415,
-      "lat": 10.46507604,
-      "signaltype": "LTE",
-      "signalstrength": 27,
-      "rsrq": -11,
-      "rsrp": -89,
-      "bhealth": "GOOD",
-      "blevel": 1,
-      "bsource": "AC",
-      "bstatus": "FULL",
-      "btemp": 242,
-      "bvolts": 4346,
-      "bslon": "NULL",
-      "bslat": "NULL",
-      "status": "NULL"
-    },
-    "geometry": {
-      "type": "Point",
-      "coordinates": [
-      0,0 
-      ]
-    }
-  }
+//   {
+//     "type": "Feature",
+//     "properties": {
+//       "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+//       "timestamp": "12/22/2018 11:00",
+//       "mobilegeneration": "4G",
+//       "cellid": 100301,
+//       "cidreported": 2567681,
+//       "downlink":2.22,
+//       "rtt":100,
+//       "mcc": 734,
+//       "mnc": 2,
+//       "lac": 700,
+//       "loc": 1,
+//       "lon": -66.85489415,
+//       "lat": 10.46507604,
+//       "signaltype": "LTE",
+//       "signalstrength": 27,
+//       "rsrq": -11,
+//       "rsrp": -89,
+//       "bhealth": "GOOD",
+//       "blevel": 1,
+//       "bsource": "AC",
+//       "bstatus": "FULL",
+//       "btemp": 242,
+//       "bvolts": 4346,
+//       "bslon": "NULL",
+//       "bslat": "NULL",
+//       "status": "NULL"
+//     },
+//     "geometry": {
+//       "type": "Point",
+//       "coordinates": [
+//       0,0 
+//       ]
+//     }
+//   }
 
 
 var drone=

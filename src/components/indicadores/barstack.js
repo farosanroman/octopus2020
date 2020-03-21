@@ -2,7 +2,7 @@ import React ,{useEffect} from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Title from './title';
+import Title from '../layout/title';
 import Chart from "react-apexcharts";
 
 const useStyles = makeStyles({
@@ -25,7 +25,8 @@ export default function BarStack(props) {
                       stackType: "100%",
                       toolbar: {
                         show: false
-                      }
+                      },
+                      foreColor: "#fff",
                     },
                     plotOptions: {
                       bar: {
@@ -40,6 +41,7 @@ export default function BarStack(props) {
                     stroke: {
                       width: 0
                     },
+                   
                     xaxis: {
                       categories: ['2G', '3G', '4G' ],
                       labels: {
@@ -50,7 +52,8 @@ export default function BarStack(props) {
                       },
                       axisTicks: {
                         show: false
-                      }
+                      },
+                      colors: [ '#3BB9FF','#B041FF', '#990000', '#000080','#FF0000','#FF4500','#FF00FF','#D2691E'],
                     },
                     // fill: {
                     //   opacity: 1,
@@ -75,6 +78,43 @@ export default function BarStack(props) {
 
               }
               height={120}
+              // series= {               [
+              //   {
+              //     name: "HSPA",
+              //     data: [0,6044,1]
+              //   },
+              //   {
+              //     name: "HSPAP",
+              //     data: [27,14523,0]
+              //   },
+              //   {
+              //     name: "UMTS",
+              //     data: [0,50,0]
+              //   },
+              //   {
+              //     name: "LTE",
+              //     data: [0,2,10648]
+              //   },
+              //   {
+              //     name: "HSUPA",
+              //     data: [0,12,1]
+              //   }
+              //   ,
+              //   {
+              //     name: "UNKNOWN",
+              //     data: [4,6,0]
+              //   }
+              //   ,
+              //   {
+              //     name: "EDGE",
+              //     data: [19,0,0]
+              //   }
+              //   ,
+              //   {
+              //     name: "HSDPA",
+              //     data: [0,2,0]
+              //   }
+              // ]}
               series={
                 [
                     {

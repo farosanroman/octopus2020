@@ -22,7 +22,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SignalCellular3BarIcon from '@material-ui/icons/SignalCellular3Bar';
-import TuneIcon from '@material-ui/icons/Tune'; 
+
 
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -30,6 +30,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Brightness5Icon from '@material-ui/icons/Brightness5';
+import TuneIcon from '@material-ui/icons/Tune';
 
 import Switch from '@material-ui/core/Switch';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -43,9 +44,9 @@ import FormLabel from '@material-ui/core/FormLabel';
 
 import Geo from         '../heatmap/geo';
 import GeoFences from         '../heatmap/geofences';
-import GeoPostKpi from         '../heatmap/geopostkpi';
+import GeoPostKpi from         '../postkpi/geopostkpi';
 import Modelog from     '../heatmap/modelog'
-import Dispositivos from     '../heatmap/dispositivos'
+import Dispositivos from     './dispositivos'
 
 import GeoCalendar from '../heatmap/geocalendar';
 import GeoBar from '../heatmap/geobar';
@@ -54,10 +55,10 @@ import ChartDayPki from '../heatmap/chartdaypki';
 import Chart1 from '../charts/chart1';
 import { mainListItems, secondaryListItems } from './listitems';
 import MainMenu from './mainmenu'
-import Indicadores from './indicadores'
+import Indicadores from '../indicadores/indicadores'
 import Antenas from './antenas'
 import {useFetch} from '../hooks/usefetch';
-import {kpigeojson} from '../hooks/kpigeojson';
+import {kpigeojson} from '../helpers/kpigeojson';
 import {antenas} from '../../data/antenas.json';
 import {celular} from '../../data/celular.json';
 function Copyright() {
@@ -181,7 +182,7 @@ export default function Dashboard() {
       type: 'CANTANTENAS',
       stateprop: antenas.length
     });
-    fetchDataDays("https://octopustestingfunctions.azurewebsites.net/api/GetGroupByDatesKPICaracas?code=F3Rb8pR03YSXi0fPEtprJ6GHQgEO5VLnc3aF6tvv/9pccdpaXSFwhg==")
+    fetchDataDays("https://octopustestingfunctions.azurewebsites.net/api/GetPkiDates?code=7/HMNoq9HlHgEUOUWxqNEhc6GzmBI7xFQvHaFyuoCpGFqSZa8YNNkw==")
   
   // var a=kpigeojson(celular)
   // setKpi(a)
@@ -204,7 +205,7 @@ export default function Dashboard() {
    }
   }, [dataDays]);
   const handleMenuChange=(id)=> {
-    alert(id)
+   // alert(id)
     //setValue(event.target.value);
   };
   
@@ -225,7 +226,7 @@ export default function Dashboard() {
     setStateF(true);
   };
   function clickDay (day)  {
-    alert(day)
+    //alert(day)
  }
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   const fixedHeightPaper2 = clsx(classes.paper, classes.fixedHeight2);
@@ -398,7 +399,7 @@ export default function Dashboard() {
             onClick={toggleDrawer('right', true)}
             className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
           >
-            <Brightness5Icon />
+            <TuneIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -525,18 +526,7 @@ export default function Dashboard() {
       <Grid item xs={12} sm={6} md={3}>
          <Paper className={classes.paper2}><Dispositivos /></Paper>
       </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-        <Paper className={classes.paper2}><Dispositivos /></Paper>
-      </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-         <Paper className={classes.paper2}><Dispositivos /></Paper>
-      </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-        <Paper className={classes.paper2}><Dispositivos /></Paper>
-      </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-         <Paper className={classes.paper2}><Dispositivos /></Paper>
-      </Grid>
+ 
 
     </Grid>
   </div>

@@ -14,16 +14,15 @@ import {useFetch} from '../hooks/usefetch';
     const[dates,setDate]=useState(props.days)
 
   function clickCalendar(day,event)  {
-    //alert(day.day)
-
+   // alert(JSON.stringify(day))
     props.clickday(day.day)
    // alert(JSON.stringify(day))
   }
 return (
 <ResponsiveCalendar
-        data={data2}
-        from="2018-02-01"
-        to="2018-12-31"
+        data={dates}
+        from="2020-02-01"
+        to="2020-12-31"
         emptyColor="#eeeeee"
         colors={[ 'dodgerblue' ]}
         margin={{ top: 10, right: 10, bottom: 10, left: 10 }}

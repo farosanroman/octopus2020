@@ -5,6 +5,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Divider from '@material-ui/core/Divider';
 import SignalCellular3BarIcon from '@material-ui/icons/SignalCellular3Bar';
 import NetworkCheckIcon from '@material-ui/icons/NetworkCheck';
 import PersonPinCircleIcon from '@material-ui/icons/PersonPinCircle';
@@ -32,12 +33,7 @@ return (
       <ListItemText primary="Mensajes" />
     </ListItem>
    
-    <ListItem button  onClick={handleMenuLayout(2)}>
-      <ListItemIcon>
-        <MapIcon />
-      </ListItemIcon>
-      <ListItemText primary="GeoFences" />
-    </ListItem>
+   
     
     <ListItem button  onClick={handleMenuLayout(1)}>
       <ListItemIcon>
@@ -45,13 +41,22 @@ return (
       </ListItemIcon>
       <ListItemText primary="Antenas" />
     </ListItem>
+
     <ListItem button  onClick={handleMenuLayout(3)}>
       <ListItemIcon>
         <PhoneIphoneIcon />
       </ListItemIcon>
       <ListItemText primary="Telefonos" />
     </ListItem>
+    
+    <ListItem button  onClick={handleMenuLayout(2)}>
+      <ListItemIcon>
+        <MapIcon />
+      </ListItemIcon>
+      <ListItemText primary="GeoFences" />
+    </ListItem>
    
+    <Divider />
     <ListItem button  onClick={handleMenuLayout(4)}>
       <ListItemIcon>
         <SignalCellular3BarIcon />

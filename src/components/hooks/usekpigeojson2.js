@@ -12,6 +12,7 @@ import { useState ,useEffect} from "react";
   const [kpiRuta, setKpiRuta] = useState({"type":"FeatureCollection","features":[] });
 
   const[criterio,setCriterio]=useState({"G2G":true,"G3G":true,"G4G":true})
+  //histograma de RSRP RSRQ
   useEffect(() => {
     
     var f2=[]
@@ -63,8 +64,9 @@ import { useState ,useEffect} from "react";
     }
   },[kpi,criterio]);
   const handleKpiDay = async (kpi) => {
+     //ACTUALIZA los kp0 INICIALIZACION
       //console.log(JSON.stringify(kpi))
-    //   alert("handle"+kpi.length)
+      // alert("handleKpiDay"+kpi.length)
    setKpi0(kpi)
    setKpi(kpi)
 }

@@ -6,8 +6,8 @@ import Divider from '@material-ui/core/Divider';
 import DatePicker from './datepicker';
 import GeoCalendar from './geocalendar';
 import GeoSlider from './geoslider';
-import BarStack2 from '../layout/barstack2';
-import Histogram from '../layout/histogram';
+import BarStack2 from './barstack2';
+import Histogram from './histogram';
 
 import Dispositivos from './geodispositivos';
 import 'date-fns';
@@ -41,7 +41,7 @@ import {useFetch} from '../hooks/usefetch';
 
 
 //import {GeoAntenas} from '../helpers/geoantenas'
-import {kpigeojson} from '../hooks/kpigeojson';
+import {kpigeojson} from '../helpers/kpigeojson';
 import {GeoKpi} from '../hooks/geokpi'
 import {useKpi} from '../hooks/usekpi'
 import {useKpiGeoJson} from '../hooks/usekpigeojson'
@@ -49,7 +49,9 @@ import {useKpiGeoJson2} from '../hooks/usekpigeojson2'
 //import {antenacercana} from '../helpers/antenacercana'
 
 import {antenas} from '../../data/antenas.json';
-import {celular} from '../../data/celular.json';
+import {voronoi} from '../../data/voronoi.json';
+
+//import {celular} from '../../data/celular.json';
 //import {aG2} from '../../data/aG2.json';
 //import {aG3} from '../../data/aG3.json';
 //import {aG4} from '../../data/aG4.json';
@@ -108,7 +110,7 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
    
     const[fecha, setFecha]=useState(new Date())
     //const[criterio0,kpicant0,kpi2G0,kpi3G0,kpi4G0, handleKpiFiltro0,handleKpiDay0]=useKpi(celular)
-   const[criterio,kpicant,kpiRuta,kpi2G,kpi3G,kpi4G,handleKpiDay,handleKpiCriterio]=useKpiGeoJson({"type":"FeatureCollection","features":[]})
+   //const[criterio,kpicant,kpiRuta,kpi2G,kpi3G,kpi4G,handleKpiDay,handleKpiCriterio]=useKpiGeoJson({"type":"FeatureCollection","features":[]})
    
    const[KPIcriterio,KPIcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2([])
     
@@ -134,13 +136,13 @@ console.log("GEO")
 
 useEffect(() => {
    //var a=kpigeojson(celular)
-  //console.log(JSON.stringify(kpigeojson(celular)))
-   handleKPIDay(kpigeojson(celular,'GEOJSON'))
+ // console.log(JSON.stringify(kpigeojson('GEOJSON')))
+ // handleKPIDay(kpigeojson('GEOJSON'))
    
 },[]);
 useEffect(() => {
   //alert("in "+option)
-// alert(JSON.stringify(data))
+ //alert(JSON.stringify(data))
   if (isLoading) {
     setFlagCircular(true)
   }
@@ -149,7 +151,7 @@ useEffect(() => {
   {
   // alert("fetch"+JSON.stringify(data))
    
-    handleKpiDay(data)
+  handleKPIDay(data)
    setFlagCircular(false)
    
   }
@@ -193,11 +195,12 @@ useEffect(() => {
 
   function clickDay (newday)  {
     //alert("clickDay "+newday)
-    var newfecha=newday.split("-")
-    newday=newfecha[1]+"/"+newfecha[2]*1+"/"+newfecha[0]
-    //alert(newday)
-    handleKPIFiltroDay(newday)
-    //fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&dia='+newday);
+    //var newfecha=newday.split("-")
+    //newday=newfecha[1]+"/"+newfecha[2]*1+"/"+newfecha[0]
+    ///alert(newday)
+    //handleKPIFiltroDay(newday)
+    fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+newday);
+    
     //handleKPIDay(newday)
     ///setDia(newday)
     //  dispatch({
@@ -293,9 +296,6 @@ return (
               <Histogram titulo={'Histogram RSRP'}  />
                </Paper>
             </Grid>
-            </Grid>
-           
-            <Grid container spacing={3}>
 
             <Grid item xs={12} md={6} lg={6}>
             <Paper >
@@ -343,7 +343,7 @@ return (
 </Paper>
 </Grid>
 </Grid>
-
+{/* //https://res.cloudinary.com/dzc4dgpyi/image/upload/v1560300064/Torrecitas-02.png */}
 <Map       
    //style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
@@ -370,6 +370,15 @@ return (
 <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
             {SOURCES}
       </Layer>
+      <GeoJSONLayer
+          data={voronoi}
+          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
+          linePaint={{
+            'line-color': 'gray',
+            'line-width': .5
+          }}
+          
+        />   
       <GeoJSONLayer   centro y brillo
           data={KPI2G}
           circleLayout={{ visibility: 'visible' }}

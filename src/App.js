@@ -14,8 +14,10 @@ function App() {
  
       setPag(1)
   }
-  const initialState = () => JSON.parse(window.localStorage.getItem('octopus2020')) || defaultState;
-  
+  // const initialState = () => JSON.parse(window.localStorage.getItem('octopus2020')) || defaultState;
+ 
+  const initialState = () => defaultState;
+ 
   const [state, dispatch] = React.useReducer(reducer, initialState());
  // alert(JSON.stringify(state))
 
@@ -34,6 +36,18 @@ function App() {
   );
 }
 export default App;
+//https://arxiv.org/pdf/1711.10089.pdf
+//https://mapshaper.org/
+
+//https://medium.com/octopus-labs-london/replacing-redux-with-react-hooks-and-context-part-1-11b72ffdb533 
+//https://medium.com/octopus-labs-london/replacing-redux-with-react-hooks-and-context-part-2-838fd20e6739
+
+//https://codinhood.com/how-to-build-bitcoin-dca-chart-react-recharts recharts fondo negro BITCOINS
+//https://www.bypeople.com/timeline-bar-line-chart-data-javascript/
+//https://codesandbox.io/s/mzzq3yqjqj apexcharts
+//https://codepen.io/junedchhipa/pen/YJQKOy
+//https://codepen.io/apexcharts/pen/pxZKqL
+
 //https://www.youtube.com/watch?v=f687hBjwFcM&t=4706s
 //https://www.youtube.com/playlist?list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM
 //https://www.youtube.com/watch?v=4BranN3qnDU
