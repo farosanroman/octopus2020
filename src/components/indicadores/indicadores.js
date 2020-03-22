@@ -103,7 +103,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   },
   fixedHeight: {
-    height: 300,
+    height: 600,
   },
   
    fixedHeight2: {
@@ -131,7 +131,7 @@ export default function Indicadores() {
         <div className={classes.root}>    
          
         <Container maxWidth="lg" className={classes.container}>  
-       <Voronoi />
+      
         <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
@@ -174,6 +174,7 @@ export default function Indicadores() {
       <Grid item xs={12} sm={12} md={12}>
       <Paper className={fixedHeightPaper}>
       <Title>{'Actividad'}</Title>
+      <Voronoi />
       <GeoCalendar days={state.days} clickday={clickDay} />
 
       </Paper>

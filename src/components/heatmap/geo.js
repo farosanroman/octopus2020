@@ -49,8 +49,6 @@ import {useKpiGeoJson2} from '../hooks/usekpigeojson2'
 //import {antenacercana} from '../helpers/antenacercana'
 
 import {antenas} from '../../data/antenas.json';
-import {voronoi} from '../../data/voronoi.json';
-
 //import {celular} from '../../data/celular.json';
 //import {aG2} from '../../data/aG2.json';
 //import {aG3} from '../../data/aG3.json';
@@ -138,7 +136,8 @@ useEffect(() => {
    //var a=kpigeojson(celular)
  // console.log(JSON.stringify(kpigeojson('GEOJSON')))
  // handleKPIDay(kpigeojson('GEOJSON'))
-   
+ //fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+newday);
+    
 },[]);
 useEffect(() => {
   //alert("in "+option)
@@ -370,15 +369,7 @@ return (
 <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
             {SOURCES}
       </Layer>
-      <GeoJSONLayer
-          data={voronoi}
-          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
-          linePaint={{
-            'line-color': 'gray',
-            'line-width': .5
-          }}
-          
-        />   
+     
       <GeoJSONLayer   centro y brillo
           data={KPI2G}
           circleLayout={{ visibility: 'visible' }}

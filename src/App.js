@@ -36,6 +36,10 @@ function App() {
   );
 }
 export default App;
+//IMAGES
+//https://gifmaker.me/
+//https://onlinepngtools.com/convert-png-to-base64
+
 //https://arxiv.org/pdf/1711.10089.pdf
 //https://mapshaper.org/
 
