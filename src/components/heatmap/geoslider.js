@@ -68,11 +68,11 @@ const marks = [
 ];
 
 function valuetext(value) {
-    console.log(value)
+   // console.log(value)
   return `${value}`;
 }
 function handleChange  (event, value){
-    console.log("#"+value[0]+" "+value[1]+"#")
+  //  console.log("#"+value[0]+" "+value[1]+"#")
 };
 
 function valueLabelFormat(value) {

@@ -63,13 +63,13 @@ const f0=antenas.map(a=>{
   
 
   
-console.log(JSON.stringify(features0))
+//console.log(JSON.stringify(features0))
 
    var voronoiPolygons0 = voronoi({
      "type": "FeatureCollection",
      "features": features0}, options);
 
-     console.log(JSON.stringify(voronoiPolygons0))
+     //console.log(JSON.stringify(voronoiPolygons0))
 
   //  var features=[]
   //    const f=voronoiPolygons0.features.map(f=>{  
@@ -86,7 +86,10 @@ export default function Antenas() {
   const classes = useStyles();
 
   const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-  const[KPIcriterio,KPIcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2([])
+  //const[KPIcriterio,KPIcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2([])
+     
+  const[KPIcriterio,KPIcant,KPI2Gcant,KPI3Gcant,KPI4Gcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2([])
+    
   const [data, isLoading, isError , fetchData] = useFetch(""); 
 
   const [zoom, setZoom] = useState(12);

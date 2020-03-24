@@ -1,0 +1,5402 @@
+
+{"kpijson":
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T03:15:38.308Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.4,
+          "rtt": 250,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721636,
+            10.4712699
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T03:26:58.199Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.9,
+          "rtt": 250,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T04:06:03.173Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 3.75,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T04:06:05.162Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 3.75,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T04:18:13.151Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.5,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T04:33:35.357Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 3.75,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T04:41:28.955Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 3.75,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T04:41:30.93Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 3.75,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T04:44:22.81Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 3.75,
+          "rtt": 250,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T04:44:23.124Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.5,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T04:45:37.173Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.5,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T04:45:39.165Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.5,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T07:56:00.528Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 7,
+          "rtt": 250,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721494,
+            10.471318499999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T07:56:02.291Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 7,
+          "rtt": 250,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721494,
+            10.471318499999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T07:59:23.9Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.15,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720894,
+            10.4713484
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T07:59:30.025Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.15,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720913,
+            10.4713545
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T07:59:50.373Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.15,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.872074,
+            10.4713379
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:00:00.779Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.15,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720983,
+            10.4713641
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:00:10.71Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.15,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721035,
+            10.4713664
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:01:11.191Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.15,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721018,
+            10.471366
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:02:56.584Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.15,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721114,
+            10.4713628
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:03:36.917Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.872087,
+            10.4713181
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:03:46.956Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720763,
+            10.4713118
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:04:16.082Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720944,
+            10.471339
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:04:22.068Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720766,
+            10.471312
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:04:32.107Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720858,
+            10.4713186
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:05:23.394Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.85,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:05:25.438Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.85,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:07:53.24Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720933,
+            10.4713375
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:08:03.346Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720931,
+            10.4713372
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:09:48.766Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720892,
+            10.4713315
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:10:39.081Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721059,
+            10.4713458
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:10:49.202Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721057,
+            10.4713454
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:11:50.094Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720736,
+            10.471311
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:12:00.185Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720752,
+            10.4713128
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:12:35.517Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.872096,
+            10.4713396
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:12:45.716Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.872078,
+            10.471317
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:12:55.772Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720741,
+            10.4713112
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:14:31.639Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720798,
+            10.4713164
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:16:22.555Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.15,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720699,
+            10.4713042
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:16:32.726Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.15,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720699,
+            10.4713046
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:19:03.373Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.85,
+          "rtt": 250,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.87207990871043,
+            10.471378106068531
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:26:01.889Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.85,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721581,
+            10.471296299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T08:26:09.882Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.85,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T12:56:08.929Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.85,
+          "rtt": 250,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T13:03:30.131Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 2.9,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.87219089999999,
+            10.4712673
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T13:03:31.783Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 2.9,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.87219089999999,
+            10.4712673
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T14:12:09.018Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.55,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721278,
+            10.4712609
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T14:12:09.981Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.55,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721421,
+            10.4712662
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:27:34.72Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 3.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:27:36.821Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 3.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:30:04.366Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:30:06.327Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:30:59.527Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:31:01.544Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:32:38.89Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.87213109999999,
+            10.4713148
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:32:40.866Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.87213109999999,
+            10.4713148
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:34:03.875Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.87213109999999,
+            10.4713148
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:34:05.831Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.87213109999999,
+            10.4713148
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:34:36.042Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:34:38.075Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 9.7,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:51:17.94Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 4.1,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721407,
+            10.4714219
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:55:51.592Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 4.1,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:55:53.609Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 4.1,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8677679,
+            10.462578299999999
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:58:46.743Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.9,
+          "rtt": 600,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.60096,
+            10.4595456
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T15:58:48.084Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.9,
+          "rtt": 600,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.60096,
+            10.4595456
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:40:08.702Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721459,
+            10.4714047
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:40:41.997Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.872388,
+            10.4715584
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:40:47.583Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8724631,
+            10.4716263
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:40:52.837Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8725364,
+            10.4716925
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:40:58.124Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8725854,
+            10.4717369
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:41:18.014Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8726933,
+            10.4718344
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:41:25.506Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8726968,
+            10.4718826
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:41:46.258Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8728632,
+            10.4720313
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:41:55.773Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8730077,
+            10.4721496
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:42:05.687Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8731092,
+            10.4722668
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:43:22.028Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8730994,
+            10.4723562
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:43:22.745Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8736204,
+            10.47273
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:43:27.514Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8736487,
+            10.4727165
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:44:08.194Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8738716,
+            10.4726709
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:44:13.962Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.873989,
+            10.4724918
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:45:22.593Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8742538,
+            10.4720612
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:45:25.315Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8746027,
+            10.4720253
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:45:29.489Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8746281,
+            10.4720368
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:45:57.096Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8748952,
+            10.4721764
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:46:06.624Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8749319,
+            10.4722525
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:46:36.687Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8747148,
+            10.4726615
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:46:46.784Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8745343,
+            10.4728353
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:46:55.694Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8744835,
+            10.4729249
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:46:58.54Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8744634,
+            10.4730043
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:47:17.974Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8743138,
+            10.4734516
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:47:27.946Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.874216,
+            10.4736073
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:47:30.041Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.874216,
+            10.4736073
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:47:47.955Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.874105,
+            10.473865
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:48:04.606Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8741793,
+            10.4741958
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:48:14.582Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8741111,
+            10.4740823
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:48:29.976Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8741445,
+            10.4737779
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:48:40.297Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8738766,
+            10.4736982
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:48:50.348Z",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8737242,
+            10.4736587
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:48:51.592Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8737242,
+            10.4736587
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:49:16.978Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8727409,
+            10.4730729
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:49:26.933Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8726076,
+            10.472968
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:49:37.568Z",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8725752,
+            10.4729021
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:51:32.665Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 500,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8724453,
+            10.4725263
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:51:34.038Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720433,
+            10.4722189
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:51:44.365Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8716679,
+            10.4718908
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:51:54.367Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8716319,
+            10.4719089
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:52:23.394Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8714826,
+            10.4718291
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:52:24.863Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8714826,
+            10.4718291
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:52:40.117Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.871193,
+            10.471621
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:52:50.075Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8710599,
+            10.4715418
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:52:59.978Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8709351,
+            10.4714484
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:53:10.317Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8708165,
+            10.4713749
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:53:21.4Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.870714,
+            10.4713167
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:53:29.954Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.870715,
+            10.4712938
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:54:16.199Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8705435,
+            10.4711874
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:54:26.462Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8704926,
+            10.4711726
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:54:58.684Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8702797,
+            10.4710902
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:55:08.618Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8702251,
+            10.4710836
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:55:29.336Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8699609,
+            10.4711071
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:55:40.111Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8698724,
+            10.471099
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:56:03.34Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8695855,
+            10.4711072
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:56:14.922Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.45,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8694579,
+            10.4710951
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:57:22.138Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 600,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.868192,
+            10.4711175
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:57:25.244Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8680307,
+            10.4710838
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:57:39.821Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8678776,
+            10.4711032
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:57:49.726Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8678862,
+            10.4709703
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:57:57.745Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8680063,
+            10.4709211
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:58:08.062Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8683239,
+            10.4707291
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:58:22.812Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8693739,
+            10.4701683
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:58:34.818Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8696106,
+            10.4699175
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:58:48.618Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8697795,
+            10.4698213
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:58:55.318Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8701646,
+            10.469646
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:59:06.467Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8704581,
+            10.469492
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T16:59:17.511Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8705479,
+            10.4693466
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:00:51.779Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8705479,
+            10.4693466
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:00:52.476Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8708744,
+            10.469674
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:00:58.124Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8705648,
+            10.4696307
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:01:08.098Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8704902,
+            10.4696007
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:01:58.705Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8702809,
+            10.4695009
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:02:08.524Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8702067,
+            10.4695377
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:02:38.381Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8700734,
+            10.4697045
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:02:48.413Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8700017,
+            10.4697374
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:03:09.688Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8696229,
+            10.4694636
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:03:20.389Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8694979,
+            10.4693231
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:03:29.908Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8694174,
+            10.4691982
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:03:40.197Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8693783,
+            10.469085
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:03:50.452Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8693407,
+            10.4690175
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:04:10.886Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8691271,
+            10.4687815
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:04:28.805Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.868987,
+            10.4685673
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:04:40.362Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8689354,
+            10.4685262
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:04:53.878Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8688019,
+            10.4684804
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:05:04.739Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8688165,
+            10.4684847
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:06:01.039Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.869812,
+            10.4690113
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:06:09.907Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8699818,
+            10.4691123
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:21:10.249Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8726953,
+            10.4729284
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:21:45.358Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8728864,
+            10.4730994
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:21:55.567Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8729251,
+            10.4731296
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:22:25.493Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8730886,
+            10.4733005
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:22:37.347Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8731865,
+            10.4733544
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:22:45.633Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8732957,
+            10.4734036
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:22:55.874Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8733926,
+            10.4734403
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:23:08.414Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8735117,
+            10.4734936
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:23:17.692Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 350,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8736482,
+            10.4735533
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:23:35.451Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8740858,
+            10.4736568
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:23:45.217Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8741519,
+            10.4736669
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:24:33.646Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8743776,
+            10.4736972
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:24:35.916Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 650,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8743776,
+            10.4736972
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:24:53.822Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 450,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8746891,
+            10.474057
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:25:04.176Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8746355,
+            10.4740358
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:25:47.608Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8748294,
+            10.4744232
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:25:59.619Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8749298,
+            10.4745687
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:26:09.686Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.35,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8749579,
+            10.4746541
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:28:30.498Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8745008,
+            10.4749127
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:28:31.161Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8741444,
+            10.4743185
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:28:38.771Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8742529,
+            10.4743043
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:28:47.335Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8743407,
+            10.4742984
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:29:18.309Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8746448,
+            10.4744301
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:29:28.352Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8747352,
+            10.474537
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:29:37.81Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8748107,
+            10.4746262
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:29:48.2Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.874858,
+            10.4746194
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:30:20.32Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8746671,
+            10.4741248
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:30:29.998Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8746123,
+            10.4740114
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:30:42.372Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8745855,
+            10.4739542
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:31:13.448Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8745083,
+            10.4738189
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:31:23.295Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8744707,
+            10.4737656
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:31:39.872Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8744013,
+            10.4735932
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:31:50.007Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8743577,
+            10.4734972
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:32:00.055Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8743155,
+            10.4734372
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:32:36.579Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8745796,
+            10.4730173
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:32:38.265Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8745796,
+            10.4730173
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:32:51.519Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8749067,
+            10.4725796
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:33:01.634Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8750986,
+            10.4722441
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:33:12.915Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 300,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.875133,
+            10.4720021
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:34:53.101Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8740005,
+            10.4724031
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:34:59.573Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8738429,
+            10.4726081
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:35:09.647Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8737986,
+            10.4726534
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:35:29.587Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.873729,
+            10.4728401
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:35:39.68Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8737133,
+            10.4728801
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:36:40.899Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8733781,
+            10.4725253
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:36:42.584Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8733781,
+            10.4725253
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:37:00.908Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8731143,
+            10.47234
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:37:11.665Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8730014,
+            10.4722723
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:37:20.914Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8728974,
+            10.4721941
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:37:35.604Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8727177,
+            10.4720314
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:39:14.178Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720927,
+            10.4713518
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:39:21.328Z",
+          "identification": "",
+          "mobilegeneration": "3G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 0.4,
+          "rtt": 400,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "3G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8720343,
+            10.4712487
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:40:49.769Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 1.65,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721352,
+            10.471366
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T17:41:31.968Z",
+          "identification": "",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 2.95,
+          "rtt": 200,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.8721348,
+            10.471366
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T23:10:25.635Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 7.4,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.87218039999999,
+            10.4712978
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+          "timestamp": "2020-03-20T23:10:27.285Z",
+          "identification": "ppazpurua@gmail.com",
+          "mobilegeneration": "4G",
+          "cellid": 11111,
+          "cidreported": 11111,
+          "downlink": 7.4,
+          "rtt": 150,
+          "mcc": 734,
+          "mnc": 2,
+          "signaltype": "4G",
+          "signalstrength": 27,
+          "rsrq": -11,
+          "rsrp": -89
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.87218039999999,
+            10.4712978
+          ]
+        }
+      }
+    ]
+  }
+}

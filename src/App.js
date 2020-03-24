@@ -51,6 +51,8 @@ export default App;
 //https://codesandbox.io/s/mzzq3yqjqj apexcharts
 //https://codepen.io/junedchhipa/pen/YJQKOy
 //https://codepen.io/apexcharts/pen/pxZKqL
+//https://www.youtube.com/watch?v=JxEyXOlSgV0 apexcharts
+
 
 //https://www.youtube.com/watch?v=f687hBjwFcM&t=4706s
 //https://www.youtube.com/playlist?list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM

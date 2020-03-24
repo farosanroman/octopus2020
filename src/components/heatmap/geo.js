@@ -7,9 +7,13 @@ import DatePicker from './datepicker';
 import GeoCalendar from './geocalendar';
 import GeoSlider from './geoslider';
 import BarStack2 from './barstack2';
+import GeoBarStack from './geobarstack';
 import Histogram from './histogram';
 
-import Dispositivos from './geodispositivos';
+import Title from '../layout/title'
+import Total from '../layout/total'
+
+import GeoDispositivos from './geodispositivos';
 import 'date-fns';
 import clsx from 'clsx';
 import DateFnsUtils from '@date-io/date-fns';
@@ -80,12 +84,17 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     },
     paper: {
       padding: theme.spacing(0),
-      textAlign: 'center',
+      textAlign: 'left',
       color: theme.palette.text.secondary
     },
     fixedHeight: {
       height: 200,
-    },
+    }
+    ,
+  
+   fixedHeight2: {
+    height: 120,
+  },
   }));
 
   export default function Geo() {
@@ -93,6 +102,7 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
 //   alert(JSON.stringify(antfl))
     const classes = useStyles();
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+    const fixedHeightPaper2 = clsx(classes.paper, classes.fixedHeight2);
     const { state, dispatch } = React.useContext(Application);
     const [zoom, setZoom] = useState(12);
     const [center, setCenter] = useState([-66.8726,10.4713]);
@@ -110,7 +120,7 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     //const[criterio0,kpicant0,kpi2G0,kpi3G0,kpi4G0, handleKpiFiltro0,handleKpiDay0]=useKpi(celular)
    //const[criterio,kpicant,kpiRuta,kpi2G,kpi3G,kpi4G,handleKpiDay,handleKpiCriterio]=useKpiGeoJson({"type":"FeatureCollection","features":[]})
    
-   const[KPIcriterio,KPIcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2([])
+   const[KPIcriterio,KPIcant,KPI2Gcant,KPI3Gcant,KPI4Gcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2({"type":"FeatureCollection","features":[] })
     
     const[dummy,setDummy]=useState({"G2G":"dummy"})
     
@@ -124,21 +134,14 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     const[yellow,setYellow]=useState()
     const[green,setGreen]=useState()
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-    const[dia, setDia]=useState('DIA')
+    const[kpiday, setKpiday]=useState({"type":"FeatureCollection","features":[] })
     const [data, isLoading, isError , fetchData] = useFetch(""); 
 
-console.log("GEO")
+//console.log("GEO")
     const handleDateChange = date => {
       setSelectedDate(date);
     };
 
-useEffect(() => {
-   //var a=kpigeojson(celular)
- // console.log(JSON.stringify(kpigeojson('GEOJSON')))
- // handleKPIDay(kpigeojson('GEOJSON'))
- //fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+newday);
-    
-},[]);
 useEffect(() => {
   //alert("in "+option)
  //alert(JSON.stringify(data))
@@ -149,12 +152,27 @@ useEffect(() => {
   if ((data!=undefined)&&(!isLoading))      
   {
   // alert("fetch"+JSON.stringify(data))
-   
-  handleKPIDay(data)
+  //console.log("data useFetch hook")
+  //console.log(data)
+  if (JSON.stringify(data)!="[]"){
+  handleKPIDay(data )
+  }
+  
    setFlagCircular(false)
    
   }
 },[data,isLoading]);
+useEffect(() => {
+  //var a=kpigeojson(celular)
+// console.log(JSON.stringify(kpigeojson('GEOJSON')))
+// handleKPIDay(kpigeojson('GEOJSON'))
+//fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+newday);
+  // var a=new Date()
+  // alert(JSON.stringify(a)+" "+a.getHours()+" "+a.getTime())
+//alert("[KPI]"+" "+JSON.stringify(KPI))
+setKpiday(data)  
+},[KPI]);
+
 // useEffect(() => {
 //   setFlagCircular(true)
 //  alert("get otro :"+dia)
@@ -198,6 +216,8 @@ useEffect(() => {
     //newday=newfecha[1]+"/"+newfecha[2]*1+"/"+newfecha[0]
     ///alert(newday)
     //handleKPIFiltroDay(newday)
+    //alert(newday)
+    setFecha(newday)
     fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+newday);
     
     //handleKPIDay(newday)
@@ -265,7 +285,32 @@ const SOURCES=antenas.map((nodo,index)=>{
 return (
 <Fragment>
     <div className={classes.root}>
+
+    <Grid container spacing={3}>
+      <Grid item xs={12} sm={6} md={3}>
+      <Paper className={fixedHeightPaper2}>
+           <Total titulo={'Messages'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={KPIcant} leyenda={'Total del Dia'}/>
+      </Paper>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+      <Paper className={fixedHeightPaper2}>
+          <Total titulo={'2G Signaltype'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={KPI2Gcant} leyenda={'Dispositivos Activos'}/>
+      </Paper>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+      <Paper className={fixedHeightPaper2}>
+          <Total titulo={'3G Signaltype'}  total={KPI3Gcant}leyenda={'Dispositivos Activos'}/>
+      </Paper>
    
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+      <Paper className={fixedHeightPaper2}>
+          <Total titulo={'4G Signaltype'}   total={KPI4Gcant} leyenda={'Dispositivos Activos'}/>
+      </Paper>
+   
+      </Grid>
+      
+      </Grid>   
     <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={12} lg={12}>
@@ -278,7 +323,7 @@ return (
             <Grid item xs={12} md={6} lg={6}>
               
               <Paper className={fixedHeightPaper}>
-              <Dispositivos titulo={'Actividad de Dispositivos'}  />
+              <GeoDispositivos titulo={'Actividad de Dispositivos'} kkppii={KPI} fecha={fecha} />
                </Paper>
             </Grid>
 
@@ -286,13 +331,14 @@ return (
             <Grid item xs={12} md={6} lg={6}>
               
               <Paper className={fixedHeightPaper}>
-              <BarStack2 titulo={'Sygnal Type'}  />
+              <GeoBarStack titulo={'Sygnal Type'}  kpi2Gcant={KPI2Gcant} kpi3Gcant={KPI3Gcant} kpi4Gcant={KPI4Gcant} />
+             
                </Paper>
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               
               <Paper className={fixedHeightPaper}>
-              <Histogram titulo={'Histogram RSRP'}  />
+              <Histogram titulo={'Histogram RSRP'}  kkppii={KPI} fecha={fecha} />
                </Paper>
             </Grid>
 

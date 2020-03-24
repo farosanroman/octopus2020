@@ -6,21 +6,28 @@ import { useState ,useEffect} from "react";
     const [kpi, setKpi] = useState(initialKPI);
   const [kpifiltro, setKpiFiltro] = useState(initialKPI);
   const [kpicant,setKpiCant]=useState(0)
+  const [kpi2Gcant,setKpi2GCant]=useState(0)
+  const [kpi3Gcant,setKpi3GCant]=useState(0)
+  const [kpi4Gcant,setKpi4GCant]=useState(0)
+ 
   const [kpi2G, setKpi2G] = useState({"type":"FeatureCollection","features":[] });
   const [kpi3G, setKpi3G] = useState({"type":"FeatureCollection","features":[] });
   const [kpi4G, setKpi4G] = useState({"type":"FeatureCollection","features":[] });
   const [kpiRuta, setKpiRuta] = useState({"type":"FeatureCollection","features":[] });
-
+ 
   const[criterio,setCriterio]=useState({"G2G":true,"G3G":true,"G4G":true})
   //histograma de RSRP RSRQ
   useEffect(() => {
+    //alert("pki "+JSON.stringify(kpi))
     
-    var f2=[]
-    var f3=[]
-    var f4=[]
+    var f2G=[]
+    var f3G=[]
+    var f4G=[]
     var ru=[]
-
-    //alert("pki "+JSON.stringify(kpi.features))
+    var cant=0
+    var cant2G=0
+    var cant3G=0
+    var cant4G=0
      if (kpi.features!=undefined){
       var f = kpi.features.map((feature, i) => {
        // alert("pki "+JSON.stringify(feature))
@@ -28,16 +35,19 @@ import { useState ,useEffect} from "react";
      //     alert(feature.properties.mobilegeneration)
      //console.log(i+" "+JSON.stringify(criterio))
         if ((feature.properties.mobilegeneration=="2G")&&(criterio.G2G)){ 
-           f2.push(feature)
+           f2G.push(feature)
+           cant2G+=1
         }
         if ((feature.properties.mobilegeneration=="3G")&&(criterio.G3G)){ 
-            f3.push(feature)
+            f3G.push(feature)
+            cant3G+=1
          }
          if ((feature.properties.mobilegeneration=="4G")&&(criterio.G4G)){ 
-            f4.push(feature)
+            f4G.push(feature)
+            cant4G+=1
          }
           ru.push(feature.geometry.coordinates)
-          
+          cant+=1;
        });
        
         setKpiRuta({"type":"FeatureCollection","features":
@@ -56,17 +66,20 @@ import { useState ,useEffect} from "react";
 
         })
         //console.log(JSON.stringify(ru))
-       setKpi2G({"type":"FeatureCollection","features":f2 });
-       setKpi3G({"type":"FeatureCollection","features":f3});;
-       setKpi4G({"type":"FeatureCollection","features":f4});
-       setKpiCant(kpi.length)
-       
+       setKpi2G({"type":"FeatureCollection","features":f2G });
+       setKpi3G({"type":"FeatureCollection","features":f3G});;
+       setKpi4G({"type":"FeatureCollection","features":f4G});
+       setKpiCant(cant)
+       setKpi2GCant(cant2G)
+       setKpi3GCant(cant3G)
+       setKpi4GCant(cant4G)
     }
+   // console.log(JSON.stringify(kpi))
   },[kpi,criterio]);
   const handleKpiDay = async (kpi) => {
      //ACTUALIZA los kp0 INICIALIZACION
       //console.log(JSON.stringify(kpi))
-      // alert("handleKpiDay"+kpi.length)
+      // alert("handleKpiDay"+JSON.stringify(kpi))
    setKpi0(kpi)
    setKpi(kpi)
 }
@@ -86,7 +99,8 @@ const handleKpiCriterio = async (cri) => {
  }
 
   return [
-criterio, kpicant, kpiRuta ,kpi, kpi2G,kpi3G,kpi4G, handleKpiDay,handleKpiCriterio,handleKpiFiltroDay
+criterio, kpicant,kpi2Gcant,kpi3Gcant,kpi4Gcant, kpiRuta ,kpi, kpi2G,kpi3G,kpi4G, 
+handleKpiDay,handleKpiCriterio,handleKpiFiltroDay
     
   ];
 };

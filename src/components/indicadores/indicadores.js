@@ -6,11 +6,12 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import Title from '../layout/title'
 import Total from '../layout/total'
 import BarStack from './barstack'
 import BarHorizontal from './barhorizontal'
 import GeoCalendar from '../heatmap/geocalendar';
-import Title from '../layout/title'
+
 import Voronoi from './voronoi.js'
 //mport Title from '../dashboard/title';
 //import FaroPieChart from '../indicadores/faropiechart';

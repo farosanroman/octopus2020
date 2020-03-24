@@ -436,7 +436,9 @@ export default function Dashboard() {
         
         {(layout==100)&&     
       <div className={classes.root}>
+           <Container maxWidth="lg" className={classes.container}>
     <Indicadores />
+    </Container>
   </div>
 }
         {(layout==0)&&

@@ -170,68 +170,66 @@ export default function GeoPostKpi() {
 
 //////////////////////////////////////////////////////////////
    useEffect(() => {
-    var from = point(latlng);
-    var to = point([stategeo.longitude*1.0,stategeo.latitude*1.0]);
-    var option = {units: 'kilometers'};
-    var dist = distance(from, to, option);
-    dist=Math.round(dist*1000)//mts
-    setHipotenusa(dist)
+     if (onlineStatus==true){
+         var from = point(latlng);
+        var to = point([stategeo.longitude*1.0,stategeo.latitude*1.0]);
+        var option = {units: 'kilometers'};
+        var dist = distance(from, to, option);
+        dist=Math.round(dist*1000)//mts
+        setHipotenusa(dist)
 
-   if ((stategeo.longitude!=null)&&(onlineStatus)&&(hipotenusa>10)){
-    setLatLng([stategeo.longitude,stategeo.latitude]) 
-    var newkpi= {
-      "type": "Feature",
-      "properties": {
-        "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
-        "timestamp": new Date(),
-        "identification":state.login.email,
-        "mobilegeneration": connection.effectiveType.toUpperCase(),
-        "cellid": 11111,
-        "cidreported": 11111,
-        "downlink":connection.downlink,
-        "rtt":connection.rtt,
-        "mcc": 734,
-        "mnc": 2,
-        "signaltype":connection.effectiveType.toUpperCase(),
-        "signalstrength": 27,
-        "rsrq": -11,
-        "rsrp": -89,
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          stategeo.longitude,
-          stategeo.latitude
-     
-        ]
-      }
-    }
+       if ((stategeo.longitude!=null)&&(onlineStatus)&&(hipotenusa>10)){
+           setLatLng([stategeo.longitude,stategeo.latitude]) 
+           var newkpi= {
+           "type": "Feature",
+           "properties": {
+           "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+           "timestamp": new Date(),
+           "identification":state.login.email,
+           "mobilegeneration": connection.effectiveType.toUpperCase(),
+           "cellid": 11111,
+           "cidreported": 11111,
+           "downlink":connection.downlink,
+           "rtt":connection.rtt,
+           "mcc": 734,
+           "mnc": 2,
+           "signaltype":connection.effectiveType.toUpperCase(),
+           "signalstrength": 27,
+           "rsrq": -11,
+           "rsrp": -89,
+             },
+               "geometry": {
+               "type": "Point",
+               "coordinates": [stategeo.longitude, stategeo.latitude]
+              }
+           }
     
-      var newruta=posruta
-      newruta.features.push(newkpi)
+           var newruta=posruta
+           newruta.features.push(newkpi)
       
-      var newlinea=linearuta
-      newlinea.features[0].geometry.coordinates.push([
-        stategeo.longitude,
-        stategeo.latitude
-      ])
-    setPos({
-      "type": "FeatureCollection",
-      "features": [
-            newkpi  
-      ]})
-      console.log("newrkpi")  
-      console.log(JSON.stringify(newkpi))
-      console.log("newruta")
-      console.log(JSON.stringify(newruta))
-      console.log("newline")
-      console.log(JSON.stringify(newlinea))
+           var newlinea=linearuta
+           newlinea.features[0].geometry.coordinates.push([
+              stategeo.longitude,
+              stategeo.latitude
+            ])
+           setPos({
+                "type": "FeatureCollection",
+                "features": [
+                newkpi  
+           ]})
+           console.log("newrkpi")  
+           console.log(JSON.stringify(newkpi))
+           console.log("newruta")
+           console.log(JSON.stringify(newruta))
+           console.log("newline")
+           console.log(JSON.stringify(newlinea))
  
-      setPosRuta(newruta)
-      setLatLng([ stategeo.longitude,stategeo.latitude])
-      setLineaRuta(newlinea)
-      setKpi(newkpi)
-    }
+          setPosRuta(newruta)
+          setLatLng([ stategeo.longitude,stategeo.latitude])
+          setLineaRuta(newlinea)
+          setKpi(newkpi)
+       }
+  }
 },[stategeo.timestamp,connection.effectiveType,onlineStatus]);
 ///////////////////////////////////////
 // useEffect(() => {
@@ -243,11 +241,13 @@ export default function GeoPostKpi() {
 // }, []);
 useEffect(() => {
  // alert(JSON.stringify(kpi))
-  if ((kpi.geometry.coordinates[0]!=null)&&(kpi.geometry.coordinates[0]<0)){
+ if (onlineStatus==true){    
+    if ((kpi.geometry.coordinates[0]!=null)&&(kpi.geometry.coordinates[0]<0)){
    // alert("post"+JSON.stringify(kpi))
-     setFlagCircular(true)
-     postData("https://octopustestingfunctions.azurewebsites.net/api/PostKPI?code=L4A3rCSSFFI5lvQfBBK2yCWG1Hr4ZaHZahfSoISNpKSlIiQ5J3NySA==",kpi)
-  }
+        setFlagCircular(true)
+        postData("https://octopustestingfunctions.azurewebsites.net/api/PostKPI?code=L4A3rCSSFFI5lvQfBBK2yCWG1Hr4ZaHZahfSoISNpKSlIiQ5J3NySA==",kpi)
+    }
+}
 },[kpi]);
 
 useEffect(() => {
