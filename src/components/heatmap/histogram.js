@@ -42,7 +42,7 @@ export default function Histogram(props) {
     }
     setCategorias(categorias)
     setData(data)
-    //console.log(JSON.stringify(rtt))
+    console.log(JSON.stringify(rtt))
      },[props.kkppii]);
   return (
     <React.Fragment>

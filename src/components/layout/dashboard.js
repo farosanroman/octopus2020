@@ -45,7 +45,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 import Geo from         '../heatmap/geo';
 import GeoFences from         '../heatmap/geofences';
 import GeoPostKpi from         '../postkpi/geopostkpi';
-import Modelog from     '../heatmap/modelog'
+import Modelog from     '../antenas/modelog'
 import Dispositivos from     './dispositivos'
 
 import GeoCalendar from '../heatmap/geocalendar';
@@ -56,7 +56,7 @@ import Chart1 from '../charts/chart1';
 import { mainListItems, secondaryListItems } from './listitems';
 import MainMenu from './mainmenu'
 import Indicadores from '../indicadores/indicadores'
-import Antenas from './antenas'
+import Antenas from '../antenas/antenas'
 import {useFetch} from '../hooks/usefetch';
 import {kpigeojson} from '../helpers/kpigeojson';
 import {antenas} from '../../data/antenas.json';

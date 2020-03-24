@@ -205,12 +205,12 @@ function onZoomEnd (map, event)  {
           data={voronoigeojson}
           fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
           linePaint={{
-            'line-color': 'grey',
-            'line-width': .7
+            'line-color': ' #FF00FF',
+            'line-width': .5
           }}
           
         />   
-          <GeoJSONLayer   centro y brillo
+          <GeoJSONLayer   
           data={KPI2G}
           circleLayout={{ visibility: 'visible' }}
          circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Lime' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         

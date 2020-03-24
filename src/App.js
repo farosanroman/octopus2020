@@ -52,6 +52,7 @@ export default App;
 //https://codepen.io/junedchhipa/pen/YJQKOy
 //https://codepen.io/apexcharts/pen/pxZKqL
 //https://www.youtube.com/watch?v=JxEyXOlSgV0 apexcharts
+//https://codepen.io/junedchhipa/pen/YJQKOy compuesto apexcharts
 
 
 //https://www.youtube.com/watch?v=f687hBjwFcM&t=4706s
