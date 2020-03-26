@@ -6,7 +6,7 @@ import {useFetch} from '../hooks/usefetch';
 
 import  MapGL,{Layer,Feature,ZoomControl,GeoJSONLayer,ScaleControl} from 'react-mapbox-gl';
 
-import {useKpiGeoJson2} from '../hooks/usekpigeojson2'
+import {useKpiGeoJson} from '../hooks/usekpigeojson'
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {voronoigeojson} from '../../data/voronoigeojson.json';
@@ -19,7 +19,7 @@ var linearoja={"type":"FeatureCollection","features":[{"type":"Feature","propert
 const style={   Paper:{padding:1,marginTop:1,marginBottom:1}}
 const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pzIn0.V8cqmZH6dFIcxtKoaWcZZw"
   const Map = MapGL({accessToken: TOKEN });
-  const mapStyle = {  flex: 1,  height: "75vh",width: "100%"};
+  const mapStyle = {  flex: 1,  height: "50vh",width: "100%"};
   
  
 // import { greatCircle, point } from '@turf/turf';
@@ -46,7 +46,7 @@ var features0=[]
 const f0=antenas.map(a=>{  
   //sources proveedores de enlaces   
  // if ((a.lat>10.43114)&&(a.lat<10.52)&&(a.lon<-66.934)&&(a.lon>-66.805)){
-    console.log("<<<<")
+   // console.log("<<<<")
    features0.push(    {
     "type": "Feature",
     "properties": {},
@@ -88,7 +88,7 @@ export default function Antenas() {
   const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
   //const[KPIcriterio,KPIcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2([])
      
-  const[KPIcriterio,KPIcant,KPI2Gcant,KPI3Gcant,KPI4Gcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2([])
+  const[KPIcriterio,KPIcant,KPI2Gcant,KPI3Gcant,KPI4Gcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson([])
     
   const [data, isLoading, isError , fetchData] = useFetch(""); 
 
@@ -180,9 +180,9 @@ function onZoomEnd (map, event)  {
    //style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
    // style="mapbox://styles/mapbox/light-v9"
-   center={[-66.873,10.4621]} 
+   center={[-66.900,10.4621]} 
    //center={[longitude,latitude]} 
-   zoom={[14]}
+   zoom={[12]}
    //center={[state.position.longitude,state.position.latitude]} 
    //center={[state.position.latitude,state.position.longitude]} 
    // zoom={[zoom]}
@@ -193,7 +193,7 @@ function onZoomEnd (map, event)  {
   onZoomEnd={onZoomEnd}
 //onClick={this._onClickMap}  
 //<ZoomControl onControlClick={onControlClick}/>
-
+// azulito #58D3F7  #FF00FF
 > 
 <ZoomControl  onControlClick={onZoom}/>
 <ScaleControl />
@@ -205,8 +205,8 @@ function onZoomEnd (map, event)  {
           data={voronoigeojson}
           fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
           linePaint={{
-            'line-color': ' #FF00FF',
-            'line-width': .5
+            'line-color': '#58D3F7',
+            'line-width': .8
           }}
           
         />   

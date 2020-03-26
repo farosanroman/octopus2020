@@ -23,6 +23,12 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 //import { Application } from '../../App';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -47,9 +53,9 @@ import {useFetch} from '../hooks/usefetch';
 //import {GeoAntenas} from '../helpers/geoantenas'
 import {kpigeojson} from '../helpers/kpigeojson';
 import {GeoKpi} from '../hooks/geokpi'
-import {useKpi} from '../hooks/usekpi'
+import {useKpi} from '../hooks/usekpiBORRAR'
+//import {useKpiGeoJson} from '../hooks/usekpigeojsonBORRAR'
 import {useKpiGeoJson} from '../hooks/usekpigeojson'
-import {useKpiGeoJson2} from '../hooks/usekpigeojson2'
 //import {antenacercana} from '../helpers/antenacercana'
 
 import {antenas} from '../../data/antenas.json';
@@ -74,7 +80,7 @@ var linearoja={"type":"FeatureCollection","features":[{"type":"Feature","propert
 const style={   Paper:{padding:1,marginTop:1,marginBottom:1}}
 const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pzIn0.V8cqmZH6dFIcxtKoaWcZZw"
   const Map = MapGL({accessToken: TOKEN });
-  const mapStyle = {  flex: 1,  height: "75vh",width: "100%"};
+  const mapStyle = {  flex: 1,  height: "50vh",width: "100%"};
   
   
   const useStyles = makeStyles(theme => ({
@@ -97,7 +103,7 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
   },
   }));
 
-  export default function Geo() {
+  export default function Geo(props) {
   
 //   alert(JSON.stringify(antfl))
     const classes = useStyles();
@@ -120,7 +126,7 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     //const[criterio0,kpicant0,kpi2G0,kpi3G0,kpi4G0, handleKpiFiltro0,handleKpiDay0]=useKpi(celular)
    //const[criterio,kpicant,kpiRuta,kpi2G,kpi3G,kpi4G,handleKpiDay,handleKpiCriterio]=useKpiGeoJson({"type":"FeatureCollection","features":[]})
    
-   const[KPIcriterio,KPIcant,KPI2Gcant,KPI3Gcant,KPI4Gcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2({"type":"FeatureCollection","features":[] })
+   const[KPIcriterio,KPIcant,KPI2Gcant,KPI3Gcant,KPI4Gcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson({"type":"FeatureCollection","features":[] })
     
     const[dummy,setDummy]=useState({"G2G":"dummy"})
     
@@ -141,6 +147,15 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     const handleDateChange = date => {
       setSelectedDate(date);
     };
+    useEffect(() => {
+      //alert(antenas.length)
+  },[]);
+useEffect(() => {
+    console.log("GEO useEffect [] "+props.filtro2GA+" "+props.filtro3GA+" "+props.filtro4GA)
+    setchecked2G(props.filtro2GA)
+    setchecked3G(props.filtro3GA)
+    setchecked4G(props.filtro4GA)
+},[props.filtro2GA,props.filtro3GA,props.filtro4GA]);
 
 useEffect(() => {
   //alert("in "+option)
@@ -196,19 +211,19 @@ useEffect(() => {
 //alert("[]")
 },[checked2G,checked3G,checked4G]);
 
-   const handleSwitchChange = name => event => {
-//var ff=criterio;
-    if (name=="G2G"){
-      setchecked2G(event.target.checked)
-  }
-    if (name=="G3G"){
-      setchecked3G(event.target.checked)
-}
-    if (name=="G4G"){
-      setchecked4G(event.target.checked)
-  }
+// const handleSwitchChange = name => event => {
+// //var ff=criterio;
+//     if (name=="G2G"){
+//       setchecked2G(event.target.checked)
+//   }
+//     if (name=="G3G"){
+//       setchecked3G(event.target.checked)
+// }
+//     if (name=="G4G"){
+//       setchecked4G(event.target.checked)
+//   }
  
-  };
+//   };
 
   function clickDay (newday)  {
     //alert("clickDay "+newday)
@@ -285,7 +300,29 @@ const SOURCES=antenas.map((nodo,index)=>{
 return (
 <Fragment>
     <div className={classes.root}>
+    <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>Calendario de Actividades</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+        <Grid container spacing={3}>
+            {/* Chart */}
+            <Grid item xs={12} md={12} lg={12}>
+              
+              <Paper className={fixedHeightPaper}>
 
+               <GeoCalendar days={state.days} clickday={clickDay} />
+              </Paper>
+            </Grid>
+         </Grid>
+        </ExpansionPanelDetails>
+
+      </ExpansionPanel>
+    {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress} />}
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
@@ -313,12 +350,7 @@ return (
       </Grid>   
     <Grid container spacing={3}>
             {/* Chart */}
-            <Grid item xs={12} md={12} lg={12}>
-              
-              <Paper className={fixedHeightPaper}>
-               <GeoCalendar days={state.days} clickday={clickDay} />
-              </Paper>
-            </Grid>
+            
 
             <Grid item xs={12} md={6} lg={6}>
               
@@ -338,47 +370,14 @@ return (
             <Grid item xs={12} md={6} lg={6}>
               
               <Paper className={fixedHeightPaper}>
-              <Histogram titulo={'Histogram RSRP'}  kkppii={KPI} fecha={fecha} />
+              <Histogram titulo={'Histogram Round Trip Time'}  kkppii={KPI} fecha={fecha} />
                </Paper>
             </Grid>
 
             <Grid item xs={12} md={6} lg={6}>
             <Paper >
 
-{flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress} />}
-    {/* <Button  variant="contained" color="primary"  startIcon={<RefreshIcon />} onClick={() => buttondiaclick()}>      
-    {dia}({kpicant})          
-                  </Button> */}
-    <FormControlLabel
-        control={<Switch
-          checked={checked2G}
-          onChange={handleSwitchChange('G2G')}
-          //value="checkedB"
-          color="primary"
-          inputProps={{ 'aria-label': 'primary checkbox' }}
-        />}
-        label="2G"
-      />
-       <FormControlLabel
-        control={<Switch
-          checked={checked3G}
-          onChange={handleSwitchChange('G3G')}
-          //value="checkedB"
-          color="primary"
-          inputProps={{ 'aria-label': 'primary checkbox' }}
-        />}
-        label="3G"
-      />
-       <FormControlLabel
-        control={<Switch
-          checked={checked4G}
-          onChange={handleSwitchChange('G4G')}
-          //value="checkedB"
-          color="primary"
-          inputProps={{ 'aria-label': 'primary checkbox' }}
-        />}
-        label="4G"
-      />
+
       <Divider />
       <GeoSlider />
     {/* <Button  variant="contained" color="primary"  onClick={() => buttonclick()}>
@@ -388,8 +387,13 @@ return (
 </Paper>
 </Grid>
 </Grid>
-{/* //https://res.cloudinary.com/dzc4dgpyi/image/upload/v1560300064/Torrecitas-02.png */}
-<Map       
+
+<Grid container spacing={3}>
+
+<Grid item xs={12} sm={12} md={12}>
+      <Paper className={fixedHeightPaper}>
+      <Title>{'Distribucion Geoespacial'}</Title>
+      <Map       
    //style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
    // style="mapbox://styles/mapbox/light-v9"
@@ -471,163 +475,6 @@ return (
           }}
           
         />
-        {/*
-   <GeoJSONLayer
-          data={kpi2G0}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': '#3BB9FF','circle-radius': 4}}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'dodgerblue'
-          }}
-          />
-
-<GeoJSONLayer
-          data={kpi3G0}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'white','circle-radius': 9,'circle-opacity': 1,'circle-stroke-color': 'gray' , 'circle-stroke-width': 4,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
-          />
-      <GeoJSONLayer
-          data={kpi3G0}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': '#B041FF','circle-radius': 4}}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'purple'
-          }}
-          />
-       <GeoJSONLayer
-          data={kpi4G0}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'white','circle-radius': 9,'circle-opacity': 1,'circle-stroke-color': 'gray' , 'circle-stroke-width': 4,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
-          />
-      <GeoJSONLayer
-          data={kpi4G0}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'crimson','circle-radius': 4}}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'red'
-          }}
-          />
-   
-
-
-      <GeoJSONLayer
-          data={kpi2G}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': '#3BB9FF','circle-radius': 4}}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'dodgerblue'
-          }}
-          />
-
-<GeoJSONLayer
-          data={kpi3G}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'white','circle-radius': 9,'circle-opacity': 1,'circle-stroke-color': 'gray' , 'circle-stroke-width': 4,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
-          />
-      <GeoJSONLayer
-          data={kpi3G}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': '#B041FF','circle-radius': 4}}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'purple'
-          }}
-          />
-       <GeoJSONLayer
-          data={kpi4G}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'white','circle-radius': 9,'circle-opacity': 1,'circle-stroke-color': 'gray' , 'circle-stroke-width': 4,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
-          />
-      <GeoJSONLayer
-          data={kpi4G}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'crimson','circle-radius': 4}}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'red'
-          }}
-          />
-         */}
 
 <GeoJSONLayer
           data={tres}
@@ -652,6 +499,11 @@ return (
           />
          
 </Map>
+     
+      </Paper>
+ </Grid >
+ </Grid > 
+{/* //https://res.cloudinary.com/dzc4dgpyi/image/upload/v1560300064/Torrecitas-02.png */}
 
 
         </div>

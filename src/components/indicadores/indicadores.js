@@ -176,7 +176,7 @@ export default function Indicadores() {
       <Paper className={fixedHeightPaper}>
       <Title>{'Actividad'}</Title>
       <Voronoi />
-      <GeoCalendar days={state.days} clickday={clickDay} />
+      {/* <GeoCalendar days={state.days} clickday={clickDay} /> */}
 
       </Paper>
       </Grid>

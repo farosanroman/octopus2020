@@ -18,18 +18,14 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 
+
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SignalCellular3BarIcon from '@material-ui/icons/SignalCellular3Bar';
 
 
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import Brightness5Icon from '@material-ui/icons/Brightness5';
+
 import TuneIcon from '@material-ui/icons/Tune';
 
 import Switch from '@material-ui/core/Switch';
@@ -48,11 +44,7 @@ import GeoPostKpi from         '../postkpi/geopostkpi';
 import Modelog from     '../antenas/modelog'
 import Dispositivos from     './dispositivos'
 
-import GeoCalendar from '../heatmap/geocalendar';
-import GeoBar from '../heatmap/geobar';
-import GeoPie from '../heatmap/geopie';
-import ChartDayPki from '../heatmap/chartdaypki';
-import Chart1 from '../charts/chart1';
+
 import { mainListItems, secondaryListItems } from './listitems';
 import MainMenu from './mainmenu'
 import Indicadores from '../indicadores/indicadores'
@@ -173,6 +165,9 @@ export default function Dashboard() {
     right: false,
   });
   const [checked, setChecked] = React.useState(false);
+  const [checked2GA, setChecked2GA] = React.useState(true);
+  const [checked3GA, setChecked3GA] = React.useState(true);
+  const [checked4GA, setChecked4GA] = React.useState(true);
 
   const [value, setValue] = React.useState('female');
   const [dataDays, isLoadingDays, isErrorDays , fetchDataDays] = useFetch("https://octopustestingfunctions.azurewebsites.net/api/GetGroupByDatesKPICaracas?code=F3Rb8pR03YSXi0fPEtprJ6GHQgEO5VLnc3aF6tvv/9pccdpaXSFwhg=="); 
@@ -212,7 +207,20 @@ export default function Dashboard() {
   const handleChange = event => {
     setValue(event.target.value);
   };
-
+  const toggleCheckedA =option=>event=> {
+   // alert(event.target.checked)
+    if (option=="2G"){
+    setChecked2GA(prev => !prev);
+    }
+    if (option=="3G"){
+      setChecked3GA(prev => !prev);
+      }
+      if (option=="4G"){
+        setChecked4GA(prev => !prev);
+        }
+   // alert(event.target.value)
+   // setChecked2GA(prev => !prev);
+  };
   const toggleChecked = () => {
     setChecked(prev => !prev);
   };
@@ -273,19 +281,22 @@ export default function Dashboard() {
               </Grid>
             <Grid item xs={6} md={6} lg={6}>
       <FormControlLabel
-        control={<Switch size="normal" checked={checked} onChange={toggleChecked} />}
+        control={<Switch color="primary" size="normal" checked={checked2GA} onChange={toggleCheckedA("2G")} />}
+        
         label="2G"
       />
       </Grid>
       <Grid item xs={6} md={6} lg={6}>
       <FormControlLabel
         control={<Switch size="normal" checked={checked} onChange={toggleChecked} />}
+        
         label="2G"
       />
    </Grid>
    <Grid item xs={6} md={6} lg={6}>
       <FormControlLabel
-        control={<Switch size="normal" checked={checked} onChange={toggleChecked} />}
+        control={<Switch  color="primary"size="normal" checked={checked3GA} onChange={toggleCheckedA("3G")} />}
+       
         label="3G"
       />
       </Grid>
@@ -297,7 +308,8 @@ export default function Dashboard() {
    </Grid>
    <Grid item xs={6} md={6} lg={6}>
       <FormControlLabel
-        control={<Switch size="normal" checked={checked} onChange={toggleChecked} />}
+        control={<Switch  color="primary" size="normal" checked={checked4GA} onChange={toggleCheckedA("4G")} />}
+       
         label="4G"
       />
       </Grid>
@@ -346,7 +358,7 @@ export default function Dashboard() {
           label="RSSI"
           labelPlacement="end"
         />
-<FormControlLabel
+       <FormControlLabel
           value="end"
           control={<Radio color="primary" />}
           label="SNR"
@@ -444,14 +456,8 @@ export default function Dashboard() {
         {(layout==0)&&
         <Container maxWidth="lg" className={classes.container}>
          
-          <Grid container spacing={3}>
-            {/* Chart */}
-            {/* Recent Orders */}
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                 <Geo />
-              </Paper>
-            </Grid>
+          
+                 <Geo filtro2GA={checked2GA} filtro3GA={checked3GA} filtro4GA={checked4GA} />
             {/* <Grid item xs={12} md={6} lg={6}>
               <Paper className={fixedHeightPaper}>
                <GeoBar />
@@ -473,7 +479,7 @@ export default function Dashboard() {
                  <ChartDayPki />   
               </Paper>
             </Grid> */}
-          </Grid>
+          
           <Box pt={4}>
             <Copyright />
           </Box>

@@ -25,7 +25,7 @@ const useStyles = makeStyles({
         enabled: false
       },
       xaxis: {
-        categories: ['2G', '3G', '4G' ],
+        categories: ['G2', 'G3', 'G4' ],
       },
       colors: [ '#3BB9FF','#B041FF', '#990000', '#000080'],
       };
@@ -38,15 +38,15 @@ const useStyles = makeStyles({
      var  sss=
         [
             {
-              name: "2G",
+              name: "G2",
               data: [32]
             },
             {
-              name: "3G",
+              name: "G3",
               data: [41]
             },
             {
-              name: "4G",
+              name: "G4",
               data: [12]
             },
           ]

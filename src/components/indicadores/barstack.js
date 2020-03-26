@@ -43,7 +43,7 @@ export default function BarStack(props) {
                     },
                    
                     xaxis: {
-                      categories: ['2G', '3G', '4G' ],
+                      categories: ['G2', 'G3', 'G4' ],
                       labels: {
                         show: false
                       },
