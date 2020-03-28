@@ -1,4 +1,4 @@
-import React, { useState,Fragment,useEffect } from 'react';
+import React, { useState,Fragment,useEffect,useReducer } from 'react';
 import logo from './logo.png';
 import './App.css';
 
@@ -36,6 +36,10 @@ function App() {
   );
 }
 export default App;
+//HOOKS 
+//https://www.youtube.com/watch?v=-G43PbpmGrA
+//https://www.youtube.com/watch?v=cjBm0HnYcqw BEST ON CONTEXT AND REDUCER   BEST BEST BEST OjO
+
 //IMAGES
 //https://gifmaker.me/
 //https://onlinepngtools.com/convert-png-to-base64
@@ -46,6 +50,7 @@ export default App;
 //https://medium.com/octopus-labs-london/replacing-redux-with-react-hooks-and-context-part-1-11b72ffdb533 
 //https://medium.com/octopus-labs-london/replacing-redux-with-react-hooks-and-context-part-2-838fd20e6739
 
+//APEXCHARTS
 //https://codinhood.com/how-to-build-bitcoin-dca-chart-react-recharts recharts fondo negro BITCOINS
 //https://www.bypeople.com/timeline-bar-line-chart-data-javascript/
 //https://codesandbox.io/s/mzzq3yqjqj apexcharts

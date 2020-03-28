@@ -205,8 +205,8 @@ function onZoomEnd (map, event)  {
           data={voronoigeojson}
           fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
           linePaint={{
-            'line-color': '#58D3F7',
-            'line-width': .8
+            'line-color': 'red',
+            'line-width': 1
           }}
           
         />   
