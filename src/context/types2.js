@@ -1,0 +1,1 @@
+export const ADD_KPI2 = 'ADD_KPI2'

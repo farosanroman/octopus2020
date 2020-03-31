@@ -1,1 +1,1 @@
-export const ADD_KPI = 'ADD_KPI'
+export const ADD_KPI = 'ADD_KPI';

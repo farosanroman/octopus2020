@@ -6,16 +6,30 @@ import Button from '@material-ui/core/Button';
 import Login from './components/layout/login'
 import Dashboard from './components/layout/dashboard'
 import { reducer, defaultState } from './Context';
+
+import KpiContext from './context/kpiContext'
+import kpiReducer from './context/kpiReducer'
+
+import {initialStateKPI} from './context/kpiReducer'
+import {ADD_KPI} from './context/types'
+
+
 export const Application = React.createContext({ state: null, dispatch: null });
+
+
 //import Fotos from '../src/components/fotos'
-function App() {
-  const [pag, setPag] = useState(0);
-  const onLoginClick = () => {  
- 
-      setPag(1)
-  }
+const App = () => {
+
+const [stateKPI, dispatchKPI] = useReducer(kpiReducer, initialStateKPI);
+const changeKPI = (kpi) => {
+  dispatchKPI(kpi);
+};
+
+  
+  ///////////////////////////////////////////////////
+  //////////////////////////////////////////////////
   // const initialState = () => JSON.parse(window.localStorage.getItem('octopus2020')) || defaultState;
- 
+  const [pag, setPag] = useState(0);
   const initialState = () => defaultState;
  
   const [state, dispatch] = React.useReducer(reducer, initialState());
@@ -25,14 +39,21 @@ function App() {
   React.useEffect(() => {
     window.localStorage.setItem('octopus2020', JSON.stringify(state));
   }, [state]);
-
+const onLoginClick = () => {  
+    
+      setPag(1)
+  }
   return (
+    <KpiContext.Provider value={{stateKPI,dispatchKPI}}>
+  
     <Application.Provider value={{ state, dispatch }}>
        
      {(pag==0)&&<Login loginclick={onLoginClick} />}
      {(pag==1)&&<Dashboard />}
           
      </Application.Provider>
+     </KpiContext.Provider>
+  
   );
 }
 export default App;

@@ -1,4 +1,6 @@
-import React ,{useEffect,useState} from 'react';
+import React ,{useEffect,useState,useContext} from 'react';
+import KpiContext from '../../context/kpiContext'
+
 import { makeStyles } from '@material-ui/core/styles';
 import { greatCircle, point,circle,voronoi,randomPoint } from '@turf/turf';
 
@@ -11,6 +13,8 @@ import {useKpiGeoJson} from '../hooks/usekpigeojson'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {voronoigeojson} from '../../data/voronoigeojson.json';
 import {antenas} from '../../data/antenas.json';
+
+
 let image = new Image();
 image.src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAr0lEQVQ4T92VQRKAMAgD9ef8XIeOOBBD6FmPLSyBAp7H8JnZlU3M7FQu9LKD7MA/wHDKSnbPXHkBZkdUg2l6QBboBTJYVy9lW4AYtVPJ7CI4BXbpeNqoLmwLcDIi9bsyKPsvhX6g0lDAx389kDO2gPiaSkABotqoiwJmm1chA3WtMdVbtk3UbpqUKEGZFBZ5ArL2akcPNszaODg5cvTUSmKOnb3cbSrlnwOn30S+vwH7HygkEWrDEQAAAABJRU5ErkJggg=="
 //image.src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAEaElEQVQ4T4WUe2xURRTGvzP3se0uW7p1KaUtFGwrpUtLQQIkAhFR0QiEaEiIRgOJJEACJIaASjE3UKIVEmNJhATjK2p8xIiIIaAExf6BofJsm9ay2GJLm4W228cuu3vvzDF7SRsEGuePSWbmfL/5zsycIYzVmMkCtKxOGD2xW3o6LM8XdAYLYVuABBE/SEoPmrQa2Ct8qWJS2nRmZwoTZaXjiHmQSL/OQraqmBm25lL8Xv19wJ0XuSDDtFcqUJFg3FRQPbZELC00NPgERJ4iTBDgjkTKObq3ytt1N/Q/wD0tPA3K3sygvhjj1/Yh9VDcUSEizr3jkCIZumia6he94whLoDgA3Tiwq4z+HoGOAq3WwSBJzzbBfDOc8nzXfzuxjhmFBNSbpDWlBSmWIQUsYladeYb4eIqXXmCNggaZ+96cQb3upunOOs26yE09L4DZ3Unz0PV4citDDl8bVl83R6kAGqpcBxIXZ2UbXUV+tQYg7+RMT91ET2oDQftTRrQj1hJyXODeZp4kVWoDKz57YUiVKKD4fB++7IzLZRCcBaY2F0hcCkWDhV7txJwc8SJYXa0KiLAOWqCReWhnOXUTmGl3iz0Hild2xdSpbps3Dtio+y2i5gHQMDD8fXa4JxswkHgkOJAY51sFwc7SoHbOp2HLZA8dnOTTlyrBR98qM86TxSyMFucpZsxqHFTX4o5aejpivzfkiE1w8FHOhfZSCLXNdajE/r5HC65CGOv8uvrg8VzjNa/gUxXZxjSpcIlD+s+0+hvWKkPyOUGquKFfRiWj9OgN53OQ2IRItDano3cXiNa6QOZP+soK9iArczuUPLgiX3/Z0NA6268FQCp8ucnzk+tQa3aeJsiZF4ZVly0x/8RN52AyRZuR4AM5jdcXE1Dj8hR29lVO+R0ZtNnDfGBZgb7R1LSzVX5RyECjLNdP3jnDZnsegZ9pj6n6SIrX96fU2/W3eDmIbqC7+1hOZ6I6DewrzKjBxPwVIExaGORjAVO8kW/S4UK/vpAUH68uN865t1xzJT5ZCeNVR6H+8oCzQAE4E8GZqONUQNOOBP649lI6rn/+w19AylXZBhoXTRCLhQIqAtpZU9BjQskPqyu8/7jAujb2RKVcDcVT22LqSDQhN0qIv9oSdLKtP9IeaBjY4gLnjq8rDeROLfHIZYZAyXiPdmi6T6xSrNqzTfPbLaWUHK2U2hbOT0h7OzGaLw2r07bCemZuHkplfHXpeNPWNHDWs6H3/WZiDTGXG7o4XOkXTxCjTOnGPquMboxWykgd7rmSnAFB1Qp0Pgr9h47eeEzr8UZ+aWhyn82Tc0P7ZV48t8in+QKZYjmB50nH3G1VUst9tTwKbeNiTjprCSpFQn1WXZ7ZEdjeuMNN+d2ZtTXNt4tYiVcghAEpP91VkREe87cZWXgnzONTMbtEeYwOazrduhtotXJQJO0i02dcfb2YBu6G3ZfyvYsj48COxhWuw9qZP44VM2bKDxRYTaY7b4VS/wf8F26OCjLnxzKcAAAAAElFTkSuQmCC"
@@ -20,6 +24,8 @@ const style={   Paper:{padding:1,marginTop:1,marginBottom:1}}
 const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pzIn0.V8cqmZH6dFIcxtKoaWcZZw"
   const Map = MapGL({accessToken: TOKEN });
   const mapStyle = {  flex: 1,  height: "50vh",width: "100%"};
+  
+ 
   
  
 // import { greatCircle, point } from '@turf/turf';
@@ -84,7 +90,7 @@ const f0=antenas.map(a=>{
 
 export default function Antenas() {
   const classes = useStyles();
-
+  const contextKPI = useContext(KpiContext);
   const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
   //const[KPIcriterio,KPIcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2([])
      
@@ -96,12 +102,24 @@ export default function Antenas() {
   const [center, setCenter] = useState([-66.8726,10.4713]);
 
   const [flagCircular, setFlagCircular] = React.useState(false);     
-
+  //const context=useContext(KpiContext)
+    
+  // useEffect(() => {
+  //   console.log("VORONIIIIIIIIIiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii")
+  //   console.log(JSON.stringify(contextKPI))
+  //  }, [contextKPI]);
   useEffect(() => {
+     //alert(JSON.stringify(contextKPI))
+    // contextKPI.addKPI({
+    //   firstName: 'ssssssssswww',
+    //   lastName: '2222222222222222'
+    // });
+    // alert(JSON.stringify(contextKPI))
+    // alert("indicadores "+JSON.stringify(context))
     //var a=kpigeojson(celular)
   // console.log(JSON.stringify(kpigeojson('GEOJSON')))
   // handleKPIDay(kpigeojson('GEOJSON'))
-  fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id=2020-03-20');
+  fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id=2020-03-28');
      
  },[]);
  useEffect(() => {
@@ -113,6 +131,7 @@ export default function Antenas() {
   //alert(data[0].type)
   if ((data!=undefined)&&(!isLoading))      
   {
+    console.log(JSON.stringify(data))
    //alert("fetch"+JSON.stringify(data))
    
   handleKPIDay(data)
@@ -124,12 +143,12 @@ export default function Antenas() {
     setSelectedDate(date);
   };
 
-
  //var criteria={position:state.position,antenas:antenas}
 
 function onResize (map, event)  {
   //cuando  cambia el tamanno del explorador//
   //alert("onRezise "+map.getZoom()+" " +JSON.stringify(event))
+
 }
 function onZoomEnd (map, event)  {
   //console.log("onZoomEnd")
@@ -180,9 +199,9 @@ function onZoomEnd (map, event)  {
    //style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
    // style="mapbox://styles/mapbox/light-v9"
-   center={[-66.900,10.4621]} 
+   center={[-66.867900,10.4671]} 
    //center={[longitude,latitude]} 
-   zoom={[12]}
+   zoom={[14]}
    //center={[state.position.longitude,state.position.latitude]} 
    //center={[state.position.latitude,state.position.longitude]} 
    // zoom={[zoom]}
@@ -205,7 +224,7 @@ function onZoomEnd (map, event)  {
           data={voronoigeojson}
           fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
           linePaint={{
-            'line-color': 'red',
+            'line-color': '#00BFFF',
             'line-width': 1
           }}
           

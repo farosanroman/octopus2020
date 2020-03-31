@@ -75,6 +75,7 @@ import { useState ,useEffect} from "react";
        setKpi3GCant(cant3G)
        setKpi4GCant(cant4G)
     }
+    //"SLOW-2G
    // console.log(JSON.stringify(kpi))
   },[kpi,criterio]);
   const handleKpiDay = async (kpi) => {

@@ -1,5 +1,6 @@
   
-import React, {useEffect, useState,Fragment } from 'react';
+import React, {useEffect, useState,Fragment,useContext } from 'react';
+import KpiContext from '../../context/kpiContext'
 import { Application } from '../../App';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
@@ -110,6 +111,8 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
     const fixedHeightPaper2 = clsx(classes.paper, classes.fixedHeight2);
     const { state, dispatch } = React.useContext(Application);
+    const contextKPI = useContext(KpiContext);
+    //alert(JSON.stringify(contextKPI))
     const [zoom, setZoom] = useState(12);
     const [center, setCenter] = useState([-66.8726,10.4713]);
 
@@ -178,13 +181,7 @@ useEffect(() => {
   }
 },[data,isLoading]);
 useEffect(() => {
-  //var a=kpigeojson(celular)
-// console.log(JSON.stringify(kpigeojson('GEOJSON')))
-// handleKPIDay(kpigeojson('GEOJSON'))
-//fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+newday);
-  // var a=new Date()
-  // alert(JSON.stringify(a)+" "+a.getHours()+" "+a.getTime())
-//alert("[KPI]"+" "+JSON.stringify(KPI))
+  
 setKpiday(data)  
 },[KPI]);
 

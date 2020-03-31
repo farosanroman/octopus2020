@@ -1,4 +1,8 @@
-import React, { PureComponent,useEffect ,useState} from 'react';
+import React, { PureComponent,useEffect ,useState,useContext} from 'react';
+import KpiContext from '../../context/kpiContext'
+import {ADD_KPI} from '../../context/types'
+
+import {useFetch} from '../hooks/usefetch'; 
 import { Application } from '../../App';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -11,6 +15,7 @@ import Total from '../layout/total'
 import BarStack from './barstack'
 import BarHorizontal from './barhorizontal'
 import GeoCalendar from '../heatmap/geocalendar';
+import CircularProgress from '@material-ui/core/CircularProgress'; 
 
 import Voronoi from './voronoi.js'
 //mport Title from '../dashboard/title';
@@ -117,13 +122,58 @@ export default function Indicadores() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   const fixedHeightPaper2 = clsx(classes.paper, classes.fixedHeight2);
   const { state, dispatch } = React.useContext(Application);
+  
+  const contextKPI = useContext(KpiContext);
+  const [data, isLoading, isError , fetchData] = useFetch(""); 
+
   const [totalKPI,setTotaKPI]= useState("33.000");
   const [totalDevices,setTotaDevices]= useState("13");
   const [tota3GBaseStations,setTota3GBaseStations]= useState("130");
   const [tota4GBaseStations,setTota4GBaseStations]= useState("430");
+  
+  const [flagCircular, setFlagCircular] = React.useState(false);     
+
   useEffect(() => {
-   // alert("indicadores "+JSON.stringify(state.days))
-  }, []);
+    // alert(JSON.stringify(contextKPI))
+    // contextKPI.addKPI({
+    //   firstName: 'ssssssssswww',
+    //   lastName: '2222222222222222'
+    // });
+    // alert(JSON.stringify(contextKPI))
+    // alert("indicadores "+JSON.stringify(context))
+    //var a=kpigeojson(celular)
+  // console.log(JSON.stringify(kpigeojson('GEOJSON')))
+  // handleKPIDay(kpigeojson('GEOJSON'))
+  fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id=2020-03-28');
+     
+ },[]);
+ useEffect(() => {
+  //alert("in "+option)
+ //alert(JSON.stringify(data))
+  if (isLoading) {
+    setFlagCircular(true)
+  }
+  //alert(data[0].type)
+  if ((data!=undefined)&&(!isLoading))      
+  {
+   // console.log("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111")
+   // console.log(JSON.stringify(data))
+   //alert("fetch"+JSON.stringify(data))
+   
+  //handleKPIDay(data)
+  //alert("[] "+JSON.stringify(data))
+  if (JSON.stringify(data)=="[]"){
+  //  alert()
+    contextKPI.dispatchKPI({type:"ADD_KPI",payload:{"type":"FeatureCollection","features":[] }});
+    
+  }else{
+      contextKPI.dispatchKPI({type:"ADD_KPI",payload:data});
+  }
+   setFlagCircular(false)
+   
+  }
+},[data,isLoading]);
+
   function clickDay (newday)  {
 
   }
@@ -132,7 +182,7 @@ export default function Indicadores() {
         <div className={classes.root}>    
          
         <Container maxWidth="lg" className={classes.container}>  
-      
+        {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress} />}
         <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>

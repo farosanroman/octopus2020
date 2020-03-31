@@ -1,11 +1,9 @@
-import {createContext} from 'react'
+import { createContext } from 'react';
 
-const KpiContext=createContext({
-    KPI:[],
-    addKpi:(kpi)=>{}
-}
+const kpiContext = createContext({
+    CANT:0,
+  KPI: [],
+  dispatchKPI: (kpi) => {}
+});
 
-
-)
-
-export default KpiContext
+export default kpiContext;
