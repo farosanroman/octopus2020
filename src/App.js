@@ -58,8 +58,13 @@ const onLoginClick = () => {
 }
 export default App;
 //HOOKS 
+//Kent useToogle with useReducer
+//https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks
 //https://www.youtube.com/watch?v=-G43PbpmGrA
+//https://github.com/hidjou/classsed-react-hooks/tree/useMemoRef GITHUB
+
 //https://www.youtube.com/watch?v=cjBm0HnYcqw BEST ON CONTEXT AND REDUCER   BEST BEST BEST OjO
+//https://dev.to/pubudu/build-a-redux-like-store-with-react-context-hooks-8a6   VERY SIMPLE AND GOOD
 
 //IMAGES
 //https://gifmaker.me/
