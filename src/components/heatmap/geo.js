@@ -1,5 +1,7 @@
   
 import React, {useEffect, useState,Fragment,useContext } from 'react';
+import { greatCircle, point,hexGrid,circle,voronoi,randomPoint } from '@turf/turf';
+
 import KpiContext from '../../context/kpiContext'
 import { Application } from '../../App';
 import Button from '@material-ui/core/Button';
@@ -113,6 +115,7 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     const { state, dispatch } = React.useContext(Application);
     const contextKPI = useContext(KpiContext);
     //alert(JSON.stringify(contextKPI))
+
     const [zoom, setZoom] = useState(12);
     const [center, setCenter] = useState([-66.8726,10.4713]);
 
@@ -144,6 +147,10 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     const[green,setGreen]=useState()
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
     const[kpiday, setKpiday]=useState({"type":"FeatureCollection","features":[] })
+    const[clicklocation, setClickLocation]=useState([0,0])
+    const[pointlocation, setPointLocation]=useState({"type":"FeatureCollection","features":[] })
+    const[randompoints, setRandomPoints]=useState({"type":"FeatureCollection","features":[] })
+    
     const [data, isLoading, isError , fetchData] = useFetch(""); 
 
 //console.log("GEO")
@@ -207,6 +214,36 @@ useEffect(() => {
 //  setCriterio({"G2G":true,"G3G":true,"G4G":true})
 //alert("[]")
 },[checked2G,checked3G,checked4G]);
+useEffect(() => {
+  //alert(JSON.stringify(clicklocation))
+  if (JSON.stringify(clicklocation)!="[0,0]"){
+  setPointLocation(
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "type": "Point",
+            "coordinates":clicklocation
+          }
+        }
+      ]
+    })
+    var options = {
+      //bbox : [-73,7,-62,12]
+      //bbox: [-66.934,10.45114, -66.841, 10.511]
+      bbox: [-66.95,10.43, -66.78, 10.5]
+    };
+   var points = randomPoint(100, options);
+  // console.log(points)
+   var pointFeatures = {
+    "type": "FeatureCollection",
+    "features": points};
+    setRandomPoints(points)
+   }
+},[clicklocation]);
 
 // const handleSwitchChange = name => event => {
 // //var ff=criterio;
@@ -259,6 +296,16 @@ useEffect(() => {
     setchecked3G(true)
     setchecked4G(true)
     //handlePkiChange({"G2G":true,"G3G":true,"G4G":true})
+  }
+  function onControlClick(map,event){
+    alert("onControlClick")
+    //console.log(event)
+   
+  }
+  function onClickMap(map,event){
+   // alert("click")
+    //console.log(event.lngLat.lng+" "+event.lngLat.lat)
+    setClickLocation([event.lngLat.lng,event.lngLat.lat])
   }
   function onResize (map, event)  {
     //cuando  cambia el tamanno del explorador//
@@ -404,7 +451,8 @@ return (
    onZoomEnd={onZoomEnd}
    onResize={onResize}
    containerStyle={mapStyle}        
-  
+   onControlClick={onControlClick}
+   onClick={onClickMap}  
   //onControlClick={onControlClick}
 //onClick={this._onClickMap}  
 //<ZoomControl onControlClick={onControlClick}/>
@@ -473,7 +521,19 @@ return (
           
         />
 
+          <GeoJSONLayer
+          data={randompoints}
+          circleLayout={{ visibility: 'visible' }}
+         circlePaint={{'circle-color': '#00FFFF','circle-radius': 4}}         
+         
+          />
 <GeoJSONLayer
+          data={pointlocation}
+          circleLayout={{ visibility: 'visible' }}
+         circlePaint={{'circle-color': 'white','circle-radius': 6,'circle-opacity': 1,'circle-stroke-color': 'white' , 'circle-stroke-width': 8,'circle-blur': 0.9,}}         
+         
+          />
+ {/* <GeoJSONLayer
           data={tres}
           circleLayout={{ visibility: 'visible' }}
          circlePaint={{'circle-color': 'white','circle-radius': 16,'circle-opacity': 0.5,'circle-stroke-color': 'white' , 'circle-stroke-width': 2,'circle-blur': 0.9,}}         
@@ -493,7 +553,7 @@ return (
           symbolPaint={{
             'text-color': 'black'
           }}
-          />
+          /> */}
          
 </Map>
      

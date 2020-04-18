@@ -28,9 +28,14 @@ import { useState ,useEffect} from "react";
     var cant2G=0
     var cant3G=0
     var cant4G=0
-    console.log("useKpiGeoJson  "+JSON.stringify(criterio))
+    //console.log("useKpiGeoJson  "+JSON.stringify(criterio))
      if (kpi.features!=undefined){
       var f = kpi.features.map((feature, i) => {
+        // feature.geometry.coordinates[0]=feature.geometry.coordinates[0]-7.2
+        // feature.geometry.coordinates[1]=feature.geometry.coordinates[1]-5.85
+      })
+      var f = kpi.features.map((feature, i) => {
+
        // alert("pki "+JSON.stringify(feature))
       //  if (index.indexOf(r.idfuncional) ==-1) {  
      //     alert(feature.properties.mobilegeneration)
