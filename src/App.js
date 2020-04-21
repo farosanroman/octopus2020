@@ -3,7 +3,7 @@ import logo from './logo.png';
 import './App.css';
 
 import Button from '@material-ui/core/Button';
-import Login from './components/layout/login'
+import LoginAntena from './components/layout/loginantena'
 import Dashboard from './components/layout/dashboard'
 import { reducer, defaultState } from './Context';
 
@@ -48,8 +48,8 @@ const onLoginClick = () => {
   
     <Application.Provider value={{ state, dispatch }}>
        
-     {(pag==0)&&<Login loginclick={onLoginClick} />}
-     {(pag==1)&&<Dashboard />}
+     {(state.flagLogin==false)&&<LoginAntena loginclick={onLoginClick} />}
+     {(state.flagLogin==true)&&<Dashboard />}
           
      </Application.Provider>
      </KpiContext.Provider>

@@ -21,7 +21,10 @@ export const defaultState = {
       const { type, stateprop } = action;
       switch (type) {
        
-      
+        case 'FLAGLOGIN':
+          //FIREBASE
+         // alert("LOGIN en reducer"+JSON.stringify(stateprop)   )
+        return { ...state, flagLogin: stateprop };
       case 'LOGIN':
           //FIREBASE
           //alert("LOGIN en reducer"+JSON.stringify(stateprop)   )

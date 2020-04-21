@@ -17,6 +17,7 @@ import Title from '../layout/title'
 import Total from '../layout/total'
 
 import GeoDispositivos from './geodispositivos';
+import {voronoigeojson} from '../../data/voronoigeojson.json';
 import 'date-fns';
 import clsx from 'clsx';
 import DateFnsUtils from '@date-io/date-fns';
@@ -50,6 +51,7 @@ import RefreshIcon from '@material-ui/icons/Refresh';
 //import { greatCircle, point,circle } from '@turf/turf';
 
 import {useFetch} from '../hooks/usefetch';
+import {useFetchPost} from '../hooks/usefetchpost'
 //import {useGeolocation} from '../hooks/usegeolocation';
 
 
@@ -121,12 +123,6 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
 
     const [flagCircular, setFlagCircular] = React.useState(false);     
 
-    //const [state, dispatch] = React.useReducer(reducer, defaultState);
-    //const { state, dispatch } = React.useContext(Application);
-
-    //const [zoom, setZoom] = useState([state.zoom]);
-    //const { latitude, longitude, timestamp, accuracy, error } = usePosition();
-    //const stategeo = useGeolocation();
    
     const[fecha, setFecha]=useState(new Date())
     //const[criterio0,kpicant0,kpi2G0,kpi3G0,kpi4G0, handleKpiFiltro0,handleKpiDay0]=useKpi(celular)
@@ -149,10 +145,14 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     const[kpiday, setKpiday]=useState({"type":"FeatureCollection","features":[] })
     const[clicklocation, setClickLocation]=useState([0,0])
     const[pointlocation, setPointLocation]=useState({"type":"FeatureCollection","features":[] })
+    const[pointFeatureCollection,setPointFeatureCollection]=useState({"type":"FeatureCollection","features":[] })
     const[randompoints, setRandomPoints]=useState({"type":"FeatureCollection","features":[] })
+    const[circle1, setCircle1]=useState({"type":"FeatureCollection","features":[] })
+    const[circle2, setCircle2]=useState({"type":"FeatureCollection","features":[] })
+    const[circle3, setCircle3]=useState({"type":"FeatureCollection","features":[] })
     
     const [data, isLoading, isError , fetchData] = useFetch(""); 
-
+    const [ dataPost, isLoadingPost, isErrorPost , postData] = useFetchPost('');
 //console.log("GEO")
     const handleDateChange = date => {
       setSelectedDate(date);
@@ -161,51 +161,18 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
       //alert(antenas.length)
   },[]);
 useEffect(() => {
-    console.log("GEO useEffect [] "+props.filtro2GA+" "+props.filtro3GA+" "+props.filtro4GA)
+   // console.log("GEO useEffect [] "+props.filtro2GA+" "+props.filtro3GA+" "+props.filtro4GA)
     setchecked2G(props.filtro2GA)
     setchecked3G(props.filtro3GA)
     setchecked4G(props.filtro4GA)
 },[props.filtro2GA,props.filtro3GA,props.filtro4GA]);
 
-useEffect(() => {
-  //alert("in "+option)
- //alert(JSON.stringify(data))
-  if (isLoading) {
-    setFlagCircular(true)
-  }
-  //alert(data[0].type)
-  if ((data!=undefined)&&(!isLoading))      
-  {
-  // alert("fetch"+JSON.stringify(data))
-  //console.log("data useFetch hook")
-  //console.log(data)
-  if (JSON.stringify(data)!="[]"){
-  handleKPIDay(data )
-  }
-  
-   setFlagCircular(false)
-   
-  }
-},[data,isLoading]);
+
 useEffect(() => {
   
 setKpiday(data)  
 },[KPI]);
 
-// useEffect(() => {
-//   setFlagCircular(true)
-//  alert("get otro :"+dia)
-//  handleKPIFiltroDay(dia)
-//   //var d='2020-03-01'
-// //setDia('2020-03-01')
-
-//   /////// fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+dia);
-   
-//   // handleKpiDay(state.kpiday)
-//  // alert(JSON.stringify(state.kpiday))
-//  //console.log(JSON.stringify(state.kpiday))
-// },[dia]);
-  //  },[state.kpiday]);
 useEffect(() => {
   //handleKpiFiltro({"G2G":true,"G3G":true,"G4G":true})
   //alert(JSON.stringify({"G2G":checked2G,"G3G":checked3G,"G4G":checked4G}))
@@ -217,47 +184,103 @@ useEffect(() => {
 useEffect(() => {
   //alert(JSON.stringify(clicklocation))
   if (JSON.stringify(clicklocation)!="[0,0]"){
-  setPointLocation(
-    {
-      "type": "FeatureCollection",
-      "features": [
-        {
-          "type": "Feature",
-          "properties": {},
-          "geometry": {
-            "type": "Point",
-            "coordinates":clicklocation
-          }
-        }
-      ]
-    })
-    var options = {
-      //bbox : [-73,7,-62,12]
-      //bbox: [-66.934,10.45114, -66.841, 10.511]
-      bbox: [-66.95,10.43, -66.78, 10.5]
-    };
-   var points = randomPoint(100, options);
-  // console.log(points)
-   var pointFeatures = {
-    "type": "FeatureCollection",
-    "features": points};
-    setRandomPoints(points)
+  // setPointLocation(
+  //   {
+  //     "type": "FeatureCollection",
+  //     "features": [
+  //       {
+  //         "type": "Feature",
+  //         "properties": {},
+  //         "geometry": {
+  //           "type": "Point",
+  //           "coordinates":clicklocation
+  //         }
+  //       }
+  //     ]
+  //   })
+  //   var options = {
+  //     //bbox : [-73,7,-62,12]
+  //     //bbox: [-66.934,10.45114, -66.841, 10.511]
+  //     bbox: [-66.95,10.43, -66.78, 10.5]
+  //   };
+  //   var cantidad=100+Math.floor(Math.random() * 2000)*1;
+  //  var points = randomPoint(cantidad, options);
+  // // console.log(points)
+  //  var pointFeatures = {
+  //   "type": "FeatureCollection",
+  //   "features": points};
+  //   var pointsFeatureCollection={"type":"FeatureCollection","features":[] }
+  //   var f = points.features.map((feature, i) => {
+
+  //     //
+
+  //   var mobiles=["2G","3G","4G"];
+  //   var random=Math.floor(Math.random() * 3)*1;
+  //   var random2=Math.floor(Math.random() *1000)*1;
+  //  // console.log("pos "+random)
+  //   var newkpi= {
+  //     "ttl":30,
+  //     "type": "Feature",
+  //     "properties": {
+  //     "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+  //     "timestamp": new Date(),
+  //     "identification":"state.login.email",
+  //     "mobilegeneration":mobiles[random],
+  //     "cellid": 11111,
+  //     "cidreported": 11111,
+  //     "downlink":random2,
+  //     "rtt":random2,
+  //     "mcc": 734,
+  //     "mnc": 2,
+  //     "signaltype":mobiles[random],
+  //     "signalstrength": 27,
+  //     "rsrq": -11,
+  //     "rsrp": -89, },
+
+  //         "geometry": {
+  //         "type": "Point",
+  //         "coordinates":feature.geometry.coordinates
+  //        }
+  //     }
+  //     pointsFeatureCollection.features.push(newkpi)
+  //   })
+  //   //setRandomPoints(pointsFeatureCollection)
+  //  // alert("fin")
+  //  setPointFeatureCollection(pointsFeatureCollection)
+  //   handleKPIDay(pointsFeatureCollection )
    }
+   var centro=clicklocation
+  var options = {steps: 500, units: 'kilometers', properties: {foo: 'bar'}};
+  var circle1 = circle(centro, 1, options);
+  var circle2 = circle(centro, 2, options);
+  var circle3 = circle(centro, 3, options);
+setCircle1(circle1)
+setCircle2(circle2)
+setCircle3(circle3)
 },[clicklocation]);
 
-// const handleSwitchChange = name => event => {
-// //var ff=criterio;
-//     if (name=="G2G"){
-//       setchecked2G(event.target.checked)
-//   }
-//     if (name=="G3G"){
-//       setchecked3G(event.target.checked)
-// }
-//     if (name=="G4G"){
-//       setchecked4G(event.target.checked)
-//   }
- 
-//   };
+
+useEffect(() => {
+  //alert("in "+option)
+ //alert(JSON.stringify(data))
+  if (isLoading) {
+    setFlagCircular(true)
+  }
+  //alert(data[0].type)
+  if ((data!=undefined)&&(!isLoading))      
+  {
+  // alert("fetch"+JSON.stringify(data))
+ // console.log("data useFetch hook")
+ // console.log(data)
+  if (JSON.stringify(data)!="[]"){
+  handleKPIDay(data )
+  }
+  
+   setFlagCircular(false)
+   
+  }
+},[data,isLoading]);
+
 
   function clickDay (newday)  {
     //alert("clickDay "+newday)
@@ -276,6 +299,7 @@ useEffect(() => {
     //    stateprop: newday
     //  });
   }
+  
   function buttondiaclick ()  {
     // alert(state.kpifechas.length+" "+JSON.stringify(state.kpifechas))
      //var random=Math.floor(Math.random() * 50)*1; 
@@ -297,7 +321,74 @@ useEffect(() => {
     setchecked4G(true)
     //handlePkiChange({"G2G":true,"G3G":true,"G4G":true})
   }
-  function onControlClick(map,event){
+  function createRandom(){
+   // alert('createtrandom')
+   // https://blog.risingstack.com/node-js-async-best-practices-avoiding-callback-hell-node-js-at-scale/?utm_source=RisingStack+Blog&utm_campaign=13c6d79d5c-reinventing-hooks-with-react-easy-state&utm_medium=email&utm_term=0_02a6a69990-13c6d79d5c-475171197
+    //points.features.map((feature, i) => {
+      var options = {
+        //bbox : [-73,7,-62,12]
+        //bbox: [-66.934,10.45114, -66.841, 10.511]
+        bbox: [-66.95,10.43, -66.78, 10.5]
+      };
+      var cantidad=100+Math.floor(Math.random() * 2000)*1;
+     var points = randomPoint(cantidad, options);
+     var pointFeatures = {
+      "type": "FeatureCollection",
+      "features": points};
+      var pointsFeatureCollection={"type":"FeatureCollection","features":[] }
+      var f = points.features.map((feature, i) => {
+  
+        //
+  
+      var mobiles=["2G","3G","4G"];
+      var random=Math.floor(Math.random() * 3)*1;
+      var random2=Math.floor(Math.random() *1000)*1;
+     // console.log("pos "+random)
+      var newkpi= {
+        "ttl":60,
+        "type": "Feature",
+        "properties": {
+        "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+        "timestamp": new Date(),
+        "identification":"state.login.email",
+        "mobilegeneration":mobiles[random],
+        "cellid": 11111,
+        "cidreported": 11111,
+        "downlink":random2,
+        "rtt":random2,
+        "mcc": 734,
+        "mnc": 2,
+        "signaltype":mobiles[random],
+        "signalstrength": 27,
+        "rsrq": -11,
+        "rsrp": -89, },
+  
+            "geometry": {
+            "type": "Point",
+            "coordinates":feature.geometry.coordinates
+           }
+        }
+        pointsFeatureCollection.features.push(newkpi)
+      })
+      //setRandomPoints(pointsFeatureCollection)
+     // alert("fin")
+     setPointFeatureCollection(pointsFeatureCollection)
+      handleKPIDay(pointsFeatureCollection )
+     
+  
+  }  
+ function postRandom(){
+  //alert('postrandom')
+  //points.features.map((feature, i) => {
+  pointFeatureCollection.features.map((feature, i) => {
+    console.log(i+" "+i)
+       postData("https://octopustestingfunctions.azurewebsites.net/api/PostKPI?code=L4A3rCSSFFI5lvQfBBK2yCWG1Hr4ZaHZahfSoISNpKSlIiQ5J3NySA==",feature)
+   
+  })
+  
+
+}
+ function onControlClick(map,event){
     alert("onControlClick")
     //console.log(event)
    
@@ -328,10 +419,28 @@ useEffect(() => {
       }
     // console.log(props.positions.length+" possssssssssss ")
    // setCenter([stategeo.longitude,stategeo.latitude])
-  
-const SOURCES=antenas.map((nodo,index)=>{  
+ //  var antenasFeatureCollection={"type":"FeatureCollection","features":[] }
+   var antenasFeatureCollection={"type":"FeatureCollection","features":[] }
+    
+const A=antenas.map((nodo,index)=>{  
   //sources proveedores de enlaces   
-  
+  var antenafeature= {
+    "type": "Feature",
+    "properties": {
+    "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+    "timestamp": new Date()},
+    "geometry": {
+        "type": "Point",
+        "coordinates":[nodo.lon,nodo.lat]
+       }
+    
+  }
+    antenasFeatureCollection.features.push(antenafeature) 
+})
+//console.log("ANTENAAAAS")
+//console.log(antenasFeatureCollection)
+const ANTENAS=antenas.map((nodo,index)=>{  
+  //sources proveedores de enlaces   
    return(
      <Feature              
           key={index} 
@@ -392,6 +501,7 @@ return (
       </Grid>
       
       </Grid>   
+     
     <Grid container spacing={3}>
             {/* Chart */}
             
@@ -426,17 +536,17 @@ return (
       <GeoSlider />
     {/* <Button  variant="contained" color="primary"  onClick={() => buttonclick()}>
                    Refrescar
-                  </Button> */}
+                  // </Button> */}
 {/* <DatePicker clickday={clickDay}/> */}
 </Paper>
 </Grid>
 </Grid>
-
+ 
 <Grid container spacing={3}>
 
 <Grid item xs={12} sm={12} md={12}>
       <Paper className={fixedHeightPaper}>
-      <Title>{'Distribucion Geoespacial'}</Title>
+      <table><tr><td><Title>{'Distribucion Geoespacial'}</Title></td><td> <Button variant="contained"  onClick={createRandom} color="primary" className={classes.button} >Generacion</Button></td><td> <Button variant="contained"  onClick={postRandom} color="primary" className={classes.button} >Registro</Button></td></tr></table>
       <Map       
    //style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
@@ -462,9 +572,36 @@ return (
 <ZoomControl  position={"bottomRight"}/>
 <ScaleControl />
 <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
-            {SOURCES}
+            {ANTENAS}
       </Layer>
-     
+      <GeoJSONLayer
+          data={circle1}
+          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
+          linePaint={{
+            'line-color': 'yellow',
+            'line-width': 4
+          }}
+          
+        />    
+              <GeoJSONLayer
+          data={circle2}
+          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
+          linePaint={{
+            'line-color': 'yellow',
+            'line-width': 4
+          }}
+          
+        />    
+      <GeoJSONLayer
+          data={circle3}
+          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
+          linePaint={{
+            'line-color': 'yellow',
+            'line-width': 4
+          }}
+          
+        />    
+
       <GeoJSONLayer   centro y brillo
           data={KPI2G}
           circleLayout={{ visibility: 'visible' }}
@@ -510,7 +647,7 @@ return (
             'text-color': 'black'
           }}
           />
-      <GeoJSONLayer
+      {/* <GeoJSONLayer
           data={KPIRuta}
           circlePaint={{'circle-color': 'lightgrey','circle-radius': 2,'circle-opacity': .8}}   
           linePaint={{
@@ -519,7 +656,7 @@ return (
            'line-opacity': 0.3
           }}
           
-        />
+        /> */}
 
           <GeoJSONLayer
           data={randompoints}
@@ -527,10 +664,26 @@ return (
          circlePaint={{'circle-color': '#00FFFF','circle-radius': 4}}         
          
           />
-<GeoJSONLayer
-          data={pointlocation}
+        <GeoJSONLayer
+            data={pointlocation}
+             circleLayout={{ visibility: 'visible' }}
+            circlePaint={{'circle-color': 'white','circle-radius': 6,'circle-opacity': 1,'circle-stroke-color': 'white' , 'circle-stroke-width': 8,'circle-blur': 0.9,}}         
+         
+          />
+          <GeoJSONLayer
+            data={voronoigeojson}
+            fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
+            linePaint={{
+             'line-color': 'deepskyblue',
+             'line-width': 2
+            }}
+          
+        />  
+          <GeoJSONLayer
+          data={antenasFeatureCollection}
           circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'white','circle-radius': 6,'circle-opacity': 1,'circle-stroke-color': 'white' , 'circle-stroke-width': 8,'circle-blur': 0.9,}}         
+          circlePaint={{'circle-color': 'white','circle-radius': 2,'circle-opacity': 1,'circle-stroke-color': 'whitesmoke' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
+           
          
           />
  {/* <GeoJSONLayer

@@ -20,6 +20,7 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase'
 import Snackbar from '@material-ui/core/Snackbar';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
+import SignInSide from './signinside'
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -162,6 +163,7 @@ function SignIn(user) {
                      message={<span id="client-snackbar">{mensajeSnackBar}</span>}
                 />
         </Snackbar>
+        <SignInSide />
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h3" align="center" color="textPrimary" gutterBottom>

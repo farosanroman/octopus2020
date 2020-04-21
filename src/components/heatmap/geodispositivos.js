@@ -149,22 +149,36 @@ var oo={
   //setOptions(oo)
   },[]);
   useEffect(() => {
-    //console.log("KPI KPI KPI")
+    console.log("KPI KPI KPI")
     var KKPPII=props.kkppii
-  
+      
     if (KKPPII.features.length>0){
-    var curvas=[]    
+     // alert(KKPPII.features[0].properties.timestamp.getHours())
+    
+      // alert(KKPPII.features.length)
+      console.log(JSON.stringify(KKPPII.features))
+      //alert(JSON.stringify(KKPPII.features[0].timestamp))
+      //alert(JSON.stringify(KKPPII.features[0].properties.timestamp).substr(12,2)*1)
+      
+      var curvas=[]    
     // alert(kpijson.features[0].properties.timestamp.substr(11,2)*1)    
      //for (var i= 0; i < 24; i++) {
+       console.log("geodispositivos")
        console.log(KKPPII)
      var cant=0;
-       var diaanterior=KKPPII.features[0].properties.timestamp.substr(11,2)*1
+    // alert(JSON.stringify(KKPPII.features[0].properties.timestamp))
+    // alert(JSON.stringify(KKPPII.features[0].properties.timestamp.getHours))
+     var dateANT = new Date(KKPPII.features[0].properties.timestamp);
+     //alert(date.getHours())
+       var horaANT=dateANT.getHours()
        for (var j= 0; j <KKPPII.features.length; j++) {
          cant+=1
-         if (diaanterior!=KKPPII.features[j].properties.timestamp.substr(11,2)*1){  
+         var dateACT = new Date(KKPPII.features[j].properties.timestamp);
+         
+         if (horaANT!=dateACT.getHours()){  
            
-         curvas.push({hora:diaanterior,cant:cant})
-         diaanterior=KKPPII.features[j].properties.timestamp.substr(11,2)*1
+         curvas.push({hora:horaANT,cant:cant})
+         horaANT=dateACT.getHours()
        }
        }
       // console.log("CURVAS")
