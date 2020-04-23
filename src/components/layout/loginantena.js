@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import { Application } from '../../App';
-import city2 from "../../images/city2.jpg";
+import bg from "../../images/bg.png";
 //import logo from "./logo_main.png";
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
@@ -39,8 +39,9 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "transparent"
   },
   dialogPaper: {
-    minHeight: '50vh',
-    maxHeight: '80vh',
+    minHeight: '60vh',
+    maxHeight: '60vh',
+    maxWidth:'60hv'
 },
   image: {
     backgroundImage: 'url(https://source.unsplash.com/random)',
@@ -82,12 +83,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const cards = [1, 2, 3];
-SignInInside.propTypes = {
-  classes: PropTypes.object.isRequired,
-  onClose: PropTypes.func,
-  selectedValue: PropTypes.string
-};
-const SignInInsideWrapped = withStyles(styles)(SignInInside);
+// SignInInside.propTypes = {
+//   classes: PropTypes.object.isRequired,
+//   onClose: PropTypes.func,
+//   selectedValue: PropTypes.string
+// };
+// const SignInInsideWrapped = withStyles(styles)(SignInInside);
 
 export default function LoginAntena(prop) {
   const classes = useStyles();
@@ -120,14 +121,15 @@ export default function LoginAntena(prop) {
         </Toolbar>
       </AppBar> */}
       <div>
-          <img src={city2} height="100%" width="100%"  alt="Logo" />
+          <img src={bg} height="100%" width="100%"  alt="Logo" />
            <Dialog open={true}  aria-labelledby="form-dialog-title"   
               fullWidth={fullWidth}
               maxWidth={maxWidth}
-            
+              maxHeight={'30%'}
+              height={'60%'}
               classes={{ paper: classes.dialogPaper }}
               >
-                                 <SignInSide />
+            <SignInSide />
         </Dialog>
      
       

@@ -22,6 +22,7 @@ import {antenas} from '../../data/antenas.json';
 import {WORLD} from '../../data/WORLD.json';
 import {PAMIRANDA} from '../../data/PAMIRANDA.json';
 import {LIBERTADOR} from '../../data/libertador.json';
+import {CIUDADESGEO} from '../../data/ciudadesgeo.json';
 let image = new Image();
 image.src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAr0lEQVQ4T92VQRKAMAgD9ef8XIeOOBBD6FmPLSyBAp7H8JnZlU3M7FQu9LKD7MA/wHDKSnbPXHkBZkdUg2l6QBboBTJYVy9lW4AYtVPJ7CI4BXbpeNqoLmwLcDIi9bsyKPsvhX6g0lDAx389kDO2gPiaSkABotqoiwJmm1chA3WtMdVbtk3UbpqUKEGZFBZ5ArL2akcPNszaODg5cvTUSmKOnb3cbSrlnwOn30S+vwH7HygkEWrDEQAAAABJRU5ErkJggg=="
 //image.src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAEaElEQVQ4T4WUe2xURRTGvzP3se0uW7p1KaUtFGwrpUtLQQIkAhFR0QiEaEiIRgOJJEACJIaASjE3UKIVEmNJhATjK2p8xIiIIaAExf6BofJsm9ay2GJLm4W228cuu3vvzDF7SRsEGuePSWbmfL/5zsycIYzVmMkCtKxOGD2xW3o6LM8XdAYLYVuABBE/SEoPmrQa2Ct8qWJS2nRmZwoTZaXjiHmQSL/OQraqmBm25lL8Xv19wJ0XuSDDtFcqUJFg3FRQPbZELC00NPgERJ4iTBDgjkTKObq3ytt1N/Q/wD0tPA3K3sygvhjj1/Yh9VDcUSEizr3jkCIZumia6he94whLoDgA3Tiwq4z+HoGOAq3WwSBJzzbBfDOc8nzXfzuxjhmFBNSbpDWlBSmWIQUsYladeYb4eIqXXmCNggaZ+96cQb3upunOOs26yE09L4DZ3Unz0PV4citDDl8bVl83R6kAGqpcBxIXZ2UbXUV+tQYg7+RMT91ET2oDQftTRrQj1hJyXODeZp4kVWoDKz57YUiVKKD4fB++7IzLZRCcBaY2F0hcCkWDhV7txJwc8SJYXa0KiLAOWqCReWhnOXUTmGl3iz0Hild2xdSpbps3Dtio+y2i5gHQMDD8fXa4JxswkHgkOJAY51sFwc7SoHbOp2HLZA8dnOTTlyrBR98qM86TxSyMFucpZsxqHFTX4o5aejpivzfkiE1w8FHOhfZSCLXNdajE/r5HC65CGOv8uvrg8VzjNa/gUxXZxjSpcIlD+s+0+hvWKkPyOUGquKFfRiWj9OgN53OQ2IRItDano3cXiNa6QOZP+soK9iArczuUPLgiX3/Z0NA6268FQCp8ucnzk+tQa3aeJsiZF4ZVly0x/8RN52AyRZuR4AM5jdcXE1Dj8hR29lVO+R0ZtNnDfGBZgb7R1LSzVX5RyECjLNdP3jnDZnsegZ9pj6n6SIrX96fU2/W3eDmIbqC7+1hOZ6I6DewrzKjBxPwVIExaGORjAVO8kW/S4UK/vpAUH68uN865t1xzJT5ZCeNVR6H+8oCzQAE4E8GZqONUQNOOBP649lI6rn/+w19AylXZBhoXTRCLhQIqAtpZU9BjQskPqyu8/7jAujb2RKVcDcVT22LqSDQhN0qIv9oSdLKtP9IeaBjY4gLnjq8rDeROLfHIZYZAyXiPdmi6T6xSrNqzTfPbLaWUHK2U2hbOT0h7OzGaLw2r07bCemZuHkplfHXpeNPWNHDWs6H3/WZiDTGXG7o4XOkXTxCjTOnGPquMboxWykgd7rmSnAFB1Qp0Pgr9h47eeEzr8UZ+aWhyn82Tc0P7ZV48t8in+QKZYjmB50nH3G1VUst9tTwKbeNiTjprCSpFQn1WXZ7ZEdjeuMNN+d2ZtTXNt4tYiVcghAEpP91VkREe87cZWXgnzONTMbtEeYwOazrduhtotXJQJO0i02dcfb2YBu6G3ZfyvYsj48COxhWuw9qZP44VM2bKDxRYTaY7b4VS/wf8F26OCjLnxzKcAAAAAElFTkSuQmCC"
@@ -244,7 +245,13 @@ function onZoomEnd (map, event)  {
 <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
             {SOURCES}
       </Layer>
-      <GeoJSONLayer   
+      <GeoJSONLayer
+          data={CIUDADESGEO}
+          fillPaint={{'fill-color': 'yellow','fill-outline-color': 'yellow','fill-opacity': .1}}
+          linePaint={{            'line-color': 'yellow',            'line-width': 1          }}
+          
+        /> 
+      {/* <GeoJSONLayer   
           data={points}
           circleLayout={{ visibility: 'visible' }}
          circlePaint={{'circle-color': 'red','circle-radius': 2,'circle-opacity': 1,'circle-stroke-color': 'Orange' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
@@ -258,8 +265,8 @@ function onZoomEnd (map, event)  {
           symbolPaint={{
             'text-color': 'black'
           }}
-          />
-            <GeoJSONLayer
+          /> */}
+            {/* <GeoJSONLayer
           data={voronoigeojson}
           fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.3}}
           linePaint={{
@@ -285,7 +292,16 @@ function onZoomEnd (map, event)  {
             'line-width': 4
           }}
           
-        />   
+        />  */}
+         <GeoJSONLayer
+          data={WORLD}
+          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
+          linePaint={{
+            'line-color': '#58D3F7',
+            'line-width': 1
+          }}
+          
+        />     
 {/* 
       <GeoJSONLayer
           data={PAMIRANDA}
@@ -304,7 +320,7 @@ function onZoomEnd (map, event)  {
             'line-width': 4
           }} */}
           
-        />   
+          
  {/* <GeoJSONLayer
           data={circle1}
           circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
@@ -323,7 +339,7 @@ function onZoomEnd (map, event)  {
           }}
           
         />     */}
-<GeoJSONLayer
+{/* <GeoJSONLayer
           data={hexgrid}
           fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
           linePaint={{
@@ -331,7 +347,7 @@ function onZoomEnd (map, event)  {
             'line-width': 4
           }}
           
-        />   
+        />    */}
           <GeoJSONLayer   
           data={KPI2G}
           circleLayout={{ visibility: 'visible' }}

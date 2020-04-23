@@ -1,6 +1,6 @@
   
 import React, {useEffect, useState,Fragment,useContext } from 'react';
-import { greatCircle, point,hexGrid,circle,voronoi,randomPoint } from '@turf/turf';
+import { greatCircle,destination, point,hexGrid,circle,voronoi,randomPoint } from '@turf/turf';
 
 import KpiContext from '../../context/kpiContext'
 import { Application } from '../../App';
@@ -184,20 +184,20 @@ useEffect(() => {
 useEffect(() => {
   //alert(JSON.stringify(clicklocation))
   if (JSON.stringify(clicklocation)!="[0,0]"){
-  // setPointLocation(
-  //   {
-  //     "type": "FeatureCollection",
-  //     "features": [
-  //       {
-  //         "type": "Feature",
-  //         "properties": {},
-  //         "geometry": {
-  //           "type": "Point",
-  //           "coordinates":clicklocation
-  //         }
-  //       }
-  //     ]
-  //   })
+  setPointLocation(
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "type": "Point",
+            "coordinates":clicklocation
+          }
+        }
+      ]
+    })
   //   var options = {
   //     //bbox : [-73,7,-62,12]
   //     //bbox: [-66.934,10.45114, -66.841, 10.511]
@@ -250,7 +250,7 @@ useEffect(() => {
   //   handleKPIDay(pointsFeatureCollection )
    }
    var centro=clicklocation
-  var options = {steps: 500, units: 'kilometers', properties: {foo: 'bar'}};
+  var options = {steps: 100, units: 'kilometers', properties: {foo: 'bar'}};
   var circle1 = circle(centro, 1, options);
   var circle2 = circle(centro, 2, options);
   var circle3 = circle(centro, 3, options);
@@ -325,10 +325,23 @@ useEffect(() => {
    // alert('createtrandom')
    // https://blog.risingstack.com/node-js-async-best-practices-avoiding-callback-hell-node-js-at-scale/?utm_source=RisingStack+Blog&utm_campaign=13c6d79d5c-reinventing-hooks-with-react-easy-state&utm_medium=email&utm_term=0_02a6a69990-13c6d79d5c-475171197
     //points.features.map((feature, i) => {
+      var poin = point(clicklocation);
+var distance = 5;
+var bearing = -135;
+var options = {units: 'kilometers'};
+
+var p1 = destination(poin, distance, bearing, options);
+var poin2 = point(clicklocation);
+var distance2 = 5;
+var bearing2 = 45;
+var options2 = {units: 'kilometers'};
+
+var p2 = destination(poin2, distance2, bearing2, options2);
+//alert(JSON.stringify(destinatio.geometry.coordinates))
       var options = {
         //bbox : [-73,7,-62,12]
         //bbox: [-66.934,10.45114, -66.841, 10.511]
-        bbox: [-66.95,10.43, -66.78, 10.5]
+        bbox: [p1.geometry.coordinates[0],p1.geometry.coordinates[1], p2.geometry.coordinates[0],p2.geometry.coordinates[1]]
       };
       var cantidad=100+Math.floor(Math.random() * 2000)*1;
      var points = randomPoint(cantidad, options);
@@ -574,33 +587,7 @@ return (
 <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
             {ANTENAS}
       </Layer>
-      <GeoJSONLayer
-          data={circle1}
-          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
-          linePaint={{
-            'line-color': 'yellow',
-            'line-width': 4
-          }}
-          
-        />    
-              <GeoJSONLayer
-          data={circle2}
-          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
-          linePaint={{
-            'line-color': 'yellow',
-            'line-width': 4
-          }}
-          
-        />    
-      <GeoJSONLayer
-          data={circle3}
-          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
-          linePaint={{
-            'line-color': 'yellow',
-            'line-width': 4
-          }}
-          
-        />    
+       
 
       <GeoJSONLayer   centro y brillo
           data={KPI2G}
@@ -670,7 +657,7 @@ return (
             circlePaint={{'circle-color': 'white','circle-radius': 6,'circle-opacity': 1,'circle-stroke-color': 'white' , 'circle-stroke-width': 8,'circle-blur': 0.9,}}         
          
           />
-          <GeoJSONLayer
+          {/* <GeoJSONLayer
             data={voronoigeojson}
             fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
             linePaint={{
@@ -678,7 +665,7 @@ return (
              'line-width': 2
             }}
           
-        />  
+        />   */}
           <GeoJSONLayer
           data={antenasFeatureCollection}
           circleLayout={{ visibility: 'visible' }}
@@ -686,6 +673,33 @@ return (
            
          
           />
+          <GeoJSONLayer
+          data={circle1}
+          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
+          linePaint={{
+            'line-color': 'yellow',
+            'line-width': 2
+          }}
+          
+        />    
+              <GeoJSONLayer
+          data={circle2}
+          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
+          linePaint={{
+            'line-color': 'yellow',
+            'line-width': 2
+          }}
+          
+        />    
+      <GeoJSONLayer
+          data={circle3}
+          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
+          linePaint={{
+            'line-color': 'yellow',
+            'line-width': 2
+          }}
+          
+        />   
  {/* <GeoJSONLayer
           data={tres}
           circleLayout={{ visibility: 'visible' }}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Application } from '../../App';
 //import city2 from "../../images/city2.jpg";
-import logo from '../../images/logo_main.png'
+import logo from '../../images/LogoOctolytics.png'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -19,10 +19,7 @@ import { makeStyles } from '@material-ui/core/styles';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
+      {'Copyright © Octolytics '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -32,9 +29,10 @@ const Background="./city2.jpg"
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '60vh',
+    
   },
   image: {
-    backgroundImage: `url(${Background})`,
+    backgroundImage: `url(${logo})`,
     backgroundRepeat: 'no-repeat',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
@@ -70,14 +68,15 @@ export default function SignInSide() {
         stateprop: true
       });
   }
+  
   return (
     <React.Fragment>
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} >
-      <img src={logo} height="100%" width="100%"  alt="Logo" />
+      <Grid item xs={false} sm={5} md={7} className={classes.image} >
+      {/* <img src={logo} height="50%" width="50%" align="center"  alt="Logo" /> */}
       </Grid>
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+      <Grid item xs={12} sm={7} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
