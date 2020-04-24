@@ -1,6 +1,6 @@
   
 import React, {useEffect, useState,Fragment,useContext } from 'react';
-import { greatCircle,destination, point,hexGrid,circle,voronoi,randomPoint } from '@turf/turf';
+import { greatCircle,destination, point,hexGrid,circle,voronoi,randomPoint ,featureCollection,nearestPoint} from '@turf/turf';
 
 import KpiContext from '../../context/kpiContext'
 import { Application } from '../../App';
@@ -145,6 +145,7 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     const[kpiday, setKpiday]=useState({"type":"FeatureCollection","features":[] })
     const[clicklocation, setClickLocation]=useState([0,0])
     const[pointlocation, setPointLocation]=useState({"type":"FeatureCollection","features":[] })
+    const[lineas, setLineas]=useState({"type":"FeatureCollection","features":[] })
     const[pointFeatureCollection,setPointFeatureCollection]=useState({"type":"FeatureCollection","features":[] })
     const[randompoints, setRandomPoints]=useState({"type":"FeatureCollection","features":[] })
     const[circle1, setCircle1]=useState({"type":"FeatureCollection","features":[] })
@@ -343,7 +344,7 @@ var p2 = destination(poin2, distance2, bearing2, options2);
         //bbox: [-66.934,10.45114, -66.841, 10.511]
         bbox: [p1.geometry.coordinates[0],p1.geometry.coordinates[1], p2.geometry.coordinates[0],p2.geometry.coordinates[1]]
       };
-      var cantidad=100+Math.floor(Math.random() * 2000)*1;
+      var cantidad=1000+Math.floor(Math.random() * 2000)*1;
      var points = randomPoint(cantidad, options);
      var pointFeatures = {
       "type": "FeatureCollection",
@@ -399,6 +400,109 @@ var p2 = destination(poin2, distance2, bearing2, options2);
    
   })
   
+
+}
+function asociarAntenas(){
+  var antenasfeatures=[]
+antenas.map((a, i) => {
+      antenasfeatures.push(point([a.lon, a.lat]))
+})
+var antenaspoints = featureCollection(antenasfeatures);
+//alert(JSON.stringify(antenasfeatures))
+// var antenaspoints2 = featureCollection([
+//     point([28.973865, 41.011122]),
+//     point([28.948459, 41.024204]),
+//     point([28.938674, 41.013324])
+// ]);
+//alert(JSON.stringify(pointFeatureCollection.features[0]))
+var targetantenaPoint = point(pointFeatureCollection.features[0].geometry.coordinates, {"marker-color": "#0F0"});
+//alert(JSON.stringify(targetantenaPoint))
+var nearestantena = nearestPoint(targetantenaPoint, antenaspoints);
+//alert("neaest "+JSON.stringify(nearestantena))
+var lineasjsonn={
+  "type": "FeatureCollection",
+  "features": []
+}
+
+var linea0={
+  "type": "Feature",
+  "properties": {},
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      pointFeatureCollection.features[0].geometry.coordinates
+      ,
+      nearestantena.geometry.coordinates
+    ]
+  }
+}
+lineasjsonn.features.push(linea0)
+  pointFeatureCollection.features.map((feature, i) => {
+    var targetKpiPoint = point(pointFeatureCollection.features[i].geometry.coordinates, {"marker-color": "#0F0"});
+    var nearestantena = nearestPoint(targetKpiPoint, antenaspoints);
+    var lineaKpiAntena={
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          pointFeatureCollection.features[i].geometry.coordinates
+          ,
+          nearestantena.geometry.coordinates
+        ]
+      }
+    }
+    lineasjsonn.features.push(lineaKpiAntena)
+
+  })
+
+//   var targetPoint = point([28.965797, 41.010086], {"marker-color": "#0F0"});
+
+// var nearest = nearestPoint(targetPoint, antenaspoints);
+// alert(JSON.stringify(nearest))
+var lineasjson=
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -66.84837341308594,
+            10.445610623552714
+          ],
+          [
+            -66.83155059814453,
+            10.455064204354326
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -66.82193756103516,
+            10.429741466565432
+          ],
+          [
+            -66.807861328125,
+            10.456077070945142
+          ]
+        ]
+      }
+    }
+  ]
+}
+
+setLineas(lineasjsonn)
+
 
 }
  function onControlClick(map,event){
@@ -559,7 +663,7 @@ return (
 
 <Grid item xs={12} sm={12} md={12}>
       <Paper className={fixedHeightPaper}>
-      <table><tr><td><Title>{'Distribucion Geoespacial'}</Title></td><td> <Button variant="contained"  onClick={createRandom} color="primary" className={classes.button} >Generacion</Button></td><td> <Button variant="contained"  onClick={postRandom} color="primary" className={classes.button} >Registro</Button></td></tr></table>
+      <table><tr><td><Title>{'Distribucion Geoespacial'}</Title></td><td> <Button variant="contained"  onClick={createRandom} color="primary" className={classes.button} >Generacion</Button></td><td> <Button variant="contained"  onClick={postRandom} color="primary" className={classes.button} >Registro</Button></td><td> <Button variant="contained"  onClick={asociarAntenas} color="primary" className={classes.button} >Asociar Antenas</Button></td></tr></table>
       <Map       
    //style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
@@ -584,10 +688,14 @@ return (
 
 <ZoomControl  position={"bottomRight"}/>
 <ScaleControl />
-<Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
+       <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
             {ANTENAS}
       </Layer>
-       
+        
+        <Layer type="line" 
+         paint={ {'line-color': '#4790E5',  'line-width': 12}}>
+          <Feature coordinates={lineas} />
+        </Layer>
 
       <GeoJSONLayer   centro y brillo
           data={KPI2G}
@@ -644,7 +752,16 @@ return (
           }}
           
         /> */}
-
+      <GeoJSONLayer
+          data={lineas}
+          circlePaint={{'circle-color': 'lightgrey','circle-radius': 2,'circle-opacity': .8}}   
+          linePaint={{
+            'line-color': 'yellow',
+            'line-width': 2,
+           'line-opacity': .5
+          }}
+          
+        />
           <GeoJSONLayer
           data={randompoints}
           circleLayout={{ visibility: 'visible' }}
@@ -657,7 +774,7 @@ return (
             circlePaint={{'circle-color': 'white','circle-radius': 6,'circle-opacity': 1,'circle-stroke-color': 'white' , 'circle-stroke-width': 8,'circle-blur': 0.9,}}         
          
           />
-          {/* <GeoJSONLayer
+          <GeoJSONLayer
             data={voronoigeojson}
             fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
             linePaint={{
@@ -665,7 +782,7 @@ return (
              'line-width': 2
             }}
           
-        />   */}
+        />  
           <GeoJSONLayer
           data={antenasFeatureCollection}
           circleLayout={{ visibility: 'visible' }}
