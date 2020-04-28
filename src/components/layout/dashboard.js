@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { Application } from '../../App';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
 
@@ -104,6 +105,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
+    
   },
   drawerPaper: {
     position: 'relative',

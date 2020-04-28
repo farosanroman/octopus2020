@@ -57,6 +57,10 @@ const onLoginClick = () => {
   );
 }
 export default App;
+
+//LIBERIAS
+//https://awesomeopensource.com/project/brillout/awesome-react-components
+
 //HOOKS 
 //Kent useToogle with useReducer
 //https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks

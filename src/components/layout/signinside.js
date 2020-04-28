@@ -1,7 +1,8 @@
 import React from 'react';
 import { Application } from '../../App';
 //import city2 from "../../images/city2.jpg";
-import logo from '../../images/LogoOctolytics.png'
+import logo from '../../images/logo.png'
+import bg from "../../images/bg.png";
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -25,19 +26,31 @@ function Copyright() {
     </Typography>
   );
 }
-const Background="./city2.jpg"
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '60vh',
     
   },
+  color: {
+    backgroundColor: 'black'
+    },
   image: {
-    backgroundImage: `url(${logo})`,
+   backgroundImage: `url(${logo})`,
+   //backgroundImage: 'url(https://images.unsplash.com/photo-1586732538632-47e539174a1c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max)',
+    backgroundPosition: 'center', 
     backgroundRepeat: 'no-repeat',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundColor:'#0A232F',
+//      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+    //backgroundSize: 'cover',
+   //width: '100vh',
+   //height: '200vh',
+   flexGrow:1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    verticalAlign: 'middle',
+    boxshadow: '2px 2px 5px rgba(0, 0, 0, 0.570422)'
+
   },
   paper: {
     margin: theme.spacing(8, 4),
@@ -73,7 +86,7 @@ export default function SignInSide() {
     <React.Fragment>
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
-      <Grid item xs={false} sm={5} md={7} className={classes.image} >
+      <Grid item xs={false} sm={5} md={7} className={classes.image} align="center" >
       {/* <img src={logo} height="50%" width="50%" align="center"  alt="Logo" /> */}
       </Grid>
       <Grid item xs={12} sm={7} md={5} component={Paper} elevation={6} square>

@@ -85,7 +85,7 @@ var linearoja={"type":"FeatureCollection","features":[{"type":"Feature","propert
 const style={   Paper:{padding:1,marginTop:1,marginBottom:1}}
 const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pzIn0.V8cqmZH6dFIcxtKoaWcZZw"
   const Map = MapGL({accessToken: TOKEN });
-  const mapStyle = {  flex: 1,  height: "50vh",width: "100%"};
+  const mapStyle = {  flex: 1,  height: "100vh",width: "100%"};
   
   
   const useStyles = makeStyles(theme => ({
@@ -344,7 +344,7 @@ var p2 = destination(poin2, distance2, bearing2, options2);
         //bbox: [-66.934,10.45114, -66.841, 10.511]
         bbox: [p1.geometry.coordinates[0],p1.geometry.coordinates[1], p2.geometry.coordinates[0],p2.geometry.coordinates[1]]
       };
-      var cantidad=1000+Math.floor(Math.random() * 2000)*1;
+      var cantidad=100+Math.floor(Math.random() * 2000)*1;
      var points = randomPoint(cantidad, options);
      var pointFeatures = {
       "type": "FeatureCollection",
@@ -663,10 +663,14 @@ return (
 
 <Grid item xs={12} sm={12} md={12}>
       <Paper className={fixedHeightPaper}>
-      <table><tr><td><Title>{'Distribucion Geoespacial'}</Title></td><td> <Button variant="contained"  onClick={createRandom} color="primary" className={classes.button} >Generacion</Button></td><td> <Button variant="contained"  onClick={postRandom} color="primary" className={classes.button} >Registro</Button></td><td> <Button variant="contained"  onClick={asociarAntenas} color="primary" className={classes.button} >Asociar Antenas</Button></td></tr></table>
+      <table><tr><td><Title>{'Distribucion Geoespacial'}</Title></td><td> <Button variant="contained" color="secondary" onClick={createRandom}  className={classes.button} >Generacion</Button></td><td> <Button variant="contained"  onClick={postRandom} color="primary" className={classes.button} >Registro</Button></td><td> <Button variant="contained"  onClick={asociarAntenas} color="primary" className={classes.button} >Asociar Antenas</Button></td></tr></table>
       <Map       
-   //style="mapbox://styles/mapbox/streets-v8"
+  // style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
+   containerStyle={{
+    height: '1000px',
+    width: '100vw'
+  }}
    // style="mapbox://styles/mapbox/light-v9"
    center={center} 
    //center={[longitude,latitude]} 
@@ -688,9 +692,7 @@ return (
 
 <ZoomControl  position={"bottomRight"}/>
 <ScaleControl />
-       <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
-            {ANTENAS}
-      </Layer>
+      
         
         <Layer type="line" 
          paint={ {'line-color': '#4790E5',  'line-width': 12}}>
@@ -756,7 +758,7 @@ return (
           data={lineas}
           circlePaint={{'circle-color': 'lightgrey','circle-radius': 2,'circle-opacity': .8}}   
           linePaint={{
-            'line-color': 'yellow',
+            'line-color': 'red',
             'line-width': 2,
            'line-opacity': .5
           }}
@@ -783,14 +785,7 @@ return (
             }}
           
         />  
-          <GeoJSONLayer
-          data={antenasFeatureCollection}
-          circleLayout={{ visibility: 'visible' }}
-          circlePaint={{'circle-color': 'white','circle-radius': 2,'circle-opacity': 1,'circle-stroke-color': 'whitesmoke' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
-           
-         
-          />
-          <GeoJSONLayer
+                  <GeoJSONLayer
           data={circle1}
           circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
           linePaint={{
@@ -817,6 +812,17 @@ return (
           }}
           
         />   
+          <GeoJSONLayer
+          data={antenasFeatureCollection}
+          circleLayout={{ visibility: 'visible' }}
+          circlePaint={{'circle-color': 'white','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'whitesmoke' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
+           
+         
+          />
+           <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
+            {ANTENAS}
+      </Layer>
+
  {/* <GeoJSONLayer
           data={tres}
           circleLayout={{ visibility: 'visible' }}
