@@ -1,4 +1,4 @@
-import {celular} from '../../data/celular.json';
+import {celular} from '../../data/celular2.json';
 export const kpigeojson=(tipo)=>{
     //alert(celular.length)
    /// alert("func1  "+e)

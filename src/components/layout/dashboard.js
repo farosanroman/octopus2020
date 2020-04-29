@@ -41,6 +41,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 
 import Geo from         '../heatmap/geo';
 import GeoFences from         '../heatmap/geofences';
+import Voronoi from         '../indicadores/voronoi';
 import GeoPostKpi from         '../postkpi/geopostkpi';
 import Modelog from     '../antenas/modelog'
 import Dispositivos from     './dispositivos'
@@ -53,7 +54,7 @@ import Antenas from '../antenas/antenas'
 import {useFetch} from '../hooks/usefetch';
 import {kpigeojson} from '../helpers/kpigeojson';
 import {antenas} from '../../data/antenas.json';
-import {celular} from '../../data/celular.json';
+//import {celular} from '../../data/celular.json';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -517,12 +518,12 @@ export default function Dashboard() {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             {/* Chart */}
+           
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                 <GeoFences />
+                 <Voronoi />
               </Paper>
             </Grid>
-           
           </Grid>
           <Box pt={4}>
             <Copyright />

@@ -124,8 +124,8 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     const contextKPI = useContext(KpiContext);
     //alert(JSON.stringify(contextKPI))
 
-    const [zoom, setZoom] = useState(12);
-    const [center, setCenter] = useState([-66.8726,10.4713]);
+    const [zoom, setZoom] = useState(13);
+    const [center, setCenter] = useState([-66.8926,10.4613]);
 
     const [flagCircular, setFlagCircular] = React.useState(false);     
 
@@ -205,56 +205,7 @@ useEffect(() => {
         }
       ]
     })
-  //   var options = {
-  //     //bbox : [-73,7,-62,12]
-  //     //bbox: [-66.934,10.45114, -66.841, 10.511]
-  //     bbox: [-66.95,10.43, -66.78, 10.5]
-  //   };
-  //   var cantidad=100+Math.floor(Math.random() * 2000)*1;
-  //  var points = randomPoint(cantidad, options);
-  // // console.log(points)
-  //  var pointFeatures = {
-  //   "type": "FeatureCollection",
-  //   "features": points};
-  //   var pointsFeatureCollection={"type":"FeatureCollection","features":[] }
-  //   var f = points.features.map((feature, i) => {
-
-  //     //
-
-  //   var mobiles=["2G","3G","4G"];
-  //   var random=Math.floor(Math.random() * 3)*1;
-  //   var random2=Math.floor(Math.random() *1000)*1;
-  //  // console.log("pos "+random)
-  //   var newkpi= {
-  //     "ttl":30,
-  //     "type": "Feature",
-  //     "properties": {
-  //     "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
-  //     "timestamp": new Date(),
-  //     "identification":"state.login.email",
-  //     "mobilegeneration":mobiles[random],
-  //     "cellid": 11111,
-  //     "cidreported": 11111,
-  //     "downlink":random2,
-  //     "rtt":random2,
-  //     "mcc": 734,
-  //     "mnc": 2,
-  //     "signaltype":mobiles[random],
-  //     "signalstrength": 27,
-  //     "rsrq": -11,
-  //     "rsrp": -89, },
-
-  //         "geometry": {
-  //         "type": "Point",
-  //         "coordinates":feature.geometry.coordinates
-  //        }
-  //     }
-  //     pointsFeatureCollection.features.push(newkpi)
-  //   })
-  //   //setRandomPoints(pointsFeatureCollection)
-  //  // alert("fin")
-  //  setPointFeatureCollection(pointsFeatureCollection)
-  //   handleKPIDay(pointsFeatureCollection )
+ 
    }
    var centro=clicklocation
   var options = {steps: 100, units: 'kilometers', properties: {foo: 'bar'}};
@@ -332,25 +283,26 @@ useEffect(() => {
    // alert('createtrandom')
    // https://blog.risingstack.com/node-js-async-best-practices-avoiding-callback-hell-node-js-at-scale/?utm_source=RisingStack+Blog&utm_campaign=13c6d79d5c-reinventing-hooks-with-react-easy-state&utm_medium=email&utm_term=0_02a6a69990-13c6d79d5c-475171197
     //points.features.map((feature, i) => {
-      var poin = point(clicklocation);
-var distance = 5;
-var bearing = -135;
-var options = {units: 'kilometers'};
+    //Buscar coordenadas de rectangulo
+    var poin = point(clicklocation);
+      var distance = 5;
+     var bearing = -135;
+    var options = {units: 'kilometers'};
 
-var p1 = destination(poin, distance, bearing, options);
-var poin2 = point(clicklocation);
-var distance2 = 5;
-var bearing2 = 45;
-var options2 = {units: 'kilometers'};
+    var p1 = destination(poin, distance, bearing, options);
+    var poin2 = point(clicklocation);
+    var distance2 = 5;
+    var bearing2 = 45;
+    var options2 = {units: 'kilometers'};
 
-var p2 = destination(poin2, distance2, bearing2, options2);
+    var p2 = destination(poin2, distance2, bearing2, options2);
 //alert(JSON.stringify(destinatio.geometry.coordinates))
       var options = {
         //bbox : [-73,7,-62,12]
-        //bbox: [-66.934,10.45114, -66.841, 10.511]
-        bbox: [p1.geometry.coordinates[0],p1.geometry.coordinates[1], p2.geometry.coordinates[0],p2.geometry.coordinates[1]]
+        bbox: [-66.934,10.42114, -66.8, 10.511]
+        //  bbox: [p1.geometry.coordinates[0],p1.geometry.coordinates[1], p2.geometry.coordinates[0],p2.geometry.coordinates[1]]
       };
-      var cantidad=100+Math.floor(Math.random() * 2000)*1;
+      var cantidad=2000+Math.floor(Math.random() * 2000)*1;
      var points = randomPoint(cantidad, options);
      var pointFeatures = {
       "type": "FeatureCollection",
@@ -395,8 +347,15 @@ var p2 = destination(poin2, distance2, bearing2, options2);
      setPointFeatureCollection(pointsFeatureCollection)
       handleKPIDay(pointsFeatureCollection )
      
-  
+    
   }  
+  useEffect(() => {
+   // alert(JSON.stringify(pointFeatureCollection.features))
+    if (pointFeatureCollection.features.length>0){
+   asociarAntenas()
+    }
+    },[pointFeatureCollection]);
+  
  function postRandom(){
   //alert('postrandom')
   //points.features.map((feature, i) => {
@@ -669,7 +628,7 @@ return (
 
 <Grid item xs={12} sm={12} md={12}>
       <Paper className={fixedHeightPaper}>
-      <table><tr><td><Title>{'Distribucion Geoespacial'}</Title></td><td> <Button variant="contained" color="secondary" onClick={createRandom}  className={classes.button} >Generacion</Button></td><td> <Button variant="contained"  onClick={postRandom} color="primary" className={classes.button} >Registro</Button></td><td> <Button variant="contained"  onClick={asociarAntenas} color="primary" className={classes.button} >Asociar Antenas</Button></td></tr></table>
+      <table><tr><td><Title>{'Distribucion Geoespacial'}</Title></td><td> <Button variant="contained" color="secondary" onClick={createRandom}  className={classes.button} >Generacion</Button></td><td> <Button variant="contained" disabled onClick={postRandom} color="primary" className={classes.button} >Registro</Button></td><td> <Button variant="contained" disabled  onClick={asociarAntenas} color="primary" className={classes.button} >Analisis de Antenas</Button></td></tr></table>
       <Map       
   // style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"

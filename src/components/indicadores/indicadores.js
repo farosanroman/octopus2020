@@ -121,7 +121,7 @@ const useStyles = makeStyles(theme => ({
     height: 180,
   },
   fixedHeight3: {
-    height: 220,
+    height: 240,
   },
 }));
 export default function Indicadores() {
