@@ -293,13 +293,13 @@ function onZoomEnd (map, event)  {
           }}
           
         />  */}
-         <GeoJSONLayer
+         {/* <GeoJSONLayer
           data={WORLD}
           fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
           linePaint={{
             'line-color': '#58D3F7',
             'line-width': 1
-          }}
+          }} */}
           
         />     
 {/* 
