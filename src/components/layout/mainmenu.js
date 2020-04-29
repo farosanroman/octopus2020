@@ -30,7 +30,7 @@ return (
       <ListItemIcon >
       <NetworkCheckIcon />
       </ListItemIcon>
-      <ListItemText primary="Mensajes" />
+      <ListItemText primary="Heatmap" />
     </ListItem>
    
    
@@ -39,14 +39,14 @@ return (
       <ListItemIcon>
         <SettingsInputAntennaIcon />
       </ListItemIcon>
-      <ListItemText primary="Antenas" />
+      <ListItemText primary="Basestations" />
     </ListItem>
 
     <ListItem button  onClick={handleMenuLayout(3)}>
       <ListItemIcon>
         <PhoneIphoneIcon />
       </ListItemIcon>
-      <ListItemText primary="Telefonos" />
+      <ListItemText primary="Devices" />
     </ListItem>
     
     <ListItem button  onClick={handleMenuLayout(2)}>
@@ -61,7 +61,7 @@ return (
       <ListItemIcon>
         <SignalCellular3BarIcon />
       </ListItemIcon>
-      <ListItemText primary="Manteniemitno" />
+      <ListItemText primary="Maintenance" />
     </ListItem>
   </div>
 )

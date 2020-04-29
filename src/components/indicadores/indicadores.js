@@ -29,8 +29,12 @@ import Voronoi from './voronoi.js'
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
+  root0: {
+    display: 'flex',
+  },
   root: {
     display: 'flex',
+    
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -101,12 +105,13 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
-   
+    background: '#081C25',
   },
     paper2: {
     padding: theme.spacing(2),
     textAlign: 'center',
-    color: theme.palette.text.secondary
+    color: theme.palette.text.secondary,
+
   },
   fixedHeight: {
     height: 600,
@@ -115,12 +120,17 @@ const useStyles = makeStyles(theme => ({
    fixedHeight2: {
     height: 180,
   },
+  fixedHeight3: {
+    height: 220,
+  },
 }));
 export default function Indicadores() {
   //static jsfiddleUrl = 'https://jsfiddle.net/alidingling/c9pL8k61/';
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   const fixedHeightPaper2 = clsx(classes.paper, classes.fixedHeight2);
+  const fixedHeightPaper3 = clsx(classes.paper, classes.fixedHeight3);
+  
   const { state, dispatch } = React.useContext(Application);
   
   const contextKPI = useContext(KpiContext);
@@ -128,7 +138,7 @@ export default function Indicadores() {
 
   const [totalKPI,setTotaKPI]= useState("33.000");
   const [totalDevices,setTotaDevices]= useState("13");
-  const [tota3GBaseStations,setTota3GBaseStations]= useState("130");
+  const [tota3GBaseStations,setTota3GBaseStations]= useState("10");
   const [tota4GBaseStations,setTota4GBaseStations]= useState("430");
   
   const [flagCircular, setFlagCircular] = React.useState(false);     
@@ -184,25 +194,26 @@ export default function Indicadores() {
         <Container maxWidth="lg" className={classes.container}>  
         {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress} />}
         <Grid container spacing={3}>
-      <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-           <Total titulo={'Messages'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalKPI} leyenda={'Total Acumulado'}/>
+          <Total titulo={'Devices'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalDevices} leyenda={'Register Devices'}/>
       </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
-      <Paper className={fixedHeightPaper2}>
-          <Total titulo={'Devices'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalDevices} leyenda={'Dispositivos Activos'}/>
+      <Paper className={fixedHeightPaper2} elevation={3}>
+           <Total titulo={'Devices Reports'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalKPI} leyenda={'Devices Reports'}/>
       </Paper>
       </Grid>
+
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'3G Basestations'}  total={tota3GBaseStations}leyenda={'Dispositivos Activos'}/>
+          <Total titulo={'3G Basestations'}  total={tota3GBaseStations}leyenda={'Registered Users'}/>
       </Paper>
    
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'4G Basestations'}   total={tota3GBaseStations} leyenda={'Dispositivos Activos'}/>
+          <Total titulo={'4G Basestations'}   total={tota3GBaseStations} leyenda={'Data Collected'}/>
       </Paper>
    
       </Grid>
@@ -210,14 +221,14 @@ export default function Indicadores() {
       </Grid>
       <Grid container spacing={3}>
       <Grid item xs={12} sm={12} md={6}>
-      <Paper className={fixedHeightPaper2}>
+      <Paper className={fixedHeightPaper3}>
       <BarHorizontal titulo={'Mobile Generation'}  />
            
 
       </Paper>
       </Grid>
       <Grid item xs={12} sm={12} md={6}>
-      <Paper className={fixedHeightPaper2}>
+      <Paper className={fixedHeightPaper3}>
       <BarStack titulo={'Sygnal Type'}  />
 
       </Paper>

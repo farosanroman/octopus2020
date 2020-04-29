@@ -153,6 +153,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
+    background: 'black',
   },
   fixedHeight: {
     height: 240,
@@ -404,7 +405,7 @@ export default function Dashboard() {
           </IconButton>
          
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Octolitycs
+            OCTOLITYCS
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">

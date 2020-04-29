@@ -14,7 +14,8 @@ const useStyles = makeStyles({
   {
     chart: {
         type: 'bar',
-        height: 350
+        height: 350,
+        foreColor: "#fff",
       },
           plotOptions: {
         bar: {

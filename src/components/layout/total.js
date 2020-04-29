@@ -14,14 +14,15 @@ export default function Total(props) {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>{props.titulo}</Title>
-      <Typography component="p" variant="h4">
+      <div >
+      {/* <Title>{props.titulo}</Title> */}
+      <Typography component="p" variant="h2">
          {props.total}
       </Typography>
-      <Typography color="textSecondary" className={classes.depositContext}>
+      <Typography color="textSecondary" variant="h5" className={classes.depositContext}>
          {props.leyenda}
       </Typography>
-     
+      </div>
     </React.Fragment>
   );
 }

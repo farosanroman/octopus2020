@@ -96,7 +96,8 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
     paper: {
       padding: theme.spacing(0),
       textAlign: 'left',
-      color: theme.palette.text.secondary
+      color: theme.palette.text.secondary,
+      background: '#081C25',
     },
     fixedHeight: {
       height: 200,
@@ -106,6 +107,11 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
    fixedHeight2: {
     height: 120,
   },
+  panelDetails: {
+   
+    background:'#0A232F'  
+  }
+   
   }));
 
   export default function Geo(props) {
@@ -570,7 +576,7 @@ const ANTENAS=antenas.map((nodo,index)=>{
 return (
 <Fragment>
     <div className={classes.root}>
-    <ExpansionPanel>
+    <ExpansionPanel  className={classes.panelDetails}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"

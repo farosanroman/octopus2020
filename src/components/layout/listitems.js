@@ -27,7 +27,7 @@ export const mainListItems = (
       <ListItemIcon>
       <NetworkCheckIcon />
       </ListItemIcon>
-      <ListItemText primary="Resultados" />
+      <ListItemText primary="Heatmap" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
@@ -39,14 +39,14 @@ export const mainListItems = (
       <ListItemIcon>
         <PhoneIphoneIcon />
       </ListItemIcon>
-      <ListItemText primary="Telefonos" />
+      <ListItemText primary="Devices" />
     </ListItem>
    
     <ListItem button>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Manteniemitno" />
+      <ListItemText primary="Maintenance" />
     </ListItem>
   </div>
 );
