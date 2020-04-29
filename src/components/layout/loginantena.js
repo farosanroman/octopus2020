@@ -39,8 +39,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "transparent"
   },
   dialogPaper: {
-    minHeight: '60vh',
-    maxHeight: '60vh',
+    minHeight: '40vh',
+    maxHeight: '70vh',
     maxWidth:'60hv'
 },
   image: {
@@ -125,8 +125,7 @@ export default function LoginAntena(prop) {
            <Dialog open={true}  aria-labelledby="form-dialog-title"   
               fullWidth={fullWidth}
               maxWidth={maxWidth}
-              maxHeight={'30%'}
-              height={'60%'}
+              
               classes={{ paper: classes.dialogPaper }}
               >
             <SignInSide />

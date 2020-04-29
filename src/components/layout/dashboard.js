@@ -71,6 +71,7 @@ const drawerWidth2 =300;
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    background: 'black',
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -108,6 +109,8 @@ const useStyles = makeStyles(theme => ({
     
   },
   drawerPaper: {
+    background: '#081c25',
+    color: 'white',
     position: 'relative',
     whiteSpace: 'nowrap',
     width: drawerWidth,
@@ -116,6 +119,7 @@ const useStyles = makeStyles(theme => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
+
   drawerPaper2: {
     width: drawerWidth2,
   },
@@ -142,6 +146,7 @@ const useStyles = makeStyles(theme => ({
   container: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
+    background: 'black',
   },
   paper: {
     padding: theme.spacing(2),
@@ -399,7 +404,7 @@ export default function Dashboard() {
           </IconButton>
          
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard de Analisis 
+            Octolitycs
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -423,6 +428,7 @@ export default function Dashboard() {
           paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
         }}
         open={open}
+
       >
         <div className={classes.toolbarIcon}>
           <IconButton onClick={handleDrawerClose}>
@@ -456,7 +462,8 @@ export default function Dashboard() {
   </div>
 }
         {(layout==0)&&
-        <Container maxWidth="lg" className={classes.container}>
+    
+        <Container  className={classes.container}>
          
           
                  <Geo filtro2GA={checked2GA} filtro3GA={checked3GA} filtro4GA={checked4GA} />
@@ -486,6 +493,7 @@ export default function Dashboard() {
             <Copyright />
           </Box>
         </Container>
+    
 }
 {(layout==1)&&     
       <div className={classes.root}>

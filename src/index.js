@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import {red,amber} from '@material-ui/core/colors';
+import {red,amber,grey} from '@material-ui/core/colors';
 
 
 import App from './App';
@@ -12,15 +12,16 @@ const themeX = createMuiTheme({
       type: 'dark',
      
       primary: {
-        light: "#64b5f6",
-        main: "#2196f3",
-        dark: "#1976d2",
-        contrastText: "blue"
+        main: '#0A232F',
+        light: '#212121',
+
+        dark: '#212121',
+        contrastText: "white"
       },
       secondary: {
-        light: amber[300],
-        main: amber[500],
-        dark: amber[700]
+        light: grey[700],
+        main: grey[100],
+        dark: grey[700]
       },
     }
     
