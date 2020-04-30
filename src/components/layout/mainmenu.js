@@ -42,6 +42,13 @@ return (
       <ListItemText primary="Basestations" />
     </ListItem>
 
+    <ListItem button  onClick={handleMenuLayout(2)}>
+      <ListItemIcon>
+        <MapIcon />
+      </ListItemIcon>
+      <ListItemText primary="GeoFences" />
+    </ListItem>
+    
     <ListItem button  onClick={handleMenuLayout(3)}>
       <ListItemIcon>
         <PhoneIphoneIcon />
@@ -49,12 +56,7 @@ return (
       <ListItemText primary="Devices" />
     </ListItem>
     
-    <ListItem button  onClick={handleMenuLayout(2)}>
-      <ListItemIcon>
-        <MapIcon />
-      </ListItemIcon>
-      <ListItemText primary="GeoFences" />
-    </ListItem>
+   
    
     <Divider />
     <ListItem button  onClick={handleMenuLayout(4)}>

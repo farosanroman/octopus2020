@@ -86,7 +86,7 @@ export default function GeoSlider() {
     <div className={classes.root}>
       
       <Typography id="discrete-slider-small-steps" gutterBottom>
-        Rango de Horas
+        Time Range
       </Typography>
       <Slider
       onChange={handleChange}

@@ -99,7 +99,7 @@ export default function SignInSide() {
     const { state, dispatch } = React.useContext(Application);
     const [correo, setCorreo] = React.useState("");
     //octotestingv2@gmail.com 32111
-    const [correoError, setCorreoError] = React.useState({flag:false,helper:"Introduzca correo"});
+    const [correoError, setCorreoError] = React.useState({flag:false,helper:"Enter email"});
     const [pwd, setPwd] = React.useState("");
     const [data, isLoading, isError , fetchData] = useFetch(""); 
   const classes = useStyles();
@@ -110,11 +110,18 @@ export default function SignInSide() {
         if (input=="correo"){
         //  alert(/\S+@\S+\.\S+/.test(e.target.value))
           //const isValid = inputs[0].isValid(e.target.value);
+          if (e.target.value==1){
+            dispatch({
+              type: 'FLAGLOGIN',
+              stateprop: true
+            });
+      
+          }
           if (/\S+@\S+\.\S+/.test(e.target.value)){
-            setCorreoError({flag:false,helper:"Sintaxis Correcta"})
+            setCorreoError({flag:false,helper:"Correct Sintax"})
         
           } else{
-            setCorreoError({flag:true,helper:"Complete Sintaxis del Correo"})
+            setCorreoError({flag:true,helper:"Mail sintax please..."})
           }
          // alert(isValid)  
         // alert(JSON.stringify(statep.persona.direcciones))     
@@ -143,15 +150,22 @@ export default function SignInSide() {
     //alert(data[0].type)
     if ((data!=undefined)&&(!isLoading))      
     {
+      //alert(JSON.stringify(data))
+      //if (JSON.stringify(data)!="[]"){
     // alert("fetch"+JSON.stringify(data))
-      if (data.flag==1){
+    if (JSON.stringify(data)=="[]"){
+      
+    }
+    if (data.flag==1){
     dispatch({
         type: 'FLAGLOGIN',
         stateprop: true
       });
 
-      } else{
-        setCorreoError({flag:true,helper:"No pudo ser autenticado. Intente de Nuevo"})
+      } 
+      if (data.flag==0){
+      
+        setCorreoError({flag:true,helper:"User could not be validated. Try again"})
         setCorreo("") 
         setPwd("")
       } 

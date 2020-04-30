@@ -100,7 +100,7 @@ const f0=antenas.map(a=>{
   //   "type": "FeatureCollection",
   //   "features": features}
 
-export default function Voronoi() {
+export default function Antenas() {
   const classes = useStyles();
   const contextKPI = useContext(KpiContext);
   const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
@@ -215,6 +215,40 @@ function onZoomEnd (map, event)  {
       />    
            )     
      })
+    var colorantena= Math.floor(Math.random() * 4)*1
+     var antenasFeatureCollection0={"type":"FeatureCollection","features":[] }
+     var antenasFeatureCollection1={"type":"FeatureCollection","features":[] }
+     var antenasFeatureCollection2={"type":"FeatureCollection","features":[] }
+     var antenasFeatureCollection3={"type":"FeatureCollection","features":[] }
+    
+     const A=antenas.map((nodo,index)=>{  
+       //sources proveedores de enlaces   
+       //console.log(Math.floor(Math.random() * 4)*1)
+       var antenafeature= {
+         "type": "Feature",
+         "properties": {
+         "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+         "timestamp": new Date()},
+         "geometry": {
+             "type": "Point",
+             "coordinates":[nodo.lon,nodo.lat]
+            }
+         
+       }
+       if (Math.floor(Math.random() * 4)*1==0){
+         antenasFeatureCollection0.features.push(antenafeature) 
+       }
+       if (Math.floor(Math.random() * 4)*1==1){
+        antenasFeatureCollection1.features.push(antenafeature) 
+      }
+      if (Math.floor(Math.random() * 4)*1==2){
+        antenasFeatureCollection2.features.push(antenafeature) 
+      }
+      if (Math.floor(Math.random() * 4)*1==3){
+        antenasFeatureCollection3.features.push(antenafeature) 
+      }
+     })
+   // }
   return (
 
     <React.Fragment>
@@ -227,7 +261,7 @@ function onZoomEnd (map, event)  {
    // style="mapbox://styles/mapbox/light-v9"
    center={[-66.867900,10.4671]} 
    //center={[longitude,latitude]} 
-   zoom={[10]}
+   zoom={[12]}
    //center={[state.position.longitude,state.position.latitude]} 
    //center={[state.position.latitude,state.position.longitude]} 
    // zoom={[zoom]}
@@ -242,169 +276,48 @@ function onZoomEnd (map, event)  {
 > 
 <ZoomControl  onControlClick={onZoom}/>
 <ScaleControl />
-<Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
+
+      <GeoJSONLayer
+          data={CIUDADESGEO}
+          fillPaint={{'fill-color': 'yellow','fill-outline-color': 'yellow','fill-opacity': .02}}
+          linePaint={{            'line-color': 'yellow',            'line-width': 3   ,'line-opacity': .2      }}
+          
+        /> 
+          <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
             {SOURCES}
       </Layer>
       <GeoJSONLayer
-          data={CIUDADESGEO}
-          fillPaint={{'fill-color': 'yellow','fill-outline-color': 'yellow','fill-opacity': .1}}
-          linePaint={{            'line-color': 'yellow',            'line-width': 1          }}
-          
-        /> 
-      {/* <GeoJSONLayer   
-          data={points}
+          data={antenasFeatureCollection0}
           circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'red','circle-radius': 2,'circle-opacity': 1,'circle-stroke-color': 'Orange' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
-          /> */}
-            {/* <GeoJSONLayer
-          data={voronoigeojson}
-          fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.3}}
-          linePaint={{
-            'line-color': '#9F81F7',
-            'line-width': 4
-          }}
-          
-        />   
-                    <GeoJSONLayer
-          data={voronoigeojson2}
-          fillPaint={{'fill-color': 'red','fill-outline-color': 'white','fill-opacity':.3}}
-          linePaint={{
-            'line-color': '#9F81F7',
-            'line-width': 4
-          }}
-          
-        />   
-                       <GeoJSONLayer
-          data={voronoigeojson3}
-          fillPaint={{'fill-color': 'blue','fill-outline-color': 'white','fill-opacity':.3}}
-          linePaint={{
-            'line-color': '#9F81F7',
-            'line-width': 4
-          }}
-          
-        />  */}
-         {/* <GeoJSONLayer
-          data={WORLD}
-          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
-          linePaint={{
-            'line-color': '#58D3F7',
-            'line-width': 1
-          }} */}
-          
-          
-{/* 
-      <GeoJSONLayer
-          data={PAMIRANDA}
-          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
-          linePaint={{
-            'line-color': '#9F81F7',
-            'line-width': 4
-          }}
-          
-        />   
-         <GeoJSONLayer
-          data={LIBERTADOR}
-          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
-          linePaint={{
-            'line-color': '#9F81F7',
-            'line-width': 4
-          }} */}
-          
-          
- {/* <GeoJSONLayer
-          data={circle1}
-          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
-          linePaint={{
-            'line-color': 'yellow',
-            'line-width': 4
-          }}
-          
-        />    
-         <GeoJSONLayer
-          data={circle2}
-          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
-          linePaint={{
-            'line-color': 'yellow',
-            'line-width': 4
-          }}
-          
-        />     */}
-{/* <GeoJSONLayer
-          data={hexgrid}
-          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
-          linePaint={{
-            'line-color': '#00BFFF',
-            'line-width': 4
-          }}
-          
-        />    */}
-          <GeoJSONLayer   
-          data={KPI2G}
+          circlePaint={{'circle-color': 'red','circle-radius': 7,'circle-opacity': .1,'circle-stroke-color': 'red' , 'circle-stroke-width': 6,'circle-blur': 1 }}         
+           
+         
+          />
+                <GeoJSONLayer
+          data={antenasFeatureCollection1}
           circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Lime' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
+          circlePaint={{'circle-color': 'orange','circle-radius': 6,'circle-opacity': .11,'circle-stroke-color': 'orange' , 'circle-stroke-width': 5,'circle-blur': 1 }}         
+           
+         
+          />
+
+          
+<GeoJSONLayer
+          data={antenasFeatureCollection2}
+          circleLayout={{ visibility: 'visible' }}
+          circlePaint={{'circle-color': 'cyan','circle-radius': 5,'circle-opacity': .11,'circle-stroke-color': 'cyan' , 'circle-stroke-width': 4,'circle-blur': 1 }}         
+           
+         
           />
           
+          <GeoJSONLayer
+          data={antenasFeatureCollection3}
+          circleLayout={{ visibility: 'visible' }}
+          circlePaint={{'circle-color': 'green','circle-radius': 4,'circle-opacity': .11,'circle-stroke-color': 'green' , 'circle-stroke-width': 3,'circle-blur': 1 }}         
+           
+         
+          />
         
-   <GeoJSONLayer   
-          data={KPI3G}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Orange' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
-          />
-           <GeoJSONLayer   
-          data={KPI4G}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Red' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
-          />
-      <GeoJSONLayer
-          data={KPIRuta}
-          circlePaint={{'circle-color': 'lightgrey','circle-radius': 2,'circle-opacity': .8}}   
-          linePaint={{
-            'line-color': 'lightgrey',
-            'line-width': .4,
-           'line-opacity': 0.3
-          }}
-          
-        />
 </Map>
 </div>
     </React.Fragment>

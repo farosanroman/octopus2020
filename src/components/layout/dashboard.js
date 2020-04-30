@@ -42,6 +42,8 @@ import FormLabel from '@material-ui/core/FormLabel';
 import Geo from         '../heatmap/geo';
 import GeoFences from         '../heatmap/geofences';
 import Voronoi from         '../indicadores/voronoi';
+
+import Voronoi2 from         '../indicadores/voronoi2';
 import GeoPostKpi from         '../postkpi/geopostkpi';
 import Modelog from     '../antenas/modelog'
 import Dispositivos from     './dispositivos'
@@ -408,11 +410,11 @@ export default function Dashboard() {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             OCTOLITYCS
           </Typography>
-          <IconButton color="inherit">
+          {/* <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
-          </IconButton>
+          </IconButton> */}
           <IconButton
             edge="end"
             color="inherit"
@@ -501,12 +503,15 @@ export default function Dashboard() {
       <div className={classes.root}>
            
     <Grid container spacing={4} justify="center">
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid item xs={12} sm={4} md={4}>
         <Paper className={classes.paper2}><Modelog /></Paper>
       </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-         <Paper className={classes.paper2}><Modelog /></Paper>
-      </Grid>
+      <Grid item xs={12} sm={8} md={8}>
+
+              <Paper className={classes.paper}>
+                 <Voronoi2 />
+              </Paper>
+            </Grid>
       <Grid item xs={12} sm={12} md={12}>
          <Paper className={classes.paper2}><Antenas /></Paper>
       </Grid>

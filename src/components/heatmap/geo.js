@@ -547,7 +547,7 @@ return (
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading}>Calendario de Actividades</Typography>
+          <Typography className={classes.heading}>Calendar</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
         <Grid container spacing={3}>
@@ -567,23 +567,23 @@ return (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-           <Total titulo={'Messages'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={KPIcant} leyenda={'Total del Dia'}/>
+           <Total titulo={'Messages'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={KPIcant} leyenda={'Day Total'}/>
       </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'2G Signaltype'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={KPI2Gcant} leyenda={'Dispositivos Activos'}/>
+          <Total titulo={'2G Signaltype'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={KPI2Gcant} leyenda={'Active devices 2G'}/>
       </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'3G Signaltype'}  total={KPI3Gcant}leyenda={'Dispositivos Activos'}/>
+          <Total titulo={'3G Signaltype'}  total={KPI3Gcant}leyenda={'Active devices 3G'}/>
       </Paper>
    
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'4G Signaltype'}   total={KPI4Gcant} leyenda={'Dispositivos Activos'}/>
+          <Total titulo={'4G Signaltype'}   total={KPI4Gcant} leyenda={'Active devices 4G'}/>
       </Paper>
    
       </Grid>
@@ -597,7 +597,7 @@ return (
             <Grid item xs={12} md={6} lg={6}>
               
               <Paper className={fixedHeightPaper}>
-              <GeoDispositivos titulo={'Actividad de Dispositivos'} kkppii={KPI} fecha={fecha} />
+              <GeoDispositivos titulo={'Devices Activity'} kkppii={KPI} fecha={fecha} />
                </Paper>
             </Grid>
 
@@ -605,7 +605,7 @@ return (
             <Grid item xs={12} md={6} lg={6}>
               
               <Paper className={fixedHeightPaper}>
-              <GeoBarStack titulo={'Sygnal Type'}  kpi2Gcant={KPI2Gcant} kpi3Gcant={KPI3Gcant} kpi4Gcant={KPI4Gcant} />
+              <GeoBarStack titulo={'Signal Type'}  kpi2Gcant={KPI2Gcant} kpi3Gcant={KPI3Gcant} kpi4Gcant={KPI4Gcant} />
              
                </Paper>
             </Grid>
@@ -634,7 +634,7 @@ return (
 
 <Grid item xs={12} sm={12} md={12}>
       <Paper className={fixedHeightPaper}>
-      <table><tr><td><Title>{'Distribucion Geoespacial'}</Title></td><td> <Button variant="contained" color="secondary" onClick={clickGeoFence}  className={classes.button} >Gran Caracas</Button></td><td> <Button variant="contained" disabled onClick={postRandom} color="primary" className={classes.button} >Registro</Button></td><td> <Button variant="contained" disabled  onClick={asociarAntenas} color="primary" className={classes.button} >Analisis de Antenas</Button></td></tr></table>
+      <table><tr><td><Title>{'Geospatial Distribution'}</Title></td><td> <Button variant="contained" color="secondary" onClick={clickGeoFence}  className={classes.button} >Great Caracas</Button></td><td> <Button variant="contained" disabled onClick={postRandom} color="primary" className={classes.button} >Register</Button></td></tr></table>
       <Map       
   // style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
@@ -783,17 +783,17 @@ return (
           }}
           
         />    */}
-          <GeoJSONLayer
-          data={antenasFeatureCollection}
-          circleLayout={{ visibility: 'visible' }}
-          circlePaint={{'circle-color': 'white','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'whitesmoke' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
-           
-         
-          />
+      
            <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
             {ANTENAS}
       </Layer>
-
+      <GeoJSONLayer
+          data={antenasFeatureCollection}
+          circleLayout={{ visibility: 'visible' }}
+          circlePaint={{'circle-color': 'white','circle-radius': 3,'circle-opacity': 1,'circle-stroke-color': 'whitesmoke' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
+           
+         
+          />
  {/* <GeoJSONLayer
           data={tres}
           circleLayout={{ visibility: 'visible' }}

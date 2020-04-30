@@ -17,7 +17,8 @@ import BarHorizontal from './barhorizontal'
 import GeoCalendar from '../heatmap/geocalendar';
 import CircularProgress from '@material-ui/core/CircularProgress'; 
 
-import Voronoi from './voronoi.js'
+import Voronoi2 from './voronoi2.js'
+
 //mport Title from '../dashboard/title';
 //import FaroPieChart from '../indicadores/faropiechart';
 //import FaroPieChart from './faropiechartborrar';
@@ -235,8 +236,8 @@ export default function Indicadores() {
       </Grid>
       <Grid item xs={12} sm={12} md={12}>
       <Paper className={fixedHeightPaper}>
-      <Title>{'Actividad'}</Title>
-      <Voronoi />
+      <Title>{'Summary of Events'}</Title>
+      <Voronoi2 />
       {/* <GeoCalendar days={state.days} clickday={clickDay} /> */}
 
       </Paper>
