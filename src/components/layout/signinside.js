@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { Application } from '../../App';
 //import city2 from "../../images/city2.jpg";
 import logo from '../../images/logo.png'
@@ -18,6 +18,8 @@ import Typography from '@material-ui/core/Typography';
 
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import { grey,cyan } from '@material-ui/core/colors';
+
+import {useFetch} from '../hooks/usefetch';
 //backgroundImage: 'url(https://source.unsplash.com/random)',
 function Copyright() {
   return (
@@ -95,14 +97,69 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignInSide() {
     const { state, dispatch } = React.useContext(Application);
+    const [correo, setCorreo] = React.useState("");
+    //octotestingv2@gmail.com 32111
+    const [correoError, setCorreoError] = React.useState({flag:false,helper:"Introduzca correo"});
+    const [pwd, setPwd] = React.useState("");
+    const [data, isLoading, isError , fetchData] = useFetch(""); 
   const classes = useStyles();
-  function auth(){
-
+  const handleChangeCambios=input=>e=>{
+     
+    //  alert("data2"+JSON.stringify(data2))
+     
+        if (input=="correo"){
+        //  alert(/\S+@\S+\.\S+/.test(e.target.value))
+          //const isValid = inputs[0].isValid(e.target.value);
+          if (/\S+@\S+\.\S+/.test(e.target.value)){
+            setCorreoError({flag:false,helper:"Sintaxis Correcta"})
+        
+          } else{
+            setCorreoError({flag:true,helper:"Complete Sintaxis del Correo"})
+          }
+         // alert(isValid)  
+        // alert(JSON.stringify(statep.persona.direcciones))     
+      
+          setCorreo(e.target.value)
+        }
+        if (input=="pwd"){
+          //  alert(/\S+@\S+\.\S+/.test(e.target.value))
+            //const isValid = inputs[0].isValid(e.target.value);
+           
+            setPwd(e.target.value)
+            
+          }
+      }
+  function auth(e){
+    e.preventDefault();
+    fetchData('https://octopusdevelopment.azurewebsites.net/api/UserAuthentication?code=vuJb1lGapanJdO/KXpaLznOhVW27zkq4f8GzahUcWGTYbe9aonqBiA==&login='+correo+'&password='+pwd);
+  
+  }
+  useEffect(() => {
+    //alert("in "+option)
+   //alert(JSON.stringify(data))
+    if (isLoading) {
+     // setFlagCircular(true)
+    }
+    //alert(data[0].type)
+    if ((data!=undefined)&&(!isLoading))      
+    {
+    // alert("fetch"+JSON.stringify(data))
+      if (data.flag==1){
     dispatch({
         type: 'FLAGLOGIN',
         stateprop: true
       });
-  }
+
+      } else{
+        setCorreoError({flag:true,helper:"No pudo ser autenticado. Intente de Nuevo"})
+        setCorreo("") 
+        setPwd("")
+      } 
+    
+     //setFlagCircular(false)
+     
+    }
+  },[data,isLoading]);
   
   return (
     <React.Fragment>
@@ -130,7 +187,11 @@ export default function SignInSide() {
               label="Email Address"
               name="email"
               autoComplete="email"
+              value={correo}
+              onChange={handleChangeCambios('correo')}
               autoFocus
+              error={correoError.flag}     
+            helperText={correoError.helper}
             />
             <TextField
               variant="outlined"
@@ -142,6 +203,8 @@ export default function SignInSide() {
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={handleChangeCambios('pwd')}
+              value={pwd}
             />
              <div className={classes.root2}>
             <Button

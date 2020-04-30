@@ -211,40 +211,26 @@ useEffect(() => {
   }
 },[data,isLoading]);
 
-
-  function clickDay (newday)  {
-    //alert("clickDay "+newday)
-    //var newfecha=newday.split("-")
-    //newday=newfecha[1]+"/"+newfecha[2]*1+"/"+newfecha[0]
-    ///alert(newday)
-    //handleKPIFiltroDay(newday)
-    //alert(newday)
-    setFecha(newday)
-    fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+newday);
-    
-    //handleKPIDay(newday)
-    ///setDia(newday)
-    //  dispatch({
-    //    type: 'KPIDAY',
-    //    stateprop: newday
-    //  });
-  }
+function clickDay (newday)  {
+  //alert("clickDay "+newday)
+  //var newfecha=newday.split("-")
+  //newday=newfecha[1]+"/"+newfecha[2]*1+"/"+newfecha[0]
+  ///alert(newday)
+  //handleKPIFiltroDay(newday)
+  //alert(newday)
+  setFecha(newday)
+  fetchData('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id='+newday);
   
-  function buttondiaclick ()  {
-    // alert(state.kpifechas.length+" "+JSON.stringify(state.kpifechas))
-     //var random=Math.floor(Math.random() * 50)*1; 
-     //alert("ranmodm"+random)
-     //alert(JSON.stringify(state.kpifechas[random]))
-     
-     //var newday=state.kpifechas[random].day
-    // alert("new dia"+newday)
-   // setDia(newday)
-  //   dispatch({
-  //     type: 'KPIDAY',
-  //     stateprop: newday
-  //   });
-    //handlePkiChange({"G2G":true,"G3G":true,"G4G":true})
-   }
+  //handleKPIDay(newday)
+  ///setDia(newday)
+  //  dispatch({
+  //    type: 'KPIDAY',
+  //    stateprop: newday
+  //  });
+}
+
+
+
    function buttonclick ()  {
     setchecked2G(true)
     setchecked3G(true)
@@ -284,7 +270,15 @@ useEffect(() => {
  // alert(JSON.stringify(circle1))
     }
   },[clicklocation]);
-  
+  function clickGeoFence(){
+    // alert('createtrandom')
+    // https://blog.risingstack.com/node-js-async-best-practices-avoiding-callback-hell-node-js-at-scale/?utm_source=RisingStack+Blog&utm_campaign=13c6d79d5c-reinventing-hooks-with-react-easy-state&utm_medium=email&utm_term=0_02a6a69990-13c6d79d5c-475171197
+     //points.features.map((feature, i) => {
+     //Buscar coordenadas de rectangulo
+     createRandomPoints("caracas") 
+      setCircle1({"type":"FeatureCollection","features":[] })
+     
+   } 
   function createRandomPoints(area){
     var poin = point(clicklocation);
     var distance = 1;
@@ -300,16 +294,19 @@ useEffect(() => {
   var p2 = destination(poin2, distance2, bearing2, options2);
 //alert(JSON.stringify(destinatio.geometry.coordinates))
 var box=[]
+var cantidad=0;
 if (area=="circulo"){
+  cantidad=200+Math.floor(Math.random() * 200)*1;
   box=[p1.geometry.coordinates[0],p1.geometry.coordinates[1], p2.geometry.coordinates[0],p2.geometry.coordinates[1]]
   }
   if (area=="caracas"){
+    cantidad=2000+Math.floor(Math.random() * 2000)*1;
    box=[-66.934,10.42114, -66.8, 10.511]
   }
   var options = {
       bbox: box
   };
-    var cantidad=500+Math.floor(Math.random() * 500)*1;
+  
    var points = randomPoint(cantidad, options);
   // alert(JSON.stringify(points))
    var pointFeatures = {
@@ -357,76 +354,7 @@ if (area=="circulo"){
 
   
   }
-  function createRandom(){
-   // alert('createtrandom')
-   // https://blog.risingstack.com/node-js-async-best-practices-avoiding-callback-hell-node-js-at-scale/?utm_source=RisingStack+Blog&utm_campaign=13c6d79d5c-reinventing-hooks-with-react-easy-state&utm_medium=email&utm_term=0_02a6a69990-13c6d79d5c-475171197
-    //points.features.map((feature, i) => {
-    //Buscar coordenadas de rectangulo
-    var poin = point(clicklocation);
-      var distance = 5;
-     var bearing = -135;
-    var options = {units: 'kilometers'};
-
-    var p1 = destination(poin, distance, bearing, options);
-    var poin2 = point(clicklocation);
-    var distance2 = 5;
-    var bearing2 = 45;
-    var options2 = {units: 'kilometers'};
-
-    var p2 = destination(poin2, distance2, bearing2, options2);
-//alert(JSON.stringify(destinatio.geometry.coordinates))
-      var options = {
-        //bbox : [-73,7,-62,12]
-        bbox: [-66.934,10.42114, -66.8, 10.511]
-        //  bbox: [p1.geometry.coordinates[0],p1.geometry.coordinates[1], p2.geometry.coordinates[0],p2.geometry.coordinates[1]]
-      };
-      var cantidad=2000+Math.floor(Math.random() * 2000)*1;
-     var points = randomPoint(cantidad, options);
-     var pointFeatures = {
-      "type": "FeatureCollection",
-      "features": points};
-      var pointsFeatureCollection={"type":"FeatureCollection","features":[] }
-      var f = points.features.map((feature, i) => {
-  
-        //
-  
-      var mobiles=["2G","3G","4G"];
-      var random=Math.floor(Math.random() * 3)*1;
-      var random2=Math.floor(Math.random() *1000)*1;
-     // console.log("pos "+random)
-      var newkpi= {
-        "ttl":60,
-        "type": "Feature",
-        "properties": {
-        "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
-        "timestamp": new Date(),
-        "identification":"state.login.email",
-        "mobilegeneration":mobiles[random],
-        "cellid": 11111,
-        "cidreported": 11111,
-        "downlink":random2,
-        "rtt":random2,
-        "mcc": 734,
-        "mnc": 2,
-        "signaltype":mobiles[random],
-        "signalstrength": 27,
-        "rsrq": -11,
-        "rsrp": -89, },
-  
-            "geometry": {
-            "type": "Point",
-            "coordinates":feature.geometry.coordinates
-           }
-        }
-        pointsFeatureCollection.features.push(newkpi)
-      })
-      //setRandomPoints(pointsFeatureCollection)
-     // alert("fin")
-     setPointFeatureCollection(pointsFeatureCollection)
-      handleKPIDay(pointsFeatureCollection )
-     setCircle1({"type":"FeatureCollection","features":[] })
-    
-  }  
+ 
   useEffect(() => {
    // alert("ANTENAS   "+JSON.stringify(pointFeatureCollection.features))
     if (pointFeatureCollection.features.length>0){
@@ -706,7 +634,7 @@ return (
 
 <Grid item xs={12} sm={12} md={12}>
       <Paper className={fixedHeightPaper}>
-      <table><tr><td><Title>{'Distribucion Geoespacial'}</Title></td><td> <Button variant="contained" color="secondary" onClick={createRandom}  className={classes.button} >Gran Caracas</Button></td><td> <Button variant="contained" disabled onClick={postRandom} color="primary" className={classes.button} >Registro</Button></td><td> <Button variant="contained" disabled  onClick={asociarAntenas} color="primary" className={classes.button} >Analisis de Antenas</Button></td></tr></table>
+      <table><tr><td><Title>{'Distribucion Geoespacial'}</Title></td><td> <Button variant="contained" color="secondary" onClick={clickGeoFence}  className={classes.button} >Gran Caracas</Button></td><td> <Button variant="contained" disabled onClick={postRandom} color="primary" className={classes.button} >Registro</Button></td><td> <Button variant="contained" disabled  onClick={asociarAntenas} color="primary" className={classes.button} >Analisis de Antenas</Button></td></tr></table>
       <Map       
   // style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
