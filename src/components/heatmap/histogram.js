@@ -51,6 +51,7 @@ export default function Histogram(props) {
             <Chart
              options={ {
                 chart: {
+                  foreColor: "#fff",
                   type: 'bar',
                   height: 450
                 },

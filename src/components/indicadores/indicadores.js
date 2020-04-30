@@ -193,11 +193,11 @@ export default function Indicadores() {
         <div className={classes.root}>    
          
         <Container maxWidth="lg" className={classes.container}>  
-        {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress} />}
+        {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress}  color="secondary" />}
         <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
-          <Total titulo={'Devices'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalDevices} leyenda={'Register Devices'}/>
+          <Total titulo={'Devices'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalDevices} leyenda={'Registered Devices'}/>
       </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
@@ -230,7 +230,7 @@ export default function Indicadores() {
       </Grid>
       <Grid item xs={12} sm={12} md={6}>
       <Paper className={fixedHeightPaper3}>
-      <BarStack titulo={'Sygnal Type'}  />
+      <BarStack titulo={'Signal Type'}  />
 
       </Paper>
       </Grid>

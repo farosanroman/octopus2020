@@ -52,6 +52,7 @@ export default function GeoBarStack(props) {
               options={
                 {
                     chart: {
+                      foreColor: "#fff",
                       stacked: true,
                       stackType: "100%",
                       toolbar: {

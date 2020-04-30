@@ -55,11 +55,14 @@ export default function HeatMap(props) {
                   type: 'heatmap',
                   foreColor: "#fff",
                 },
-                plotOptions: {
-                  heatmap: {
-                    shadeIntensity: 0.5,
                 
+                plotOptions: {
+                  
+                  heatmap: {
+                    shadeIntensity: .5,
                     colorScale: {
+                      inverse: true,
+
                       ranges: [{
                           from: 0,
                           to: 25,
@@ -84,7 +87,8 @@ export default function HeatMap(props) {
                           name: 'excelent',
                           color: '#50D050'
                         }
-                      ]
+                      ],
+                      
                     }
                   }
                 },

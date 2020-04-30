@@ -563,7 +563,7 @@ return (
         </ExpansionPanelDetails>
 
       </ExpansionPanel>
-    {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress} />}
+    {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17} color="secondary"  thickness={4} className={classes.progress} />}
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={3}>
       <Paper className={fixedHeightPaper2}>
@@ -634,7 +634,7 @@ return (
 
 <Grid item xs={12} sm={12} md={12}>
       <Paper className={fixedHeightPaper}>
-      <table><tr><td><Title>{'Geospatial Distribution'}</Title></td><td> <Button variant="contained" color="secondary" onClick={clickGeoFence}  className={classes.button} >Great Caracas</Button></td><td> <Button variant="contained" disabled onClick={postRandom} color="primary" className={classes.button} >Register</Button></td></tr></table>
+      <table><tr><td><Title>{'Geospatial Distribution'}</Title></td><td> <Button variant="contained" color="secondary" onClick={clickGeoFence}  className={classes.button} >Geoboundary: Caracas</Button></td><td> <Button variant="contained" disabled onClick={postRandom} color="primary" className={classes.button} >Register</Button></td></tr></table>
       <Map       
   // style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
