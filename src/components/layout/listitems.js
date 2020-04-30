@@ -58,19 +58,19 @@ export const secondaryListItems = (
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Esta Semana" />
+      <ListItemText primary="Period x" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Ultimo Mes" />
+      <ListItemText primary="Period y" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Ultimo Año" />
+      <ListItemText primary="Period z" />
     </ListItem>
   </div>
 );

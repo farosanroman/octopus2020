@@ -408,7 +408,7 @@ export default function Dashboard() {
           </IconButton>
          
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            OCTOLITYCS
+            OCTOLYTICS
           </Typography>
           {/* <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -446,7 +446,7 @@ export default function Dashboard() {
         
         <Divider />
        
-        <List>{secondaryListItems}</List>
+        {/* <List>{secondaryListItems}</List> */}
       </Drawer>
       <Drawer anchor="right" open={stateF.right} onClose={toggleDrawer('right', false)}
       classes={{

@@ -6,7 +6,10 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.apexcharts-tooltip {
+  background: #f3f3f3;
+  color: rgb(136, 147, 165);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
