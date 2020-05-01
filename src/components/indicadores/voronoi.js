@@ -14,9 +14,10 @@ import {useKpiGeoJson} from '../hooks/usekpigeojson'
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {voronoigeojson} from '../../data/voronoigeojson.json';
-import {voronoigeojson2} from '../../data/voronoigeojson2.json';
+import {voronoiguarenas} from '../../data/voronoiguarenas.json';
+import {voronoiteques} from '../../data/voronoiteques.json';
+import {voronoivargas} from '../../data/voronoivargas.json';
 
-import {voronoigeojson3} from '../../data/voronoigeojson3.json';
 import {antenas} from '../../data/antenas.json';
 
 import {WORLD} from '../../data/WORLD.json';
@@ -32,14 +33,6 @@ const style={   Paper:{padding:1,marginTop:1,marginBottom:1}}
 const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pzIn0.V8cqmZH6dFIcxtKoaWcZZw"
   const Map = MapGL({accessToken: TOKEN });
   const mapStyle = {  flex: 1,  height: "50vh",width: "100%"};
-  
- 
-  
- 
-// import { greatCircle, point } from '@turf/turf';
-
-// console.log(greatCircle([0, 0], [100, 10]));
-// console.log(point([100, 0]));
 
 const useStyles = makeStyles({
   table: {
@@ -49,19 +42,25 @@ const useStyles = makeStyles({
 //console.log(greatCircle([0, 0], [100, 10]));//
 //console.log(point([150, 0]));
 var options = {
-    //bbox : [-73,7,-62,12]
+    bbox : [-67.07,10.57, -66.81, 10.62]
     //bbox: [-66.934,10.45114, -66.841, 10.511]
-    bbox: [-67.3,9.985, -65.52, 10.5]
+    //bbox: [-67.3,9.985, -65.52, 10.5]//antenas
   };
- var points = randomPoint(4000, options);
+ var points = randomPoint(100, options);
  var pointFeatures = {
   "type": "FeatureCollection",
   "features": points};
-//  alert(JSON.stringify(points))
+ // alert(JSON.stringify(points))
  // var voronoiPolygons = voronoi(points, options);
-//console.log(JSON.stringify(points))
+// console.log(JSON.stringify(points))
+var voronoiRandom = voronoi(points, options);
+//  console.log("voronoirandom")
+//  console.log(JSON.stringify(voronoiRandom))
+
+  
 var features0=[]
 const f0=antenas.map(a=>{  
+//  const f0=points.map(a=>{ 
   //sources proveedores de enlaces   
  // if ((a.lat>10.43114)&&(a.lat<10.52)&&(a.lon<-66.934)&&(a.lon>-66.805)){
    // console.log("<<<<")
@@ -78,16 +77,19 @@ const f0=antenas.map(a=>{
    )
 //  }
 })
-  
-
-  
-//console.log(JSON.stringify(features0))
-
+var optionsA = {
+ // bbox : [-66.65,10.44,-66.5,10.48]
+  //bbox: [-66.934,10.45114, -66.841, 10.511]
+  bbox: [-67.3,9.985, -65.52, 10.5]//antenas
+};
    var voronoiPolygons0 = voronoi({
      "type": "FeatureCollection",
-     "features": features0}, options);
+     "features": features0}, optionsA);
 
-     //console.log(JSON.stringify(voronoiPolygons0))
+  //   console.log(JSON.stringify(voronoiPolygons0))
+//VORONOI RANDON
+
+
 
   //  var features=[]
   //    const f=voronoiPolygons0.features.map(f=>{  
@@ -266,16 +268,48 @@ function onZoomEnd (map, event)  {
             'text-color': 'black'
           }}
           /> */}
-            {/* <GeoJSONLayer
-          data={voronoigeojson}
-          fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.3}}
-          linePaint={{
-            'line-color': '#9F81F7',
-            'line-width': 4
-          }}
+            
+            <GeoJSONLayer
+            data={voronoigeojson}
+            fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
+            linePaint={{
+             'line-color': 'deepskyblue',
+             'line-width': 1
+            }}
+            
           
-        />   
-                    <GeoJSONLayer
+        />  
+        <GeoJSONLayer
+            data={voronoiguarenas}
+            fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
+            linePaint={{
+             'line-color': 'deepskyblue',
+             'line-width': 1
+            }}
+            
+          
+        />  
+                <GeoJSONLayer
+            data={voronoiteques}
+            fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
+            linePaint={{
+             'line-color': 'deepskyblue',
+             'line-width': 1
+            }}
+            
+          
+        />  
+                <GeoJSONLayer
+            data={voronoivargas}
+            fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
+            linePaint={{
+             'line-color': 'deepskyblue',
+             'line-width': 1
+            }}
+            
+          
+        />  
+                    {/* <GeoJSONLayer
           data={voronoigeojson2}
           fillPaint={{'fill-color': 'red','fill-outline-color': 'white','fill-opacity':.3}}
           linePaint={{
@@ -290,9 +324,9 @@ function onZoomEnd (map, event)  {
           linePaint={{
             'line-color': '#9F81F7',
             'line-width': 4
-          }}
+          }} */}
           
-        />  */}
+        /> 
          {/* <GeoJSONLayer
           data={WORLD}
           fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}

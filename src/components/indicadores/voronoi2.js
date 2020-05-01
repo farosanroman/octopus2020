@@ -14,9 +14,7 @@ import {useKpiGeoJson} from '../hooks/usekpigeojson'
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {voronoigeojson} from '../../data/voronoigeojson.json';
-import {voronoigeojson2} from '../../data/voronoigeojson2.json';
 
-import {voronoigeojson3} from '../../data/voronoigeojson3.json';
 import {antenas} from '../../data/antenas.json';
 
 import {WORLD} from '../../data/WORLD.json';
