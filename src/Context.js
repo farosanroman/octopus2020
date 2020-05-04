@@ -4,7 +4,18 @@ export const defaultState = {
    
     flagLogin:false,
 
-    
+    user:{
+      "id": "octotestingv2@gmail.com",
+      "login": "octotestingv2@gmail.com",
+      "password": "32111",
+      "first": "Gabriel",
+      "last": "Boyerizo",
+      "isEnabled": true,
+      "isAdmin": true,
+      "isRoot": true,
+      "dateCreation": "2020-04-24T02:21:46.790Z",
+      "dateModification": "2020-04-24T02:21:46.790Z",
+  },
     login:{id:"id",type:"login",name:"mister",photoURL:"https://image.shutterstock.com/image-vector/photo-camera-icon-260nw-197166461.jpg",email:"",phone:"",cedula:"",lat:0,lng:0,idorg:0,org:"",idfuncional:0,funcional:"",idrol:0,rol:"",codcne:"000000000"}, //FIREBASE AUTH
     geolocation:{country:"VE",countrylong:"VE",estado:"ES",municipio:"MU",municipiolong:"MUNICIPIO",ciudad:"VE",ciudadlong:"VE",urbanizacion:"URB",urbanizacionlong:"URB",ruta:"RUTA",rutalong:"RUTALONG",premisa:"PREMISA",premisalong:"PREMISALONG",postalcode:"postalcode"},
     position:{ latitude:9, longitude:-66, timestamp:0, accuracy:0, error:null },  //hook

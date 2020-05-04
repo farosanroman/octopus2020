@@ -4,6 +4,10 @@ import { Application } from '../../App';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
 
@@ -19,12 +23,26 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
+import ImageIcon from '@material-ui/icons/Image';
+import PersonIcon from '@material-ui/icons/Person';
+import SportsIcon from '@material-ui/icons/Sports';
+import WorkIcon from '@material-ui/icons/Work';
+import BeachAccessIcon from '@material-ui/icons/BeachAccess';
+import AddIcon from '@material-ui/icons/Add';
 
+import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuIcon from '@material-ui/icons/Menu';
+import EmailIcon from '@material-ui/icons/Email';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SignalCellular3BarIcon from '@material-ui/icons/SignalCellular3Bar';
-
+import DoneIcon from '@material-ui/icons/Done';
 
 
 import TuneIcon from '@material-ui/icons/Tune';
@@ -166,6 +184,10 @@ const useStyles = makeStyles(theme => ({
 export default function Dashboard() {
   const classes = useStyles();
   const { state, dispatch } = React.useContext(Application);
+  const [user,setUser]=React.useState(state.user);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [openPerfil, setOpenPerfil] = React.useState(false);
+  const openEl = Boolean(anchorEl);
   const [hora,setHora]=React.useState(new Date())
   const [layout, setLayout] = React.useState(100);
   const [open, setOpen] = React.useState(false);
@@ -189,7 +211,7 @@ export default function Dashboard() {
       stateprop: antenas.length
     });
     fetchDataDays("https://octopustestingfunctions.azurewebsites.net/api/GetPkiDates?code=7/HMNoq9HlHgEUOUWxqNEhc6GzmBI7xFQvHaFyuoCpGFqSZa8YNNkw==")
-  
+  //alert(JSON.stringify(user))
   // var a=kpigeojson(celular)
   // setKpi(a)
   // dispatch({
@@ -210,11 +232,44 @@ export default function Dashboard() {
      });
    }
   }, [dataDays]);
-  const handleMenuChange=(id)=> {
-   // alert(id)
-    //setValue(event.target.value);
+  // const handleMenuChange=(id)=> {
+  //  // alert(id)
+  //   //setValue(event.target.value);
+  // };
+  const handleMenu = (event) => {
+    //alert(event.currentTarget)
+    console.log(event.currentTarget)
+    setAnchorEl(event.currentTarget);
   };
-  
+  const handleOpenPerfil = () => {
+    
+    setAnchorEl(null)
+    setOpenPerfil(true)
+  };
+  const closePerfil = () => {
+    
+    //setAnchorEl(null)
+    setOpenPerfil(false)
+  };
+  const cerrarSesion = () => {
+   // alert("cerrar sesion")
+    dispatch({
+      type: 'FLAGLOGIN',
+      stateprop: false
+    });
+    //setAnchorEl(null)
+    //setOpenPerfil(false)
+  };
+  // const onClose = (value) => {
+  //   //setAnchorEl(null);
+  // };
+  const handleClose = (value) => {
+   
+    setAnchorEl(null);
+  };
+  // const handleClose2 = () => {
+  //   setAnchorEl(null);
+  // };
   const handleChange = event => {
     setValue(event.target.value);
   };
@@ -258,6 +313,8 @@ export default function Dashboard() {
     setStateF({ ...stateF, [side]: open });
   };
 
+  
+  
   const sideList = side => (
     <div
       className={classes.list}
@@ -415,6 +472,36 @@ export default function Dashboard() {
               <NotificationsIcon />
             </Badge>
           </IconButton> */}
+            <div>
+              <IconButton
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
+              <Menu
+               open={openEl}
+               //onClose={handleClose}
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+               
+              >
+                <MenuItem onClick={handleOpenPerfil}>Profile</MenuItem>
+                <MenuItem onClick={cerrarSesion}>Cerrar Sesion</MenuItem>
+              </Menu>
+            </div>
           <IconButton
             edge="end"
             color="inherit"
@@ -426,6 +513,47 @@ export default function Dashboard() {
           </IconButton>
         </Toolbar>
       </AppBar>
+      <Dialog  aria-labelledby="simple-dialog-title" open={openPerfil}  modal={true} onClose={closePerfil} onRequestClose={closePerfil}>
+        <DialogTitle id="simple-dialog-title">Perfil del Usuario</DialogTitle>
+        <List>
+         
+  
+          <ListItem autoFocus >
+            <ListItemAvatar>
+              <Avatar>
+                <EmailIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary={user.id} />
+          </ListItem>
+          <ListItem autoFocus >
+            <ListItemAvatar>
+              <Avatar>
+                <PersonIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary={user.first+" "+user.last} />
+          </ListItem>
+          <ListItem autoFocus >
+            <ListItemAvatar>
+              <Avatar>
+                <SportsIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary={user.isAdmin ? "Administrador" : "Usuario"} />
+          </ListItem>
+          <ListItem autoFocus >
+            <ListItemAvatar>
+              <Avatar>
+                <DoneIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary={user.isEnabled ? "Activo" : "Inactivo"} />
+          </ListItem>
+        </List>
+      </Dialog>
+
+     
       <Drawer
         variant="permanent"
         classes={{
