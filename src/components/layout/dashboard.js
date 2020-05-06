@@ -59,6 +59,9 @@ import FormLabel from '@material-ui/core/FormLabel';
 
 import Geo from         '../heatmap/geo';
 import GeoFences from         '../heatmap/geofences';
+
+import GeoBoundaries from         '../antenas/geoboundaries';
+
 import Voronoi from         '../indicadores/voronoi';
 
 import Voronoi2 from         '../indicadores/voronoi2';
@@ -499,9 +502,11 @@ export default function Dashboard() {
                
               >
                 <MenuItem onClick={handleOpenPerfil}>Profile</MenuItem>
+                {/* <MenuItem onClick={cerrarSesion}>Crear Usuario</MenuItem> */}
                 <MenuItem onClick={cerrarSesion}>Cerrar Sesion</MenuItem>
               </Menu>
             </div>
+            
           <IconButton
             edge="end"
             color="inherit"
@@ -654,7 +659,7 @@ export default function Dashboard() {
            
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                 <Voronoi />
+                 <GeoBoundaries />
               </Paper>
             </Grid>
           </Grid>
