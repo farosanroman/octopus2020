@@ -670,7 +670,7 @@ return (
           <Feature coordinates={lineas} />
         </Layer>
 
-      <GeoJSONLayer   centro y brillo
+      <GeoJSONLayer   
           data={KPI2G}
           circleLayout={{ visibility: 'visible' }}
          circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Lime' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
@@ -685,7 +685,7 @@ return (
             'text-color': 'black'
           }}
           />
-   <GeoJSONLayer   centro y brillo
+   <GeoJSONLayer   
           data={KPI3G}
           circleLayout={{ visibility: 'visible' }}
          circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Orange' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
@@ -700,7 +700,7 @@ return (
             'text-color': 'black'
           }}
           />
-           <GeoJSONLayer   centro y brillo
+           <GeoJSONLayer   
           data={KPI4G}
           circleLayout={{ visibility: 'visible' }}
          circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Red' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         

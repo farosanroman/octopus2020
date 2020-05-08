@@ -1,5 +1,15 @@
 import React ,{useEffect,useState,useContext} from 'react';
 //import { greatCircle, point ,randomPoint,voronoi} from '@turf/turf';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
+
+
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
@@ -24,8 +34,9 @@ import {voronoiteques} from '../../data/voronoiteques.json';
 import {voronoivargas} from '../../data/voronoivargas.json';
 
 import {antenas} from '../../data/antenas.json';
+import {jsonantenas} from '../../data/jsonantenas.json';
 
-import {WORLD} from '../../data/WORLD.json';
+//import {WORLD} from '../../data/WORLD.json';
 import {PAMIRANDA} from '../../data/PAMIRANDA.json';
 import {LIBERTADOR} from '../../data/libertador.json';
 import {CIUDADESGEO} from '../../data/ciudadesgeo.json';
@@ -40,8 +51,8 @@ const TOKEN="pk.eyJ1IjoiZmFyb21hcGJveCIsImEiOiJjamt6amF4c3MwdXJ3M3JxdDRpYm9ha2pz
   const mapStyle = {  flex: 1,  height: "50vh",width: "100%"};
 
   const useStyles = makeStyles(theme => ({
-//const useStyles = makeStyles({
-  table: {
+
+table: {
     minWidth: 650,
   },
   formControl: {
@@ -104,53 +115,43 @@ var optionsA = {
      "type": "FeatureCollection",
      "features": features0}, optionsA);
 
-  //   console.log(JSON.stringify(voronoiPolygons0))
-//VORONOI RANDON
-
-
-
-  //  var features=[]
-  //    const f=voronoiPolygons0.features.map(f=>{  
-  //     //sources proveedores de enlaces   
-  //     if (f!=null){
-  //      features.push( f
-  //      )
-  //     }})
-  // var  voronoiPolygons=   {
-  //   "type": "FeatureCollection",
-  //   "features": features}
-
-export default function Voronoi() {
+export default function GeoBoundaries() {
   const classes = useStyles();
   const contextKPI = useContext(KpiContext);
   const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
   //const[KPIcriterio,KPIcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson2([])
      
-  const[KPIcriterio,KPIcant,KPI2Gcant,KPI3Gcant,KPI4Gcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson([])
+  //const[KPIcriterio,KPIcant,KPI2Gcant,KPI3Gcant,KPI4Gcant,KPIRuta,KPI,KPI2G,KPI3G,KPI4G,handleKPIDay,handleKPICriterio,handleKPIFiltroDay]=useKpiGeoJson([])
     
   const [data, isLoading, isError , fetchData] = useFetch(""); 
-
+  const [dataCircle, isLoadingCircle, isErrorCircle , fetchDataCircle] = useFetch(""); 
+  const [circle1, setCircle1] = useState({"type":"FeatureCollection","features":[] });
+  const[clicklocation, setClickLocation]=useState([0,0])
   const [zoom, setZoom] = useState(16);
   const [center, setCenter] = useState([-66.8726,10.4713]);
-
+  const [rows, setRows] = useState([]);
+  const [region, setRegion] = useState("GRAN CARACAS");
+  const [antenasimages, setAntenasImages] = useState([]);
+  const [antenas2G, setAntenas2G] = useState({"type":"FeatureCollection","features":[] });
+  const [antenas3G, setAntenas3G] = useState({"type":"FeatureCollection","features":[] });
+  const [antenas4G, setAntenas4G] = useState({"type":"FeatureCollection","features":[] });
   const [flagCircular, setFlagCircular] = React.useState(false);     
 
-  var centro=[-66.867900,10.4671]
-  var options = {steps: 10, units: 'kilometers', properties: {foo: 'bar'}};
-  var circle1 = circle(centro, .5, options);
-  var circle2 = circle(centro, 1, options);
-  var circle8 = circle(centro, 8, options);
+  // var centro=[-66.867900,10.4671]
+  // var options = {steps: 10, units: 'kilometers', properties: {foo: 'bar'}};
+  // var circle1 = circle(centro, .5, options);
+  // var circle2 = circle(centro, 1, options);
+  // var circle8 = circle(centro, 8, options);
 
-  var bbox = [-66.807900,10.4071,-66.70,12.4071];
-  //var bbox  = [-96,31,-84,40];
-  var cellSide = 55;
-  var options = {units: 'kilometers'};
+  // var bbox = [-66.807900,10.4071,-66.70,12.4071];
+  var bbox  = [-96,31,-84,40];
+   var cellSide = 55;
+   var options = {units: 'kilometers'};
   const [age, setAge] = React.useState('');
-
   
   var hexgrid = hexGrid(bbox, cellSide, options);
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setRegion(event.target.value);
   };
   useEffect(() => {
   fetchData('https://min-api.cryptocompare.com/data/pricemulti?fsyms=USD&tsyms=USD,EUR,COP,VES,ARS,PEN,PAB,BRL,BOB,BTC');
@@ -168,14 +169,63 @@ export default function Voronoi() {
    // console.log(JSON.stringify(data))
    //alert("fetch"+JSON.stringify(data))
    
-  handleKPIDay(data)
-   setFlagCircular(false)
+  // handleKPIDay(data)
+  //  setFlagCircular(false)
    
   }
 },[data,isLoading]);
- const handleDateChange = date => {
-    setSelectedDate(date);
-  };
+
+
+function onClickMap(map,event){
+  var centro=[event.lngLat.lng,event.lngLat.lat]
+
+  //alert(JSON.stringify(centro))
+  var options = {steps: 10, units: 'kilometers', properties: {foo: 'bar'}};
+  var circle1 = circle(centro, 1, options);
+setCircle1(circle1)
+setClickLocation(centro)  
+  //alert("click")
+   //console.log(event.lngLat.lng+" "+event.lngLat.lat)
+  // setClickLocation([event.lngLat.lng,event.lngLat.lat])
+ }
+ useEffect(() => {
+  // alert("ANTENAS   "+JSON.stringify(pointFeatureCollection.features))
+  fetchDataCircle('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id=2020-06-05');
+  
+   },[clicklocation]);
+ 
+ useEffect(() => {
+  //alert("in "+option)
+ //alert(JSON.stringify(data))
+  if (isLoadingCircle) {
+    setFlagCircular(true)
+  }
+  //alert(data[0].type)
+  if ((dataCircle!=undefined)&&(!isLoadingCircle))      
+  {
+   // console.log(JSON.stringify(data))
+  //alert("fetch"+JSON.stringify(dataCircle))
+   if (JSON.stringify(dataCircle)!="[]"){
+  //  alert("fetch"+JSON.stringify(dataCircle))
+   const rows = [
+    createData('16002','Av Libertador', '3G','LTE',55),
+    createData('16002','Av Libertador', '3G','LTE',55),
+    createData('16002','Av Libertador', '3G','LTE',55),
+    createData('16002','Av Libertador', '3G','LTE',55),
+    createData('16002','Av Libertador', '3G','LTE',55),
+    createData('16002','Av Libertador', '3G','LTE',55),
+    createData('16002','Av Libertador', '3G','LTE',55),
+    createData('16002','Av Libertador', '3G','LTE',55),
+ 
+  ];
+setRows(rows)
+}
+  
+  // handleKPIDay(data)
+  //  setFlagCircular(false)
+   
+  }
+},[dataCircle,isLoadingCircle]);
 
  //var criteria={position:state.position,antenas:antenas}
 
@@ -212,17 +262,76 @@ function onZoomEnd (map, event)  {
      //   stateprop:z
      // });
     }
-    const SOURCES=antenas.map((nodo,index)=>{  
-      //sources proveedores de enlaces   
+    useEffect(() => {
+      // alert("ANTENAS   "+JSON.stringify(pointFeatureCollection.features))
+      var SOURCES3=[]
+      var antenasxregion=[];
+      //console.log("FILTRO")
+      //alert(region)
+      jsonantenas.map((a,index)=>{
+        if (a.properties.region==region){
+         // console.log(a)
+          antenasxregion.push(a)
+
+        }
+       })
+      antenasxregion.map((ant,index)=>{  
+       //ources proveedores de enlaces   
+       if (ant.properties.region==region){
+        SOURCES3.push(  <Feature              
+         key={index} 
+         coordinates={ant.geometry.coordinates}             
+         //onClick={this.markerClick.bind(this, {properties:nodo.properties,coordinates:nodo.geometry.coordinates})}
+           />)
+        }
+       //   return(
+       //    <Feature              
+       //         key={index} 
+       //         coordinates={a.geometry.coordinates}             
+       //         //onClick={this.markerClick.bind(this, {properties:nodo.properties,coordinates:nodo.geometry.coordinates})}
+       // />    
+       //      )     
+        //}
+           })
+      setAntenasImages(SOURCES3)
+      var antenasFeatureCollection2G={"type":"FeatureCollection","features":[] }
+      var antenasFeatureCollection3G={"type":"FeatureCollection","features":[] }
+      var antenasFeatureCollection4G={"type":"FeatureCollection","features":[] }
       
-       return(
-         <Feature              
-              key={index} 
-              coordinates={[nodo.lon,nodo.lat]}             
-              //onClick={this.markerClick.bind(this, {properties:nodo.properties,coordinates:nodo.geometry.coordinates})}
-      />    
-           )     
-     })
+      const A=antenasxregion.map((nodo,index)=>{  
+
+        //sources proveedores de enlaces   
+       //console.log(Math.floor(Math.random() * 4)*1)
+       if (nodo.properties.region==region){
+       var antenafeature= {
+         "type": "Feature",
+         "properties": {
+         "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+         "timestamp": new Date()},
+         "geometry":nodo.geometry
+         
+       }
+       if (nodo.properties.mobilegeneration=="2G"){
+              antenasFeatureCollection2G.features.push(antenafeature) 
+       }
+       if (nodo.properties.mobilegeneration=="3G"){
+         antenasFeatureCollection3G.features.push(antenafeature) 
+       }
+      if (nodo.properties.mobilegeneration=="4G"){
+        antenasFeatureCollection4G.features.push(antenafeature) 
+       }
+     }
+     }) 
+     setAntenas2G(antenasFeatureCollection2G)
+     setAntenas3G(antenasFeatureCollection3G)
+     setAntenas4G(antenasFeatureCollection4G)
+
+    },[region]);
+     
+    function createData(id,  sectorname,generation,technology,orientacion) {
+      return { id,  sectorname,generation,technology,orientacion};
+    }
+    
   return (
 
     <React.Fragment>
@@ -244,7 +353,7 @@ function onZoomEnd (map, event)  {
           <MenuItem value={'OCCIDENTE'}>OCCIDENTE</MenuItem>
           <MenuItem value={'CENTRO'}>CENTRO</MenuItem>
           <MenuItem value={'ANDES'}>ANDES</MenuItem>
-          <MenuItem value={'GUUAYANA'}>GUAYANA</MenuItem>
+          <MenuItem value={'GUAYANA'}>GUAYANA</MenuItem>
           <MenuItem value={'Andes'}>ANDES</MenuItem>
           <MenuItem value={'CENTRO LLANOS'}>CENTRO LLANOS</MenuItem>
           <MenuItem value={'Centro Occidente'}>CENTRO OCCIDENTE</MenuItem>
@@ -262,7 +371,7 @@ function onZoomEnd (map, event)  {
    // style="mapbox://styles/mapbox/light-v9"
    center={[-66.867900,10.4671]} 
    //center={[longitude,latitude]} 
-   zoom={[10]}
+   zoom={[6]}
    //center={[state.position.longitude,state.position.latitude]} 
    //center={[state.position.latitude,state.position.longitude]} 
    // zoom={[zoom]}
@@ -271,208 +380,81 @@ function onZoomEnd (map, event)  {
    containerStyle={mapStyle}        
    onControlClick={onControlClick}
    onZoomEnd={onZoomEnd}
+   onClick={onClickMap}
 //onClick={this._onClickMap}  
 //<ZoomControl onControlClick={onControlClick}/>
 // azulito #58D3F7  #FF00FF
 > 
 <ZoomControl  onControlClick={onZoom}/>
 <ScaleControl />
-<Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
-            {SOURCES}
-      </Layer>
-      <GeoJSONLayer
+<GeoJSONLayer
           data={CIUDADESGEO}
-          fillPaint={{'fill-color': 'yellow','fill-outline-color': 'yellow','fill-opacity': .1}}
-          linePaint={{            'line-color': 'yellow',            'line-width': 1          }}
+          fillPaint={{'fill-color': 'yellow','fill-outline-color': 'yellow','fill-opacity': .02}}
+          linePaint={{            'line-color': 'yellow',            'line-width': .5          }}
           
         /> 
-      {/* <GeoJSONLayer   
-          data={points}
+<Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
+            {antenasimages}
+      </Layer>
+      <GeoJSONLayer 
+          data={antenas2G}
           circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'red','circle-radius': 2,'circle-opacity': 1,'circle-stroke-color': 'Orange' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
-          /> */}
-            
-            <GeoJSONLayer
-            data={voronoigeojson}
-            fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
-            linePaint={{
-             'line-color': 'deepskyblue',
-             'line-width': 1
-            }}
-            
-          
-        />  
-        <GeoJSONLayer
-            data={voronoiguarenas}
-            fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
-            linePaint={{
-             'line-color': 'deepskyblue',
-             'line-width': 1
-            }}
-            
-          
-        />  
-                <GeoJSONLayer
-            data={voronoiteques}
-            fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
-            linePaint={{
-             'line-color': 'deepskyblue',
-             'line-width': 1
-            }}
-            
-          
-        />  
-                <GeoJSONLayer
-            data={voronoivargas}
-            fillPaint={{'fill-color': 'Orange','fill-outline-color': 'white','fill-opacity':.000013}}
-            linePaint={{
-             'line-color': 'deepskyblue',
-             'line-width': 1
-            }}
-            
-          
-        />  
-                    {/* <GeoJSONLayer
-          data={voronoigeojson2}
-          fillPaint={{'fill-color': 'red','fill-outline-color': 'white','fill-opacity':.3}}
-          linePaint={{
-            'line-color': '#9F81F7',
-            'line-width': 4
-          }}
-          
-        />   
-                       <GeoJSONLayer
-          data={voronoigeojson3}
-          fillPaint={{'fill-color': 'blue','fill-outline-color': 'white','fill-opacity':.3}}
-          linePaint={{
-            'line-color': '#9F81F7',
-            'line-width': 4
-          }} */}
-          
-        /> 
-         {/* <GeoJSONLayer
-          data={WORLD}
-          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
-          linePaint={{
-            'line-color': '#58D3F7',
-            'line-width': 1
-          }} */}
-          
-          
-{/* 
-      <GeoJSONLayer
-          data={PAMIRANDA}
-          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
-          linePaint={{
-            'line-color': '#9F81F7',
-            'line-width': 4
-          }}
-          
-        />   
-         <GeoJSONLayer
-          data={LIBERTADOR}
-          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
-          linePaint={{
-            'line-color': '#9F81F7',
-            'line-width': 4
-          }} */}
-          
-          
- {/* <GeoJSONLayer
-          data={circle1}
-          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
-          linePaint={{
-            'line-color': 'yellow',
-            'line-width': 4
-          }}
-          
-        />    
-         <GeoJSONLayer
-          data={circle2}
-          circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
-          linePaint={{
-            'line-color': 'yellow',
-            'line-width': 4
-          }}
-          
-        />     */}
-{/* <GeoJSONLayer
-          data={hexgrid}
-          fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}
-          linePaint={{
-            'line-color': '#00BFFF',
-            'line-width': 4
-          }}
-          
-        />    */}
-          {/* <GeoJSONLayer   
-          data={KPI2G}
-          circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Lime' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
+          circlePaint={{'circle-color': '#3BB9FF','circle-radius': 6,'circle-opacity': 1,'circle-stroke-color': '#3BB9FF' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
+           
+         
           />
-          
-        
-   <GeoJSONLayer   
-          data={KPI3G}
+      <GeoJSONLayer 
+          data={antenas3G}
           circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Orange' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
+          circlePaint={{'circle-color': '#c77aff','circle-radius': 5,'circle-opacity': 1,'circle-stroke-color': '#c77aff' , 'circle-stroke-width': 1,'circle-blur': 0.9, }}         
+           
+         
           />
-           <GeoJSONLayer   
-          data={KPI4G}
+      <GeoJSONLayer 
+          data={antenas4G}
           circleLayout={{ visibility: 'visible' }}
-         circlePaint={{'circle-color': 'red','circle-radius': 4,'circle-opacity': 1,'circle-stroke-color': 'Red' , 'circle-stroke-width': 2,'circle-blur': 0.9, }}         
-          symbolLayout={{
-            'text-field': '{nombre0}',
-            'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top',
-            
-          }}
-          symbolPaint={{
-            'text-color': 'black'
-          }}
-          /> */}
-      {/* <GeoJSONLayer
-          data={KPIRuta}
-          circlePaint={{'circle-color': 'lightgrey','circle-radius': 2,'circle-opacity': .8}}   
-          linePaint={{
-            'line-color': 'lightgrey',
-            'line-width': .4,
-           'line-opacity': 0.3
-          }}
-          
-        /> */}
+          circlePaint={{'circle-color': '#990000','circle-radius': 3,'circle-opacity': 1,'circle-stroke-color': '#990000' , 'circle-stroke-width': 1,'circle-blur': 0.9, }}         
+           
+         
+        />
+<GeoJSONLayer
+data={circle1}
+circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
+linePaint={{
+  'line-color': 'yellow',
+  'line-width': 2
+}}
+
+/>    
 </Map>
+<TableContainer component={Paper}>
+      <Table className={classes.table} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>BaseStation</TableCell>
+            <TableCell align="right">Sector</TableCell>
+            <TableCell align="right">generation</TableCell>
+            <TableCell align="right">technology</TableCell>
+
+            <TableCell align="right">Orientacion</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow key={row.name}>
+              <TableCell component="th" scope="row">
+                {row.id}
+              </TableCell>
+              <TableCell align="right">{row.sectorname}</TableCell>
+              <TableCell align="right">{row.generation}</TableCell>
+              <TableCell align="right">{row.technology}</TableCell>
+              
+              <TableCell align="right">{row.orientacion}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
 </div>
     </React.Fragment>
   );

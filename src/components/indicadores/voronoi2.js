@@ -17,7 +17,7 @@ import {voronoigeojson} from '../../data/voronoigeojson.json';
 
 import {antenas} from '../../data/antenas.json';
 
-import {WORLD} from '../../data/WORLD.json';
+//import {WORLD} from '../../data/WORLD.json';
 import {PAMIRANDA} from '../../data/PAMIRANDA.json';
 import {LIBERTADOR} from '../../data/libertador.json';
 import {CIUDADESGEO} from '../../data/ciudadesgeo.json';

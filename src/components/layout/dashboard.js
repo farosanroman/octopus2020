@@ -66,8 +66,11 @@ import Voronoi from         '../indicadores/voronoi';
 
 import Voronoi2 from         '../indicadores/voronoi2';
 import GeoPostKpi from         '../postkpi/geopostkpi';
-import Modelog from     '../antenas/modelog'
-import Dispositivos from     './dispositivos'
+import Modelog from     '../antenas/dispositivoborrar2'
+
+import Dispositivos from     '../dispositivos/dispositivos'
+import Dispositivo from     '../dispositivos/dispositivo'
+
 
 
 import { mainListItems, secondaryListItems } from './listitems';
@@ -95,6 +98,11 @@ const drawerWidth2 =300;
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    background: 'black',
+  },
+  container: {
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
     background: 'black',
   },
   toolbar: {
@@ -167,11 +175,7 @@ const useStyles = makeStyles(theme => ({
     height: '100vh',
     overflow: 'auto',
   },
-  container: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
-    background: 'black',
-  },
+
   paper: {
     padding: theme.spacing(2),
     display: 'flex',
@@ -592,107 +596,70 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         
         {(layout==100)&&     
-      <div className={classes.root}>
-           <Container maxWidth="lg" className={classes.container}>
-    <Indicadores />
-    </Container>
-  </div>
-}
+                <div className={classes.root}>
+                    <Container maxWidth="lg" className={classes.container}>
+                    <Indicadores />
+                    </Container>
+                </div>
+         }
         {(layout==0)&&
     
         <Container  className={classes.container}>
          
           
                  <Geo filtro2GA={checked2GA} filtro3GA={checked3GA} filtro4GA={checked4GA} />
-            {/* <Grid item xs={12} md={6} lg={6}>
-              <Paper className={fixedHeightPaper}>
-               <GeoBar />
-              </Paper>
-            </Grid>
            
-            <Grid item xs={12} md={6} lg={6}>
-               <Paper className={fixedHeightPaper}>
-                 <GeoPie />   
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={6} lg={6}>
-               <Paper className={fixedHeightPaper}>
-               <Chart1 />   
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={6} lg={6}>
-               <Paper className={fixedHeightPaper}>
-                 <ChartDayPki />   
-              </Paper>
-            </Grid> */}
           
           <Box pt={4}>
             <Copyright />
           </Box>
         </Container>
     
-}
-{(layout==1)&&     
-      <div className={classes.root}>
+         }
+       {(layout==1)&&     
+            <div className={classes.root}>
            
-    <Grid container spacing={4} justify="center">
-      <Grid item xs={12} sm={4} md={4}>
-        <Paper className={classes.paper2}><Modelog /></Paper>
-      </Grid>
-      <Grid item xs={12} sm={8} md={8}>
-
-              <Paper className={classes.paper}>
-                 <Voronoi2 />
-              </Paper>
-            </Grid>
-      <Grid item xs={12} sm={12} md={12}>
-         <Paper className={classes.paper2}><Antenas /></Paper>
-      </Grid>
+               <Grid container spacing={4} justify="center">
+                <Grid item xs={12} sm={4} md={4}>
+                    <Paper className={classes.paper2}><Dispositivo /></Paper>
+                 </Grid>
+                <Grid item xs={12} sm={8} md={8}>
+                  <Paper className={classes.paper}>
+                            <Voronoi2 />
+                 </Paper>
+                </Grid>
+               <Grid item xs={12} sm={12} md={12}>
+                  <Paper className={classes.paper2}><Antenas /></Paper>
+              </Grid>
       
-    </Grid>
-  </div>
-}
-{(layout==2)&&
-        <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={3}>
-            {/* Chart */}
+              </Grid>
+             </div>
+              }
+         {(layout==2)&&
+             <Container maxWidth="lg" className={classes.container}>
+                 <Grid container spacing={3}>
+                 {/* Chart */}
            
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                 <GeoBoundaries />
-              </Paper>
-            </Grid>
-          </Grid>
-          <Box pt={4}>
-            <Copyright />
-          </Box>
-        </Container>
-}
-{(layout==3)&&     
-      <div className={classes.root}>
-    
-    <Grid container spacing={4} justify="center">
-      <Grid item xs={12} sm={6} md={3}>
-        <Paper className={classes.paper2}><Dispositivos /></Paper>
-      </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-         <Paper className={classes.paper2}><Dispositivos /></Paper>
-      </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-        <Paper className={classes.paper2}><Dispositivos /></Paper>
-      </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-         <Paper className={classes.paper2}><Dispositivos /></Paper>
-      </Grid>
+                <Grid item xs={12}>
+                 <Paper className={classes.paper}>
+                     <GeoBoundaries />
+                  </Paper>
+                 </Grid>
+                 </Grid>
+                   <Box pt={4}>
+                       <Copyright />
+                   </Box>
+                  </Container>
+           }
+       {(layout==3)&&     
+         <Container maxWidth="lg" className={classes.container}>
+         <Dispositivos />
+         </Container>
+        }
+        {(layout==4)&&     
+            <GeoPostKpi />
  
-
-    </Grid>
-  </div>
-}
-{(layout==4)&&     
-     <GeoPostKpi />
- 
-}
+        }
       </main>
     </div>
   );

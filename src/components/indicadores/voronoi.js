@@ -20,7 +20,7 @@ import {voronoivargas} from '../../data/voronoivargas.json';
 
 import {antenas} from '../../data/antenas.json';
 
-import {WORLD} from '../../data/WORLD.json';
+//import {WORLD} from '../../data/WORLD.json';
 import {PAMIRANDA} from '../../data/PAMIRANDA.json';
 import {LIBERTADOR} from '../../data/libertador.json';
 import {CIUDADESGEO} from '../../data/ciudadesgeo.json';
@@ -217,6 +217,7 @@ function onZoomEnd (map, event)  {
       />    
            )     
      })
+    
   return (
 
     <React.Fragment>
@@ -324,9 +325,10 @@ function onZoomEnd (map, event)  {
           linePaint={{
             'line-color': '#9F81F7',
             'line-width': 4
-          }} */}
+          }} 
           
-        /> 
+       /> 
+       */}
          {/* <GeoJSONLayer
           data={WORLD}
           fillPaint={{'fill-color': 'gray','fill-outline-color': 'white','fill-opacity': 0.005}}

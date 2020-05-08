@@ -3,7 +3,7 @@ import logo from './logo.png';
 import './App.css';
 
 import Button from '@material-ui/core/Button';
-import LoginAntena from './components/layout/loginantena'
+import LoginAntena from './components/login/loginantena'
 import Dashboard from './components/layout/dashboard'
 import { reducer, defaultState } from './Context';
 
