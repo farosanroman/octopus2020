@@ -70,7 +70,7 @@ import Modelog from     '../antenas/dispositivoborrar2'
 
 import Dispositivos from     '../dispositivos/dispositivos'
 import Dispositivo from     '../dispositivos/dispositivo'
-
+import Antena from     '../antenas/antena'
 
 
 import { mainListItems, secondaryListItems } from './listitems';
@@ -621,7 +621,7 @@ export default function Dashboard() {
            
                <Grid container spacing={4} justify="center">
                 <Grid item xs={12} sm={4} md={4}>
-                    <Paper className={classes.paper2}><Dispositivo /></Paper>
+                    <Paper className={classes.paper2}><Antena /></Paper>
                  </Grid>
                 <Grid item xs={12} sm={8} md={8}>
                   <Paper className={classes.paper}>
