@@ -11,12 +11,17 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Title from '../layout/title'
-import Total from '../layout/total'
+import Total from './total'
 import BarStack from './barstack'
 import BarHorizontal from './barhorizontal'
+import RadialBar from './radialbar'
+import ProgressBar from './progressbar'
 import GeoCalendar from '../heatmap/geocalendar';
 import CircularProgress from '@material-ui/core/CircularProgress'; 
-
+import devices from '../../images/registeredDevicesIcon.png'
+import users from '../../images/registeredUsersIcon.png'
+import dataColleted from '../../images/dataCollectedIcon.png'
+import reports from '../../images/deviceReportsIcon.png'
 import Voronoi2 from './voronoi2.js'
 
 //mport Title from '../dashboard/title';
@@ -30,12 +35,8 @@ import Voronoi2 from './voronoi2.js'
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
-  root0: {
-    display: 'flex',
-  },
   root: {
     display: 'flex',
-    
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -103,26 +104,26 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     padding: theme.spacing(2),
+    magin: theme.spacing(2),
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
-    background: '#081C25',
+    backgroundColor: '#06171E'
+   
   },
-    paper2: {
+  paper2: {
     padding: theme.spacing(2),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
-
+    color: theme.palette.text.secondary
   },
   fixedHeight: {
-    height: 600,
+    height: 700,
   },
-  
-   fixedHeight2: {
-    height: 180,
+  fixedHeight2: {
+    height: 140,
   },
   fixedHeight3: {
-    height: 240,
+    height: 350,
   },
 }));
 export default function Indicadores() {
@@ -195,32 +196,52 @@ export default function Indicadores() {
         <Container maxWidth="lg" className={classes.container}>  
         {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress}  color="secondary" />}
         <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} md={3}>
-      <Paper className={fixedHeightPaper2}>
-          <Total titulo={'Devices'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalDevices} leyenda={'Registered Devices'}/>
-      </Paper>
-      </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-      <Paper className={fixedHeightPaper2} elevation={3}>
-           <Total titulo={'Devices Reports'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalKPI} leyenda={'Devices Reports'}/>
-      </Paper>
-      </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Paper className={fixedHeightPaper2}>
+                 <Total src={devices} titulo={'Messages'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalKPI} leyenda={'Registered devices'}/>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Paper className={fixedHeightPaper2}>
+                <Total titulo={'Devices'} indicador={'Totalhh'} color={'#1bc943'} bcolor={"rgba(27, 201, 67, 0.15)"} porc={45} total={totalDevices} src={reports} leyenda={'Device reports'}/>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Paper className={fixedHeightPaper2}>
+                <Total src={users} titulo={'3G Basestations'}  total={tota3GBaseStations} leyenda={'Registered users'}/>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Paper className={fixedHeightPaper2}>
+                <Total src={dataColleted} titulo={'4G Basestations'} total={tota3GBaseStations} leyenda={'Data collected in previous month'}/>
+            </Paper>
+          </Grid>
+        </Grid>
+       
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={12}>
+              <Paper className={fixedHeightPaper3}>
+                <RadialBar titulo={'Record Account by Mobile Generation'} percentages={[60, 40]} totals={[397000, 249000]} />
+              </Paper>
+            </Grid>
+            <Grid item xs={12}>
+              <Paper  className={fixedHeightPaper3}>
+                <BarHorizontal titulo={'Registered Base Stations'} data={[50, 100]}  />
+              </Paper>
+            </Grid>
+          </Grid>
+          <Grid item xs={12} sm={12} md={6}>
+            <Paper className={fixedHeightPaper}>
+              <ProgressBar titulo={'Record Count by Signal Type'} data={[{name: 'HSDPA', value: 150}, {name: 'HSPA', value: 280}, {name: 'HSPAP', value: 260}, {name: 'LTE', value: 680}, {name: 'UMTS', value: 350}, {name: 'Unknown', value: 100}]} max={1000}/>
+              {/* <GeoCalendar days={state.days} clickday={clickDay} /> */}
+            </Paper>
+          </Grid>
+        </Grid>    
 
-      <Grid item xs={12} sm={6} md={3}>
-      <Paper className={fixedHeightPaper2}>
-          <Total titulo={'3G Basestations'}  total={tota3GBaseStations}leyenda={'Registered Users'}/>
-      </Paper>
-   
-      </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-      <Paper className={fixedHeightPaper2}>
-          <Total titulo={'4G Basestations'}   total={tota3GBaseStations} leyenda={'Data Collected'}/>
-      </Paper>
-   
-      </Grid>
-      
-      </Grid>
-      <Grid container spacing={3}>
+
+    
+      {/* <Grid container spacing={3}>
       <Grid item xs={12} sm={12} md={6}>
       <Paper className={fixedHeightPaper3}>
       <BarHorizontal titulo={'Mobile Generation'}  />
@@ -238,11 +259,12 @@ export default function Indicadores() {
       <Paper className={fixedHeightPaper}>
       <Title>{'Summary of Events'}</Title>
       <Voronoi2 />
-      {/* <GeoCalendar days={state.days} clickday={clickDay} /> */}
 
       </Paper>
       </Grid>
-</Grid>    
+    </Grid>   */}
+
+
    </Container>
 </div>
     );

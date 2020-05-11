@@ -80,6 +80,7 @@ import Antenas from '../antenas/antenas'
 import {useFetch} from '../hooks/usefetch';
 import {kpigeojson} from '../helpers/kpigeojson';
 import {antenas} from '../../data/antenas.json';
+import logo from '../../images/logo.png'
 //import {celular} from '../../data/celular.json';
 function Copyright() {
   return (
@@ -185,6 +186,11 @@ const useStyles = makeStyles(theme => ({
   },
   fixedHeight: {
     height: 240,
+  },
+  logo: {
+    maxWidth: 100,
+    marginTop: '10px',
+    marginBottom: '10px'
   },
 }));
 
@@ -470,10 +476,10 @@ export default function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
-         
-          <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+          <img src={logo} alt="logo" className={classes.logo} />
+          {/* <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             OCTOLYTICS
-          </Typography>
+          </Typography> */}
           {/* <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />

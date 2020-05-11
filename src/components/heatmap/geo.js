@@ -14,7 +14,7 @@ import GeoBarStack from './geobarstack';
 import Histogram from './histogram';
 
 import Title from '../layout/title'
-import Total from '../layout/total'
+import Total from '../indicadores/total'
 
 import GeoDispositivos from './geodispositivos';
 import {voronoigeojson} from '../../data/voronoigeojson.json';
