@@ -30,8 +30,8 @@ import {useKpiGeoJson} from '../hooks/usekpigeojson'
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 
-import {antenas} from '../../data/antenas.json';
-import {jsonantenas} from '../../data/jsonantenas.json';
+//import {antenas} from '../../data/antenas.json';
+//import {jsonantenas} from '../../data/jsonantenas.json';
 
 //import {WORLD} from '../../data/WORLD.json';
 //import {PAMIRANDA} from '../../data/PAMIRANDA.json';

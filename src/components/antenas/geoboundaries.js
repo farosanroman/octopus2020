@@ -28,13 +28,9 @@ import  MapGL,{Layer,Feature,ZoomControl,GeoJSONLayer,ScaleControl} from 'react-
 import {useKpiGeoJson} from '../hooks/usekpigeojson'
 
 import CircularProgress from '@material-ui/core/CircularProgress';
-import {voronoigeojson} from '../../data/voronoigeojson.json';
-import {voronoiguarenas} from '../../data/voronoiguarenas.json';
-import {voronoiteques} from '../../data/voronoiteques.json';
-import {voronoivargas} from '../../data/voronoivargas.json';
 
 import {antenas} from '../../data/antenas.json';
-import {jsonantenas} from '../../data/jsonantenas.json';
+//import {jsonantenas} from '../../data/jsonantenas.json';
 
 //import {WORLD} from '../../data/WORLD.json';
 import {PAMIRANDA} from '../../data/PAMIRANDA.json';
@@ -130,7 +126,7 @@ export default function GeoBoundaries() {
   const [zoom, setZoom] = useState(16);
   const [center, setCenter] = useState([-66.8726,10.4713]);
   const [rows, setRows] = useState([]);
-  const [region, setRegion] = useState("GRAN CARACAS");
+  const [region, setRegion] = useState("");
   const [antenasimages, setAntenasImages] = useState([]);
   const [antenas2G, setAntenas2G] = useState({"type":"FeatureCollection","features":[] });
   const [antenas3G, setAntenas3G] = useState({"type":"FeatureCollection","features":[] });
@@ -154,7 +150,11 @@ export default function GeoBoundaries() {
     setRegion(event.target.value);
   };
   useEffect(() => {
-  fetchData('https://min-api.cryptocompare.com/data/pricemulti?fsyms=USD&tsyms=USD,EUR,COP,VES,ARS,PEN,PAB,BRL,BOB,BTC');
+ //   alert(region)
+  setAntenas2G(  {"type":"FeatureCollection","features":[] })
+  setAntenas3G(  {"type":"FeatureCollection","features":[] })
+  setAntenas4G(  {"type":"FeatureCollection","features":[] })
+  fetchData('https://octopusdevelopment.azurewebsites.net/api/GetBaseStationRegion?code=4RUMYeiJlU5yXsETXkXwRhS9HfDVjyb2lR8KPpPIFBjxgn/rSK1Sbg==&region='+region);
      
  },[region]);
 //  useEffect(() => {
@@ -176,18 +176,18 @@ export default function GeoBoundaries() {
 // },[data,isLoading]);
 
 
-function onClickMap(map,event){
-  var centro=[event.lngLat.lng,event.lngLat.lat]
+// function onClickMap(map,event){
+//   var centro=[event.lngLat.lng,event.lngLat.lat]
 
-  //alert(JSON.stringify(centro))
-  var options = {steps: 10, units: 'kilometers', properties: {foo: 'bar'}};
-  var circle1 = circle(centro, 1, options);
-setCircle1(circle1)
-setClickLocation(centro)  
-  //alert("click")
-   //console.log(event.lngLat.lng+" "+event.lngLat.lat)
-  // setClickLocation([event.lngLat.lng,event.lngLat.lat])
- }
+//   //alert(JSON.stringify(centro))
+//   var options = {steps: 10, units: 'kilometers', properties: {foo: 'bar'}};
+//   var circle1 = circle(centro, 1, options);
+// setCircle1(circle1)
+// setClickLocation(centro)  
+//   //alert("click")
+//    //console.log(event.lngLat.lng+" "+event.lngLat.lat)
+//   // setClickLocation([event.lngLat.lng,event.lngLat.lat])
+//  }
 //  useEffect(() => {
 //   // alert("ANTENAS   "+JSON.stringify(pointFeatureCollection.features))
 //   fetchDataCircle('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id=2020-06-05');
@@ -205,7 +205,40 @@ setClickLocation(centro)
   if ((data!=undefined)&&(!isLoading))      
   {
    // console.log(JSON.stringify(data))
-  //alert("fetch"+JSON.stringify(dataCircle))
+ // alert("fetch"+JSON.stringify(data))
+      var antenasFeatureCollection2G={"type":"FeatureCollection","features":[] }
+      var antenasFeatureCollection3G={"type":"FeatureCollection","features":[] }
+      var antenasFeatureCollection4G={"type":"FeatureCollection","features":[] }
+      
+      const A=data.map((nodo,index)=>{  
+
+        //sources proveedores de enlaces   
+       //console.log(Math.floor(Math.random() * 4)*1)
+       //if (nodo.properties.region==region){
+       var antenafeature= {
+         "type": "Feature",
+         "properties": {
+         "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+         "timestamp": new Date()},
+         "geometry":nodo.geometry
+         
+       }
+       if (nodo.properties.mobilegeneration=="2G"){
+              antenasFeatureCollection2G.features.push(antenafeature) 
+       }
+       if (nodo.properties.mobilegeneration=="3G"){
+         antenasFeatureCollection3G.features.push(antenafeature) 
+       }
+      if (nodo.properties.mobilegeneration=="4G"){
+        antenasFeatureCollection4G.features.push(antenafeature) 
+       }
+     //}
+     }) 
+   //  alert("pre")
+   //  alert(JSON.stringify(antenasFeatureCollection3G))
+     setAntenas2G(antenasFeatureCollection2G)
+     setAntenas3G(antenasFeatureCollection3G)
+     setAntenas4G(antenasFeatureCollection4G)
    if (JSON.stringify(data)!="[]"){
 
   //  alert("fetch"+JSON.stringify(dataCircle))
@@ -266,71 +299,71 @@ function onZoomEnd (map, event)  {
      //   stateprop:z
      // });
     }
-    useEffect(() => {
-      // alert("ANTENAS   "+JSON.stringify(pointFeatureCollection.features))
-      var SOURCES3=[]
-      var antenasxregion=[];
-      //console.log("FILTRO")
-      //alert(region)
-      jsonantenas.map((a,index)=>{
-        if (a.properties.region==region){
-         // console.log(a)
-          antenasxregion.push(a)
+    // useEffect(() => {
+    //   // alert("ANTENAS   "+JSON.stringify(pointFeatureCollection.features))
+    //   var SOURCES3=[]
+    //   var antenasxregion=[];
+    //   //console.log("FILTRO")
+    //   //alert(region)
+    //   jsonantenas.map((a,index)=>{
+    //     if (a.properties.region==region){
+    //      // console.log(a)
+    //       antenasxregion.push(a)
 
-        }
-       })
-      antenasxregion.map((ant,index)=>{  
-       //ources proveedores de enlaces   
-       if (ant.properties.region==region){
-        SOURCES3.push(  <Feature              
-         key={index} 
-         coordinates={ant.geometry.coordinates}             
-         //onClick={this.markerClick.bind(this, {properties:nodo.properties,coordinates:nodo.geometry.coordinates})}
-           />)
-        }
-       //   return(
-       //    <Feature              
-       //         key={index} 
-       //         coordinates={a.geometry.coordinates}             
-       //         //onClick={this.markerClick.bind(this, {properties:nodo.properties,coordinates:nodo.geometry.coordinates})}
-       // />    
-       //      )     
-        //}
-           })
-      setAntenasImages(SOURCES3)
-      var antenasFeatureCollection2G={"type":"FeatureCollection","features":[] }
-      var antenasFeatureCollection3G={"type":"FeatureCollection","features":[] }
-      var antenasFeatureCollection4G={"type":"FeatureCollection","features":[] }
+    //     }
+    //    })
+    //   antenasxregion.map((ant,index)=>{  
+    //    //ources proveedores de enlaces   
+    //    if (ant.properties.region==region){
+    //     SOURCES3.push(  <Feature              
+    //      key={index} 
+    //      coordinates={ant.geometry.coordinates}             
+    //      //onClick={this.markerClick.bind(this, {properties:nodo.properties,coordinates:nodo.geometry.coordinates})}
+    //        />)
+    //     }
+    //    //   return(
+    //    //    <Feature              
+    //    //         key={index} 
+    //    //         coordinates={a.geometry.coordinates}             
+    //    //         //onClick={this.markerClick.bind(this, {properties:nodo.properties,coordinates:nodo.geometry.coordinates})}
+    //    // />    
+    //    //      )     
+    //     //}
+    //        })
+    //   setAntenasImages(SOURCES3)
+    //   var antenasFeatureCollection2G={"type":"FeatureCollection","features":[] }
+    //   var antenasFeatureCollection3G={"type":"FeatureCollection","features":[] }
+    //   var antenasFeatureCollection4G={"type":"FeatureCollection","features":[] }
       
-      const A=antenasxregion.map((nodo,index)=>{  
+    //   const A=antenasxregion.map((nodo,index)=>{  
 
-        //sources proveedores de enlaces   
-       //console.log(Math.floor(Math.random() * 4)*1)
-       if (nodo.properties.region==region){
-       var antenafeature= {
-         "type": "Feature",
-         "properties": {
-         "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
-         "timestamp": new Date()},
-         "geometry":nodo.geometry
+    //     //sources proveedores de enlaces   
+    //    //console.log(Math.floor(Math.random() * 4)*1)
+    //    if (nodo.properties.region==region){
+    //    var antenafeature= {
+    //      "type": "Feature",
+    //      "properties": {
+    //      "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
+    //      "timestamp": new Date()},
+    //      "geometry":nodo.geometry
          
-       }
-       if (nodo.properties.mobilegeneration=="2G"){
-              antenasFeatureCollection2G.features.push(antenafeature) 
-       }
-       if (nodo.properties.mobilegeneration=="3G"){
-         antenasFeatureCollection3G.features.push(antenafeature) 
-       }
-      if (nodo.properties.mobilegeneration=="4G"){
-        antenasFeatureCollection4G.features.push(antenafeature) 
-       }
-     }
-     }) 
-     setAntenas2G(antenasFeatureCollection2G)
-     setAntenas3G(antenasFeatureCollection3G)
-     setAntenas4G(antenasFeatureCollection4G)
+    //    }
+    //    if (nodo.properties.mobilegeneration=="2G"){
+    //           antenasFeatureCollection2G.features.push(antenafeature) 
+    //    }
+    //    if (nodo.properties.mobilegeneration=="3G"){
+    //      antenasFeatureCollection3G.features.push(antenafeature) 
+    //    }
+    //   if (nodo.properties.mobilegeneration=="4G"){
+    //     antenasFeatureCollection4G.features.push(antenafeature) 
+    //    }
+    //  }
+    //  }) 
+    //  setAntenas2G(antenasFeatureCollection2G)
+    //  setAntenas3G(antenasFeatureCollection3G)
+    //  setAntenas4G(antenasFeatureCollection4G)
 
-    },[region]);
+    // },[region]);
      
     function createData(id,  sectorname,generation,technology,orientacion) {
       return { id,  sectorname,generation,technology,orientacion};
@@ -385,7 +418,7 @@ function onZoomEnd (map, event)  {
    containerStyle={mapStyle}        
    onControlClick={onControlClick}
    onZoomEnd={onZoomEnd}
-   onClick={onClickMap}
+ //  onClick={onClickMap}
 //onClick={this._onClickMap}  
 //<ZoomControl onControlClick={onControlClick}/>
 // azulito #58D3F7  #FF00FF
