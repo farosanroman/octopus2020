@@ -111,22 +111,20 @@ export default function SignInSide() {
         //  alert(/\S+@\S+\.\S+/.test(e.target.value))
           //const isValid = inputs[0].isValid(e.target.value);
           if (e.target.value==1){
-            dispatch({
-              type: 'FLAGLOGIN',
-              stateprop: true
-            });
-      
-          }
+             setCorreo("octotestingv2@gmail.com")
+             setPwd(32111)
+          }else{
           if (/\S+@\S+\.\S+/.test(e.target.value)){
             setCorreoError({flag:false,helper:"Correct Sintax"})
         
           } else{
-            setCorreoError({flag:true,helper:"Mail sintax please..."})
+            setCorreoError({flag:true,helper:"Mail sintax incorrect..."})
           }
+        }
          // alert(isValid)  
         // alert(JSON.stringify(statep.persona.direcciones))     
       
-          setCorreo(e.target.value)
+          //setCorreo(e.target.value)
         }
         if (input=="pwd"){
           //  alert(/\S+@\S+\.\S+/.test(e.target.value))
@@ -161,7 +159,10 @@ export default function SignInSide() {
         type: 'FLAGLOGIN',
         stateprop: true
       });
-
+      dispatch({
+        type: 'USER',
+        stateprop: data
+      });
       } 
       if (data.flag==0){
       

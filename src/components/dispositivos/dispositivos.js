@@ -454,7 +454,7 @@ linePaint={{
 
              </Grid>
            </Grid>
-    <FormControl className={classes.formControl}>
+    {/* <FormControl className={classes.formControl}>
         <InputLabel id="demo-simple-select-label">GEOBOUNDARIES</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -481,7 +481,7 @@ linePaint={{
           <MenuItem value={'CENTRO OCCIDENTE'}>CENTRO OCCIDENTE</MenuItem>
 
         </Select>
-      </FormControl>
+      </FormControl> */}
       </ Container>  
 </div>
     </React.Fragment>

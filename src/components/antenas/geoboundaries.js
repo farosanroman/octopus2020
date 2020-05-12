@@ -147,7 +147,7 @@ export default function GeoBoundaries() {
   var bbox  = [-96,31,-84,40];
    var cellSide = 55;
    var options = {units: 'kilometers'};
-  const [age, setAge] = React.useState('');
+  //const [age, setAge] = React.useState('');
   
   var hexgrid = hexGrid(bbox, cellSide, options);
   const handleChange = (event) => {
@@ -156,7 +156,7 @@ export default function GeoBoundaries() {
   useEffect(() => {
   fetchData('https://min-api.cryptocompare.com/data/pricemulti?fsyms=USD&tsyms=USD,EUR,COP,VES,ARS,PEN,PAB,BRL,BOB,BTC');
      
- },[age]);
+ },[region]);
  useEffect(() => {
   //alert("in "+option)
  //alert(JSON.stringify(data))
@@ -170,7 +170,7 @@ export default function GeoBoundaries() {
    //alert("fetch"+JSON.stringify(data))
    
   // handleKPIDay(data)
-  //  setFlagCircular(false)
+    setFlagCircular(false)
    
   }
 },[data,isLoading]);
@@ -342,11 +342,11 @@ function onZoomEnd (map, event)  {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={age}
+          value={region}
           onChange={handleChange}
           autoWidth={true}
     >
-
+        
           <MenuItem value={'GRAN CARACAS'}>GRAN CARACAS</MenuItem>
           <MenuItem value={'ORIENTE'}>ORIENTE</MenuItem>
           <MenuItem value={'CENTRO OCCIDENTE'}>CENTRO OCCIDENTE</MenuItem>
@@ -365,6 +365,7 @@ function onZoomEnd (map, event)  {
 
         </Select>
       </FormControl>
+      {flagCircular&&<CircularProgress variant="indeterminate"   disableShrink  size={17}   thickness={4} className={classes.progress}  color="secondary" />}
 <Map       
    //style="mapbox://styles/mapbox/streets-v8"
    style="mapbox://styles/mapbox/dark-v9"
