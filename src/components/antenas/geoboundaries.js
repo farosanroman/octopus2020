@@ -157,23 +157,23 @@ export default function GeoBoundaries() {
   fetchData('https://min-api.cryptocompare.com/data/pricemulti?fsyms=USD&tsyms=USD,EUR,COP,VES,ARS,PEN,PAB,BRL,BOB,BTC');
      
  },[region]);
- useEffect(() => {
-  //alert("in "+option)
- //alert(JSON.stringify(data))
-  if (isLoading) {
-    setFlagCircular(true)
-  }
-  //alert(data[0].type)
-  if ((data!=undefined)&&(!isLoading))      
-  {
-   // console.log(JSON.stringify(data))
-   //alert("fetch"+JSON.stringify(data))
+//  useEffect(() => {
+//   //alert("in "+option)
+//  //alert(JSON.stringify(data))
+//   if (isLoading) {
+//     setFlagCircular(true)
+//   }
+//   //alert(data[0].type)
+//   if ((data!=undefined)&&(!isLoading))      
+//   {
+//    // console.log(JSON.stringify(data))
+//    qalert("fetch"+JSON.stringify(data))
    
-  // handleKPIDay(data)
-    setFlagCircular(false)
+//   // handleKPIDay(data)
+//     setFlagCircular(false)
    
-  }
-},[data,isLoading]);
+//   }
+// },[data,isLoading]);
 
 
 function onClickMap(map,event){
@@ -188,24 +188,27 @@ setClickLocation(centro)
    //console.log(event.lngLat.lng+" "+event.lngLat.lat)
   // setClickLocation([event.lngLat.lng,event.lngLat.lat])
  }
- useEffect(() => {
-  // alert("ANTENAS   "+JSON.stringify(pointFeatureCollection.features))
-  fetchDataCircle('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id=2020-06-05');
+//  useEffect(() => {
+//   // alert("ANTENAS   "+JSON.stringify(pointFeatureCollection.features))
+//   fetchDataCircle('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id=2020-06-05');
   
-   },[clicklocation]);
+//    },[clicklocation]);
  
  useEffect(() => {
   //alert("in "+option)
  //alert(JSON.stringify(data))
-  if (isLoadingCircle) {
+  if (isLoading) {
+    if (JSON.stringify(data)!="[]"){
     setFlagCircular(true)
+    }
   }
   //alert(data[0].type)
-  if ((dataCircle!=undefined)&&(!isLoadingCircle))      
+  if ((data!=undefined)&&(!isLoading))      
   {
    // console.log(JSON.stringify(data))
   //alert("fetch"+JSON.stringify(dataCircle))
-   if (JSON.stringify(dataCircle)!="[]"){
+   if (JSON.stringify(data)!="[]"){
+     
   //  alert("fetch"+JSON.stringify(dataCircle))
    const rows = [
     createData('16002','Av Libertador', '3G','LTE',55),
@@ -219,13 +222,15 @@ setClickLocation(centro)
  
   ];
 setRows(rows)
+
+setFlagCircular(false)
 }
   
   // handleKPIDay(data)
   //  setFlagCircular(false)
    
   }
-},[dataCircle,isLoadingCircle]);
+},[data,isLoading]);
 
  //var criteria={position:state.position,antenas:antenas}
 
@@ -407,17 +412,17 @@ function onZoomEnd (map, event)  {
       <GeoJSONLayer 
           data={antenas3G}
           circleLayout={{ visibility: 'visible' }}
-          circlePaint={{'circle-color': '#c77aff','circle-radius': 5,'circle-opacity': 1,'circle-stroke-color': '#c77aff' , 'circle-stroke-width': 1,'circle-blur': 0.9, }}         
+          circlePaint={{'circle-color': '#ACDFEC','circle-radius': 5,'circle-opacity': 1,'circle-stroke-color': '#ACDFEC' , 'circle-stroke-width': 1,'circle-blur': 0.9, }}         
            
          
           />
       <GeoJSONLayer 
           data={antenas4G}
           circleLayout={{ visibility: 'visible' }}
-          circlePaint={{'circle-color': '#990000','circle-radius': 3,'circle-opacity': 1,'circle-stroke-color': '#990000' , 'circle-stroke-width': 1,'circle-blur': 0.9, }}         
+          circlePaint={{'circle-color': '#00AAD0','circle-radius': 3,'circle-opacity': 1,'circle-stroke-color': '#00AAD0' , 'circle-stroke-width': 1,'circle-blur': 0.9, }}         
            
          
-        />
+        /> 
 <GeoJSONLayer
 data={circle1}
 circlePaint={{'circle-color': 'pink','circle-radius': .5, }}   
