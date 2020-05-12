@@ -193,8 +193,7 @@ setClickLocation(centro)
 //   fetchDataCircle('https://octopustestingfunctions.azurewebsites.net/api/GetKPIDay?code=ophd6G5J32nZT0jZHMoDXr7FEHoRMiQFa876XZ35TpWkmjIBJziHZw==&id=2020-06-05');
   
 //    },[clicklocation]);
- 
- useEffect(() => {
+  useEffect(() => {
   //alert("in "+option)
  //alert(JSON.stringify(data))
   if (isLoading) {
@@ -208,7 +207,7 @@ setClickLocation(centro)
    // console.log(JSON.stringify(data))
   //alert("fetch"+JSON.stringify(dataCircle))
    if (JSON.stringify(data)!="[]"){
-     
+
   //  alert("fetch"+JSON.stringify(dataCircle))
    const rows = [
     createData('16002','Av Libertador', '3G','LTE',55),
