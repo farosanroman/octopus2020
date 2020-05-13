@@ -428,7 +428,7 @@ function onZoomEnd (map, event)  {
 <GeoJSONLayer
           data={CIUDADESGEO}
           fillPaint={{'fill-color': 'yellow','fill-outline-color': 'yellow','fill-opacity': .02}}
-          linePaint={{            'line-color': 'yellow',            'line-width': .5          }}
+          linePaint={{            'line-color': '#F9E79F',            'line-width': .5          }}
           
         /> 
 <Layer type="symbol" id="marker34" layout={{ 'icon-image': 'londonCycle' }} images={images}>
