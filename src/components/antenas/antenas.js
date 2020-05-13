@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Heatmap from './heatmap'
+
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
@@ -67,6 +68,7 @@ export default function Antenas() {
 
   return (
     <Fragment>
+    
       <Heatmap/>
     <TableContainer component={Paper}>
       <Table className={classes.table} size="small" aria-label="a dense table">

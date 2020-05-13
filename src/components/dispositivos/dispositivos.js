@@ -24,7 +24,6 @@ import {useKpiGeoJson} from '../hooks/usekpigeojson'
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-
 //import {antenas} from '../../data/antenas.json';
 //import {jsonantenas} from '../../data/jsonantenas.json';
 
@@ -108,13 +107,6 @@ export default function Dispositivos() {
 
   const [flagCircular, setFlagCircular] = React.useState(false);     
 
-  // var centro=[-66.867900,10.4671]
-  // var options = {steps: 10, units: 'kilometers', properties: {foo: 'bar'}};
-  // var circle1 = circle(centro, .5, options);
-  // var circle2 = circle(centro, 1, options);
-  // var circle8 = circle(centro, 8, options);
-
-  // var bbox = [-66.807900,10.4071,-66.70,12.4071];
   var bbox  = [-96,31,-84,40];
    var cellSide = 55;
    var options = {units: 'kilometers'};
@@ -243,40 +235,7 @@ function onZoomEnd (map, event)  {
      var antenasFeatureCollection2G={"type":"FeatureCollection","features":[] }
      var antenasFeatureCollection3G={"type":"FeatureCollection","features":[] }
      var antenasFeatureCollection4G={"type":"FeatureCollection","features":[] }
-     
-//      const A=jsonantenas.map((nodo,index)=>{  
-//       //sources proveedores de enlaces   
-//       //console.log(Math.floor(Math.random() * 4)*1)
-//       var antenafeature= {
-//         "type": "Feature",
-//         "properties": {
-//         "id": "81150cc3-25fa-4f98-b36d-4103e9de00e7",
-//         "timestamp": new Date()},
-//         "geometry":nodo.geometry
-        
-//       }
-//       if (nodo.properties.mobilegeneration=="2G"){
-//              antenasFeatureCollection2G.features.push(antenafeature) 
-//       }
-//       if (nodo.properties.mobilegeneration=="3G"){
-//         antenasFeatureCollection3G.features.push(antenafeature) 
-//       }
-//      if (nodo.properties.mobilegeneration=="4G"){
-//        antenasFeatureCollection4G.features.push(antenafeature) 
-//       }
 
-//     })
-//  const SOURCES2=jsonantenas.map((a,index)=>{  
-//       //sources proveedores de enlaces   
-      
-//        return(
-//          <Feature              
-//               key={index} 
-//               coordinates={a.geometry.coordinates}             
-//               //onClick={this.markerClick.bind(this, {properties:nodo.properties,coordinates:nodo.geometry.coordinates})}
-//       />    
-//            )     
-//      })
     var dev=
 {"deviceId":"07F1A8206765346D6110F9A5C13E5A3A340DA011DDD986F97302A999D6A3CB52",
 "serverPublicKey":"AAAAAAAAAAAAAAAAAAAAAMBGLKA2fVWLoP90ZeKpPAOeEH_ZSfrq78qG3hfA0HzOVgced8QEmz-dglxEjNYgD4MXMxsHGCbC1T3jqQ",
@@ -449,6 +408,8 @@ linePaint={{
 
              </Grid>
            </Grid>
+
+
     {/* <FormControl className={classes.formControl}>
         <InputLabel id="demo-simple-select-label">GEOBOUNDARIES</InputLabel>
         <Select
